@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Skyraker&#39;s</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-03-10T06:22:20.287Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Guangzhi Ye</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OS学习笔记01-接管裸机控制权</title>
+    <link href="http://yoursite.com/2018/03/10/OS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(01)%E6%8E%A5%E7%AE%A1%E8%A3%B8%E6%9C%BA%E6%8E%A7%E5%88%B6%E6%9D%83/"/>
+    <id>http://yoursite.com/2018/03/10/OS学习笔记(01)接管裸机控制权/</id>
+    <published>2018-03-10T04:47:00.000Z</published>
+    <updated>2018-03-10T06:22:20.287Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;实验任务&quot;&gt;&lt;a href=&quot;#实验任务&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="OS" scheme="http://yoursite.com/categories/OS/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello blog again</title>
+    <link href="http://yoursite.com/2018/03/10/hello-blog-again/"/>
+    <id>http://yoursite.com/2018/03/10/hello-blog-again/</id>
+    <published>2018-03-10T04:47:00.000Z</published>
+    <updated>2018-03-10T06:25:18.272Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;wow&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+      <category term="OS" scheme="http://yoursite.com/categories/OS/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Python作业01-变量和简单数据类型</title>
+    <link href="http://yoursite.com/2018/03/08/2018-03-08-Python%E4%BD%9C%E4%B8%9A01-%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>http://yoursite.com/2018/03/08/2018-03-08-Python作业01-变量和简单数据类型/</id>
+    <published>2018-03-08T12:33:00.000Z</published>
+    <updated>2018-03-10T06:21:52.959Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description&quot;&gt;&lt;/a&gt;Description&lt;/h1&gt;&lt;p&gt;Select from exercise 2-1 to 2-11.
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello Python</title>
+    <link href="http://yoursite.com/2018/03/06/2018-03-06-Hello-Python/"/>
+    <id>http://yoursite.com/2018/03/06/2018-03-06-Hello-Python/</id>
+    <published>2018-03-06T15:16:00.000Z</published>
+    <updated>2018-03-08T02:27:16.930Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Python-的优点&quot;&gt;&lt;a href=&quot;#Python-的优点&quot; class=&quot;headerlink&quot; title=&quot;Python 的优点&quot;&gt;&lt;/a&gt;Python
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello Blog</title>
+    <link href="http://yoursite.com/2018/03/06/2018-03-06-Hello-Blog/"/>
+    <id>http://yoursite.com/2018/03/06/2018-03-06-Hello-Blog/</id>
+    <published>2018-03-06T05:16:00.000Z</published>
+    <updated>2018-03-10T06:22:48.667Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Hello-Blog&quot;&gt;&lt;a href=&quot;#Hello-Blog&quot; class=&quot;headerlink&quot; title=&quot;Hello Blog&quot;&gt;&lt;/a&gt;Hello
+        
+      
+    
+    </summary>
+    
+      <category term="others" scheme="http://yoursite.com/categories/others/"/>
+    
+    
+  </entry>
+  
+</feed>
