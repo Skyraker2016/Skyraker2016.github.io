@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="DescriptionSelect from exercise 2-1 to 2-11.  I will finish the code with comment about the requirement. Code2-3# 2-3 个性化消息： 将用户的姓名存到一个变量中， # 并向该用户显示一条消息。显示的消息应非常简单， # 如“Hello Eric, would you like to">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python作业01-变量和简单数据类型">
+<meta property="og:url" content="http://yoursite.com/2018/03/08/2018-03-08-Python作业01-变量和简单数据类型/index.html">
+<meta property="og:site_name" content="Skyraker">
+<meta property="og:description" content="DescriptionSelect from exercise 2-1 to 2-11.  I will finish the code with comment about the requirement. Code2-3# 2-3 个性化消息： 将用户的姓名存到一个变量中， # 并向该用户显示一条消息。显示的消息应非常简单， # 如“Hello Eric, would you like to">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-03-10T06:21:52.959Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python作业01-变量和简单数据类型">
+<meta name="twitter:description" content="DescriptionSelect from exercise 2-1 to 2-11.  I will finish the code with comment about the requirement. Code2-3# 2-3 个性化消息： 将用户的姓名存到一个变量中， # 并向该用户显示一条消息。显示的消息应非常简单， # 如“Hello Eric, would you like to">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/03/08/2018-03-08-Python作业01-变量和简单数据类型/"/>
+
+
+
+
+
+  <title>Python作业01-变量和简单数据类型 | Skyraker</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Skyraker</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/08/2018-03-08-Python作业01-变量和简单数据类型/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Guangzhi Ye">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Skyraker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Python作业01-变量和简单数据类型</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-08T20:33:00+08:00">
+                2018-03-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h1><p>Select from exercise 2-1 to 2-11. </p>
+<p>I will finish the code with comment about the requirement.</p>
+<h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><h2 id="2-3"><a href="#2-3" class="headerlink" title="2-3"></a>2-3</h2><pre><code># 2-3 个性化消息： 将用户的姓名存到一个变量中，
+# 并向该用户显示一条消息。显示的消息应非常简单，
+# 如“Hello Eric, would you like to learn some Python today?”。
+
+name = input()
+print(&quot;Hello &quot; + name + &quot;, would you like to learn some Python today?&quot;)
+</code></pre><p>result:</p>
+<pre><code>D:\pyproject\homework1\venv\Scripts\python.exe D:/pyproject/homework1/2_3.py
+Jobs
+Hello Jobs, would you like to learn some Python today?
+
+Process finished with exit code 0
+</code></pre><h2 id="2-4"><a href="#2-4" class="headerlink" title="2-4"></a>2-4</h2><pre><code># 2-4 调整名字的大小写： 将一个人名存储到一个变量中，
+# 再以小写、大写和首字母大写的方式显示这个人名。
+
+name = input()
+print(name.upper())
+print(name.lower())
+print(name.title())
+</code></pre><p>result:</p>
+<pre><code>D:\pyproject\homework1\venv\Scripts\python.exe D:/pyproject/homework1/2_4.py
+sKy raKeR
+SKY RAKER
+sky raker
+Sky Raker
+
+Process finished with exit code 0
+</code></pre><h2 id="2-7"><a href="#2-7" class="headerlink" title="2-7"></a>2-7</h2><pre><code># 2-7 剔除人名中的空白： 存储一个人名，
+# 并在其开头和末尾都包含一些空白字符。
+# 务必至少使用字符组合&quot;\t&quot; 和&quot;\n&quot; 各一次。
+# 打印这个人名，以显示其开头和末尾的空白。
+# 然后，分别使用剔除函数lstrip() 、rstrip()
+# 和strip() 对人名进行处理，并将结果打印出来。
+
+name = &quot;\n\tSky Raker\t\n\t&quot;
+print(&quot;-------------&quot;)
+print(name)
+print(&quot;-------------&quot;)
+print(name.lstrip())
+print(&quot;-------------&quot;)
+print(name.rstrip())
+print(&quot;-------------&quot;)
+print(name.strip())
+print(&quot;-------------&quot;)
+</code></pre><p>result:</p>
+<pre><code>D:\pyproject\homework1\venv\Scripts\python.exe D:/pyproject/homework1/2_7.py
+-------------
+
+    Sky Raker    
+
+-------------
+Sky Raker    
+
+-------------
+
+    Sky Raker
+-------------
+Sky Raker
+-------------
+
+Process finished with exit code 0
+</code></pre><h2 id="2-8"><a href="#2-8" class="headerlink" title="2-8"></a>2-8</h2><pre><code># 2-8 数字8： 编写4个表达式，它们分别使用
+# 加法、减法、乘法和除法运算，但结果都是数字8。
+# 为使用print 语句来显示结果，务必将这些表达式用括号括起来，
+
+print(3+5)
+print(10-2)
+print(2*4)
+print(1000/125)
+</code></pre><p>result:</p>
+<pre><code>D:\pyproject\homework1\venv\Scripts\python.exe D:/pyproject/homework1/2_8.py
+8
+8
+8
+8.0
+
+Process finished with exit code 0
+</code></pre><h2 id="2-11"><a href="#2-11" class="headerlink" title="2-11"></a>2-11</h2><pre><code># 2-11 Python之禅： 在Python终端会话中执行命令import this ，
+# 并粗略地浏览一下其他的指导原则。
+
+import this
+</code></pre><p>result:</p>
+<pre><code>D:\pyproject\homework1\venv\Scripts\python.exe D:/pyproject/homework1/2_11.py
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren&apos;t special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you&apos;re Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it&apos;s a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let&apos;s do more of those!
+
+Process finished with exit code 0
+</code></pre>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/06/2018-03-06-Hello-Python/" rel="next" title="Hello Python">
+                <i class="fa fa-chevron-left"></i> Hello Python
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/10/hello-blog-again/" rel="prev" title="Hello blog again">
+                Hello blog again <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Guangzhi Ye</p>
+              <p class="site-description motion-element" itemprop="description">Do not give up thinking.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Code"><span class="nav-number">2.</span> <span class="nav-text">Code</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3"><span class="nav-number">2.1.</span> <span class="nav-text">2-3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4"><span class="nav-number">2.2.</span> <span class="nav-text">2-4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-7"><span class="nav-number">2.3.</span> <span class="nav-text">2-7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-8"><span class="nav-number">2.4.</span> <span class="nav-text">2-8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-11"><span class="nav-number">2.5.</span> <span class="nav-text">2-11</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Guangzhi Ye</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

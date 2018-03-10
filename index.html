@@ -1,183 +1,1682 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
+
+
 
   
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Do not give up thinking.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Skyraker">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="Skyraker">
+<meta property="og:description" content="Do not give up thinking.">
+<meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Skyraker">
+<meta name="twitter:description" content="Do not give up thinking.">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/"/>
+
+
+
+
+
+  <title>Skyraker</title>
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+
+
+
+
+
+
+
+
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/03/10/hello-world/" class="article-date">
-  <time datetime="2018-03-10T05:22:50.270Z" itemprop="datePublished">2018-03-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/10/hello-world/">Hello World</a>
-    </h1>
+    
   
 
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Skyraker</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/10/OS学习笔记(01)接管裸机控制权/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Guangzhi Ye">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Skyraker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/10/OS学习笔记(01)接管裸机控制权/" itemprop="url">OS学习笔记01-接管裸机控制权</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-10T12:47:00+08:00">
+                2018-03-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OS/" itemprop="url" rel="index">
+                    <span itemprop="name">OS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/10/hello-world/" data-id="cjekxek440000aouckgrzpdas" class="article-share-link">Share</a>
       
+
+      
+        
+          
+            <h1 id="实验任务"><a href="#实验任务" class="headerlink" title="实验任务"></a>实验任务</h1><p>设计一个引导扇区程序，程序功能是：<br>在屏幕上显示运动内容，并在触碰到边框时反弹，可以加入变色等其它功能。<br>将这个程序的机器码放进放进虚拟软盘的首扇区，并用此软盘引导无操作系统的虚拟机，直到成功。</p>
+<h1 id="基础原理"><a href="#基础原理" class="headerlink" title="基础原理"></a>基础原理</h1><h2 id="主引导记录（MBR）工作原理："><a href="#主引导记录（MBR）工作原理：" class="headerlink" title="主引导记录（MBR）工作原理："></a>主引导记录（MBR）工作原理：</h2><p>计算机启动后，由BIOS检查硬件并根据指定的顺序，检查引导设备（本次实验中的虚拟软盘）的第一扇区<br>（即前512B且以0x55AA结尾的内容，也就是我们的主引导记录），加载至内存地址0x7C00，并开始运行；其它内存地址如下所示：</p>
+<p><img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/os-hw-01-1.png" alt="内存分配方式"></p>
+<h2 id="显示原理："><a href="#显示原理：" class="headerlink" title="显示原理："></a>显示原理：</h2><p>显存首地址为0xB800，以两个字节来控制相应屏幕位置的显示内容。其中低字节为显示字符的ascii码，高字节为显示颜色，显示颜色如下表：</p>
+<p><img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/os-hw-01-2.png" alt="显示模式"><br>其中，颜色默认为0x07，即黑底白字；</p>
+<h1 id="实验工具和环境说明"><a href="#实验工具和环境说明" class="headerlink" title="实验工具和环境说明"></a>实验工具和环境说明</h1><ul>
+<li>编辑器：Notepad++，支持语法高亮；</li>
+<li>汇编器：NASM，与MASM有部分区别，后文详述；</li>
+<li>机器码编辑器：WinHex，用于对COM进行修改使其符合MBR的格式</li>
+<li>虚拟机：VMware，用于生成裸机</li>
+</ul>
+<h1 id="程序流程及源码"><a href="#程序流程及源码" class="headerlink" title="程序流程及源码"></a>程序流程及源码</h1><p>显示个人信息跳动规迹，并变色；</p>
+<p><img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/os-hw-01-3.png" alt="流程图"></p>
+<pre><code>;显示学号姓名缩写
+    DRt equ 1                      ;D-Down,U-Up,R-right,L-Left
+    URt equ 2                      ;
+    ULt equ 3                      ;
+    DLt equ 4                      ;
+    delay equ 50000                ;计时器延迟计数,用于控制画框的速度
+    ddelay equ 580                 ;延迟580*50000次
+    Hm equ 25                    ;最大高度
+    Lm equ 80                      ;最大宽度
+    len equ 14                    ;字符串长度
+
+    BOOTSEG equ 0x7c00          ;段基址0x7c00
+    DISPLAYSEG equ 0xb800          ;显存及地址0xb800
+    org BOOTSEG                    ;告诉汇编器要在0x7c00执行
+
+section .text
+_start:  
+
+    ;初始化数据段，使其指向0X7C00处，即Boot代码被加载的地方  
+    mov     ax, cs
+    mov     ds, ax  
+
+    ;将文本显示内存段基址 放在ES中，供后面显示字符使用  
+    mov     ax, DISPLAYSEG  
+    mov     es, ax  
+
+loop1:
+    dec word[count]                ; 递减计数变量
+        jnz loop1                    ; &gt;0：跳转;
+        mov word[count],delay
+    dec word[dcount]                ; 递减计数变量
+        jnz loop1
+        mov word[count],delay
+        mov word[dcount],ddelay
+    ;mov al, 20H    ;空格覆盖
+    ;mov ah, 0FH    
+    ;mov [es:bx], ax   
+    dec byte[color]
+    cmp byte[color], 01H
+    jz reset
+back:
+    mov al, DRt    ;↘
+        cmp al, byte[dir]
+        jz DRF
+    mov al, DLt    ;↙
+        cmp al, byte[dir]
+        jz DLF
+    mov al, URt    ;↗
+        cmp al, byte[dir]
+        jz URF
+    mov al, ULt    ;↖
+        cmp al, byte[dir]
+        jz ULF
+    jmp $
+
+DRF:
+    inc word[x]    
+    inc word[y]    ;向右下前进一格
+    mov ax, Hm
+        mov bx, word[x]    ;判断x是否越界
+        cmp ax, bx
+        jz dr2ur
+    mov ax, Lm-len
+        mov bx, word[y]    ;判断y是否越界
+        cmp ax, bx
+        jz dr2dl
+    jmp display
+dr2ur:    ;回弹——从右下改为右上
+    mov word[x], Hm-2
+    mov ax, Lm-len    ;判断是否为角落
+        mov bx, word[y]
+        cmp ax, bx
+        jz drA
+    mov byte[dir], URt
+
+    jmp display
+dr2dl:
+    mov word[y], Lm-len-2
+    mov byte[dir], DLt
+
+    jmp display
+drA:    ;角落时原路返回
+    mov word[y],Lm-len-2
+    mov byte[dir], ULt
+
+    jmp display
+
+DLF:
+    inc word[x]
+    dec word[y]
+    mov ax, Hm
+        mov bx, word[x]
+        cmp ax, bx
+        jz dl2ul
+    mov ax, -1
+        mov bx, word[y]
+        cmp ax, bx
+        jz dl2dr
+    jmp display
+dl2ul:
+    mov word[x], Hm-2
+    mov ax, -1
+        mov bx, word[y]
+        cmp ax, bx
+        jz dlA    
+    mov byte[dir], ULt
+
+    jmp display
+dl2dr:
+    mov word[y], 1
+    mov byte[dir], DRt
+
+    jmp display
+dlA:
+    mov word[y], 1
+    mov byte[dir], URt
+
+    jmp display
+
+URF:
+    dec word[x]
+    inc word[y]
+    mov ax, -1
+        mov bx, word[x]
+        cmp ax, bx
+        jz ur2dr
+    mov ax, Lm-len
+        mov bx, word[y]
+        cmp ax, bx
+        jz ur2ul
+    jmp display
+ur2dr:
+    mov word[x], 1
+    mov ax, Lm-len
+        mov bx, word[y]
+        cmp ax, bx
+        jz urA
+    mov byte[dir], DRt
+
+    jmp display
+ur2ul:
+    mov word[y], Lm-len-2
+    mov byte[dir], ULt
+
+    jmp display
+urA:
+    mov word[y], Lm-len-2
+    mov byte[dir], DLt
+
+    jmp display
+
+ULF:
+    dec word[x]
+    dec word[y]
+    mov ax, -1
+        mov bx, word[x]
+        cmp ax, bx
+        jz ul2dl
+    mov ax, -1
+        mov bx, word[y]
+        cmp ax, bx
+        jz ul2ur
+    jmp display
+ul2dl:
+    mov word[x], 1
+    mov ax, -1
+        mov bx, word[y]
+        cmp ax, bx
+        jz ulA    
+    mov byte[dir], DLt
+
+    jmp display
+ul2ur:
+    mov word[y], 1
+    mov byte[dir], URt
+
+    jmp display
+ulA:
+    mov word[y], 1
+    mov byte[dir], DRt
+
+    jmp display
+
+display:    ;显示模块
+    mov ax, word[x]
+    mov bx, Lm
+    mul bx
+    add ax, word[y]
+    mov bx, 2
+    mul bx
+    mov bx, ax    ;bx = ax = (x*80+y) * 2
+    mov cx, len
+    mov si, info
+    mov ah, [color]
+loop_str:    ;字符串显示模块
+    mov al, [si]
+    mov [es:bx], ax
+    inc si
+    inc bx
+    inc bx
+    loop loop_str
+
+    jmp loop1
+
+reset:
+    mov byte[color], 0FH
+    jmp back
+end:
+    jmp $
+
+;section .data
+
+    info db &quot; ygz 16337287 &quot;,0
+    count dw delay
+    dcount dw ddelay
+    dir db DRt         ; 向右下运动
+    x    dw 2
+    y    dw 0
+    color db 0FH
+
+    times 510-($-$$) db 0  ;填充空格
+    dw  0xaa55  
+</code></pre><h1 id="实验步骤"><a href="#实验步骤" class="headerlink" title="实验步骤"></a>实验步骤</h1><ol>
+<li>在NotePad++中进行编辑程序; </li>
+<li><p>在生成软盘文件：</p>
+<ul>
+<li>打开CMD终端窗口至asm文件所在的文件夹，输入<br><code>nasm -f bin %name%.asm -o %name%.com  &gt; amsg.txt</code>（<code>%name%</code>为文件名）；</li>
+<li>或直接输入<code>na %name%.asm</code>快速生成com文件，<code>na.bat</code>内容如下：<br>@echo off<br>set name=%~n1<br>nasm -f bin %name%.asm -o %name%.COM  &gt; amsg.txt<br>type amsg.txt |find “Error”<br>type amsg.txt |find “Warn”</li>
+<li><p>生成com文件，打开com文件将0x1FE和0x1FF改为0x55和0xAA，保存为flp软盘格式:</p>
+<p><img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/os-hw-01-4.png" alt="flp文件"></p>
+</li>
+<li>另：若代码末尾已经加上了<br>times 510-($-$$) db 0  ;填充空格<br>dw  0xaa55  ;加上55AA，符合MBR特征<br>则不必再修改com文件，直接生成为flp文件即可</li>
+</ul>
+</li>
+<li><p>创建无操作系统的裸机：</p>
+</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/os-hw-01-5.png" alt="虚拟机配置"></p>
+<ol>
+<li>将flp文件装载进虚拟机作为MBR引导启动：</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/os-hw-01-6.png" alt="加载虚拟软盘"></p>
+<h1 id="结果截图"><a href="#结果截图" class="headerlink" title="结果截图"></a>结果截图</h1><ol>
+<li>显示有规迹的‘A’：<br><img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/os-hw-01-8.png" alt="&#39;A&#39;带规迹"></li>
+<li>显示动态无规迹的‘A’+固定的个人信息‘ ygz 16337287 ’：<br><img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/os-hw-01-7.png" alt="&#39;A&#39;无规迹"></li>
+<li>逐字显示动态变色个人信息，并保留痕迹：<br><img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/os-hw-01-9.png" alt="逐字显示"></li>
+<li>整行显示动态变色个人信息：<br><img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/os-hw-01-10.png" alt="整行显示"></li>
+</ol>
+<hr>
+<p>接下来就是各种踩坑和填坑的经历了</p>
+<h1 id="关于NASM："><a href="#关于NASM：" class="headerlink" title="关于NASM："></a>关于NASM：</h1><ol>
+<li>NASM的标识符区分大小写；</li>
+<li>NASM中，memory操作数直接是内容地址，并且不保存数据类型，导致以下两个区别：<ol>
+<li>在读取数据内容时，要加方括号[ ] 指明是地址的内容，若没有方括号则是首地址的值；</li>
+<li>在操作数据内容时且另一个操作数是常数（非ax、ah这种能够知道数据大小的寄存器），要加上数据类型如byte、word等；</li>
+<li>不需要ptr指示字；</li>
+</ol>
+</li>
+<li>提供segment时，NASM要在方括号内提供segment，如：<code>MOV [es:bx], ax</code></li>
+<li>段定义方式，NASM定义数据段<code>section .data</code>，定义代码段<code>section .text</code></li>
+<li><code>equ</code>类似C语言中的<code>define</code>，用于定义整数常量；（注意，不能定义浮点数，且最长为8bytes）</li>
+<li>用<code>times</code>来重复定义数据或指令</li>
+<li><code>$</code>为当前nasm编译后当前指令位置，<code>$$</code>为该段的初始位置。一开始在没弄懂<code>$$</code>的情况下照猫画虎胡乱使用，<br>导致生成的文件大于512B且0x55AA位置错误（虽然没有影响），后来去掉了<code>section .data</code>后即可（即让后面的数据处于与代码的同一段，以便于计算总体机器码的大小）。</li>
+<li>其它的NASM需要注意的语法待后面的实验探索。<h1 id="关于加载至0x7c00："><a href="#关于加载至0x7c00：" class="headerlink" title="关于加载至0x7c00："></a>关于加载至0x7c00：</h1>BIOS检查了引导设备的第一个扇区（以0x55AA结尾的512B）即主引导记录（MBR），加载至0x7c00，因此默认偏移为0x7c00。<br>至于为什么时0x7c00，是由于一开始的8088CPU内存为32KB，即0~0x7FFF，保留512B给MBR，512B保留给MBR产生的数据，<br>为了让出足够的空间给操作系统，因此从后开始算，0x7FFF-1024 = 0x7c00;<h1 id="关于org的作用及思考："><a href="#关于org的作用及思考：" class="headerlink" title="关于org的作用及思考："></a>关于org的作用及思考：</h1>根据上一条，我们的代码将会被强制加载到0x7c00，因此若没有<code>org</code>，后面的memory操作数会默认从0开始算。</li>
+</ol>
+<p>例如在相对位置3做了如下定义：<br>    msg db ‘@’</p>
+<ul>
+<li>在没有org的情况下，<code>[msg]</code>会在0x03读取一位，而真正的数据‘@’被加载到了0x7c03，在读取<code>[msg]</code>的时候就会读到乱码。</li>
+<li>在有<code>org 0x7c00</code>的情况下，<code>[msg]</code>会直接去0x7c03读取’@’。</li>
+</ul>
+<p>以上可以在生成机器码后，通过反汇编看出。总的来说，<code>org</code>就是告诉汇编器，该代码必然会被加载到某一偏移值上<br>，因此要告诉汇编器后面的相对地址要加上偏移值。</p>
+<p>这也就能够解释一个现象：明明在数据段中初始化了数据，却无法读取，只能在代码开头重新mov一遍才能正常输出，<br>但是重复<code>mov</code>时的目的地址为0x7c00前面的某个位置，造成别的内存的篡改，产生不可预计的后果。</p>
+<h1 id="关于算法的错误："><a href="#关于算法的错误：" class="headerlink" title="关于算法的错误："></a>关于算法的错误：</h1><ul>
+<li>角落判断：在一开始的设计中，仅分别判断了x和y的位置，若字符运行至角<br>落，仅仅将x反弹，而y会继续运动，而且运动方向也会错误，导致一次显示错误的同时也造成了y的越界，<br>且会越跑越远，最终让字符完全移出屏幕，如下图可见在后期字符的反弹条件已经错误了</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/os-hw-01-11.png" alt="角落错误"></p>
+<p>修改方法：在判断x越界后的反弹程序中，判断y是否同时越界，若是，则将路径原路返回</p>
+<ul>
+<li>在部分不需要写回的相等判断中，用了sub，其实用cmp即可；</li>
+</ul>
+<h1 id="不足及优化设想："><a href="#不足及优化设想：" class="headerlink" title="不足及优化设想："></a>不足及优化设想：</h1><p>在整体信息输出弹跳时，本想着每次弹跳后才变色的，视觉效果会好很多，但是在弹跳时加了判断后（即十二种弹跳），会超出512B限制,导致部分指令无法装载。<br>有两种优化设想：</p>
+<ol>
+<li>将DRt等数据不局限于一个特征数，而是按规律如上下分别为1、0来进行编写，在弹跳时通过运算来更改路径，合并重复逻辑；</li>
+<li>在MBR中进行引导而非操作，真正的操作放在操作系统的位置执行。</li>
+</ol>
+<p>这两种方法都有待进一步的实践。</p>
+<p><em>入门摸索，难免有纰漏，欢迎各位大佬批评指正</em></p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ol>
+<li><a href="https://icoderme.wordpress.com/2010/06/10/bootloader/" target="_blank" rel="noopener">“Hello world” 引导程序</a></li>
+<li><a href="https://www.cnblogs.com/jiu0821/p/4422464.html" target="_blank" rel="noopener">NASM与MASM语法区别</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2015/09/0x7c00.html" target="_blank" rel="noopener">主引导记录内存地址是0x7c00</a></li>
+<li><a href="http://blog.csdn.net/mirage1993/article/details/29908929" target="_blank" rel="noopener">关于org 0x7c00的原因</a></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
+
+    
+      
 
   
 
+  
+  
+  
 
-</section>
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/10/hello-blog-again/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Guangzhi Ye">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Skyraker">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <aside id="sidebar">
-  
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/10/hello-blog-again/" itemprop="url">Hello blog again</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-10T12:47:00+08:00">
+                2018-03-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OS/" itemprop="url" rel="index">
+                    <span itemprop="name">OS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
     
 
-  
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>wow</p>
+
+          
+        
+      
+    </div>
+    
+    
     
 
-  
     
-  
+
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li></ul>
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/08/2018-03-08-Python作业01-变量和简单数据类型/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Guangzhi Ye">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Skyraker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/08/2018-03-08-Python作业01-变量和简单数据类型/" itemprop="url">Python作业01-变量和简单数据类型</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-08T20:33:00+08:00">
+                2018-03-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h1><p>Select from exercise 2-1 to 2-11. </p>
+<p>I will finish the code with comment about the requirement.</p>
+<h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><h2 id="2-3"><a href="#2-3" class="headerlink" title="2-3"></a>2-3</h2><pre><code># 2-3 个性化消息： 将用户的姓名存到一个变量中，
+# 并向该用户显示一条消息。显示的消息应非常简单，
+# 如“Hello Eric, would you like to learn some Python today?”。
+
+name = input()
+print(&quot;Hello &quot; + name + &quot;, would you like to learn some Python today?&quot;)
+</code></pre><p>result:</p>
+<pre><code>D:\pyproject\homework1\venv\Scripts\python.exe D:/pyproject/homework1/2_3.py
+Jobs
+Hello Jobs, would you like to learn some Python today?
+
+Process finished with exit code 0
+</code></pre><h2 id="2-4"><a href="#2-4" class="headerlink" title="2-4"></a>2-4</h2><pre><code># 2-4 调整名字的大小写： 将一个人名存储到一个变量中，
+# 再以小写、大写和首字母大写的方式显示这个人名。
+
+name = input()
+print(name.upper())
+print(name.lower())
+print(name.title())
+</code></pre><p>result:</p>
+<pre><code>D:\pyproject\homework1\venv\Scripts\python.exe D:/pyproject/homework1/2_4.py
+sKy raKeR
+SKY RAKER
+sky raker
+Sky Raker
+
+Process finished with exit code 0
+</code></pre><h2 id="2-7"><a href="#2-7" class="headerlink" title="2-7"></a>2-7</h2><pre><code># 2-7 剔除人名中的空白： 存储一个人名，
+# 并在其开头和末尾都包含一些空白字符。
+# 务必至少使用字符组合&quot;\t&quot; 和&quot;\n&quot; 各一次。
+# 打印这个人名，以显示其开头和末尾的空白。
+# 然后，分别使用剔除函数lstrip() 、rstrip()
+# 和strip() 对人名进行处理，并将结果打印出来。
+
+name = &quot;\n\tSky Raker\t\n\t&quot;
+print(&quot;-------------&quot;)
+print(name)
+print(&quot;-------------&quot;)
+print(name.lstrip())
+print(&quot;-------------&quot;)
+print(name.rstrip())
+print(&quot;-------------&quot;)
+print(name.strip())
+print(&quot;-------------&quot;)
+</code></pre><p>result:</p>
+<pre><code>D:\pyproject\homework1\venv\Scripts\python.exe D:/pyproject/homework1/2_7.py
+-------------
+
+    Sky Raker    
+
+-------------
+Sky Raker    
+
+-------------
+
+    Sky Raker
+-------------
+Sky Raker
+-------------
+
+Process finished with exit code 0
+</code></pre><h2 id="2-8"><a href="#2-8" class="headerlink" title="2-8"></a>2-8</h2><pre><code># 2-8 数字8： 编写4个表达式，它们分别使用
+# 加法、减法、乘法和除法运算，但结果都是数字8。
+# 为使用print 语句来显示结果，务必将这些表达式用括号括起来，
+
+print(3+5)
+print(10-2)
+print(2*4)
+print(1000/125)
+</code></pre><p>result:</p>
+<pre><code>D:\pyproject\homework1\venv\Scripts\python.exe D:/pyproject/homework1/2_8.py
+8
+8
+8
+8.0
+
+Process finished with exit code 0
+</code></pre><h2 id="2-11"><a href="#2-11" class="headerlink" title="2-11"></a>2-11</h2><pre><code># 2-11 Python之禅： 在Python终端会话中执行命令import this ，
+# 并粗略地浏览一下其他的指导原则。
+
+import this
+</code></pre><p>result:</p>
+<pre><code>D:\pyproject\homework1\venv\Scripts\python.exe D:/pyproject/homework1/2_11.py
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren&apos;t special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you&apos;re Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it&apos;s a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let&apos;s do more of those!
+
+Process finished with exit code 0
+</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/06/2018-03-06-Hello-Python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Guangzhi Ye">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Skyraker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/06/2018-03-06-Hello-Python/" itemprop="url">Hello Python</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-06T23:16:00+08:00">
+                2018-03-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Python-的优点"><a href="#Python-的优点" class="headerlink" title="Python 的优点"></a>Python 的优点</h1><p>作为一个流行的解释型语言，python具有以下优点：</p>
+<ul>
+<li>拥有许多强大的库，以支持python在各个领域的使用，也是许多人开始学习python的原因,例如：<ul>
+<li>Web框架方面的<code>Django</code>等</li>
+<li>科学计算方面的<code>NumPy</code>和<code>SciPy</code>等</li>
+<li>用于解析HTML等的<code>BeautifulSoup</code></li>
+<li>用于图像处理的<code>PIL</code>以及支持python3的<code>Pillow</code></li>
+<li>用于多媒体、游戏开发的<code>PyGame</code></li>
+<li>机器学习的<code>scikit-learn</code></li>
+<li>…</li>
+</ul>
+</li>
+<li>对初学者友好的学习曲线</li>
+<li>…</li>
+</ul>
+<h1 id="Python-的使用"><a href="#Python-的使用" class="headerlink" title="Python 的使用"></a>Python 的使用</h1><p>若仅仅进行少量的代码编写，可以使用文本编辑器写python代码再放到解释器下运行。若要进行更多的开发，可以用IDE，例如<code>PyCharm</code>、<code>Eclipse&#39;s PyDev</code>或轻量级的<code>Geany</code><br>。我目前使用的是PyCharm。</p>
+<h1 id="Python-官网探索"><a href="#Python-官网探索" class="headerlink" title="Python 官网探索"></a>Python 官网探索</h1><p>在学习python之初，我们来看一下它官网的内容：<a href="https://www.python.org/" target="_blank" rel="noopener">Python</a></p>
+<p><img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/hello-python-1.png" alt="官网首页"></p>
+<pre><code>1. 社区：可以进行讨论交流、参与会议、参与活动等等；
+2. 初学引导：初学者入门的手册、指南、帮助等；
+3. 下载：python的相关下载、环境配置；
+4. 帮助文档：在学习时要多参考帮助文档，里面有针对初学、进阶等各个阶段的帮助；
+5. 最新关于python的新闻；
+6. 即将到来的活动；
+7. python的应用领域以及相关库；
+</code></pre><p>网页上还有其它的类似成功故事、新闻、加入团队等链接就不一一赘述了。</p>
+<h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><ol>
+<li>掌握python编程思想和基本语法，对常用库有一定的了解；</li>
+<li>能够在日常生活中应用python脚本解决一些重复性的、机械的问题；</li>
+<li>用python写爬虫，并学会用python进行数据处理；</li>
+<li>希望能够利用python去学习一些机器学习的内容。</li>
+</ol>
+<p>在python中输入<code>import this</code>，会出现一首诗<em>Zen of Python</em>:</p>
+<pre><code>The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren&apos;t special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you&apos;re Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it&apos;s a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let&apos;s do more of those!
+</code></pre><p><strong>与各位共勉！</strong></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/06/2018-03-06-Hello-Blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Guangzhi Ye">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Skyraker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/06/2018-03-06-Hello-Blog/" itemprop="url">Hello Blog</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-06T13:16:00+08:00">
+                2018-03-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/others/" itemprop="url" rel="index">
+                    <span itemprop="name">others</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Hello-Blog"><a href="#Hello-Blog" class="headerlink" title="Hello Blog"></a>Hello Blog</h1><p>在很久之前就有搭一个自己的博客的想法，但是一直缺乏行动，同样的，一直想开始使用GitHub也没有静下心来研究一下。正巧《高级编程技术》的老师要求把作业项目提交<br>到博客上，借着这次机会尝试使用<code>GitHub Pages</code>进行个人博客的搭建，尝试过<code>hexo</code>和<code>jekyll</code>都没有成功，只能clone<a href="https://yanb25.github.io/" target="_blank" rel="noopener">YanB大佬</a>的博客，<br>再参照所使用的<code>NexT</code>模板进行修改。另外，大佬还推荐了一个在线编辑<code>GitHub Pages</code>上博客的在线编辑平台<a href="https://prose.io" target="_blank" rel="noopener">prose</a>，可以在线修改编辑博客并上传。<br>很感谢大佬的教学！</p>
+<h1 id="博客内容"><a href="#博客内容" class="headerlink" title="博客内容"></a>博客内容</h1><p>这个博客将会分享一些在学习过程中的心得、参与的项目以及其它的一些想分享的东西。未来或许会尝试用英文写作。希望能养成写博客的习惯，及时总结。</p>
+<h1 id="需要改进的地方"><a href="#需要改进的地方" class="headerlink" title="需要改进的地方"></a>需要改进的地方</h1><ul>
+<li>markdown的代码高亮配置。</li>
+<li>虽然借助别人已经生成的模板也搭建出来了现在的这个博客，但依旧希望能够学会用<code>jekyll</code>并用来进行进一步的个性化调整。</li>
+<li>挖掘博客的一些有趣的应用。</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
     </div>
   </div>
 
-
-  
+  <aside id="sidebar" class="sidebar">
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2018/03/10/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+    <div class="sidebar-inner">
 
-  
-</aside>
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Guangzhi Ye</p>
+              <p class="site-description motion-element" itemprop="description">Do not give up thinking.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
         
       </div>
-      <footer id="footer">
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Guangzhi Ye</span>
+
   
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2018 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-
+    
 
   </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
