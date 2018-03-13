@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-10T06:25:18.272Z</updated>
+  <updated>2018-03-13T02:30:57.103Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>Hello blog again</title>
-    <link href="http://yoursite.com/2018/03/10/hello-blog-again/"/>
-    <id>http://yoursite.com/2018/03/10/hello-blog-again/</id>
-    <published>2018-03-10T04:47:00.000Z</published>
-    <updated>2018-03-10T06:25:18.272Z</updated>
+    <link href="http://yoursite.com/2018/03/11/hello-blog-again/"/>
+    <id>http://yoursite.com/2018/03/11/hello-blog-again/</id>
+    <published>2018-03-11T04:47:00.000Z</published>
+    <updated>2018-03-13T02:30:57.103Z</updated>
     
     <summary type="html">
     
@@ -29,14 +29,14 @@
       
         
         
-          &lt;p&gt;wow&lt;/p&gt;
-
+          &lt;p&gt;之前的博客是直接克隆自他人的博客代码再进行修改，不太好意思。而且不自己从开始建的话，很多配置用不了、不知道如何更改，因此趁周末闲暇&lt;br&gt;从新用hexo建站并上传至GitHub Pages，并配置好了主题等，特地记录一下踩过的、好的文章和添加的功能。&lt;/p&gt;
+&lt;h1
         
       
     
     </summary>
     
-      <category term="OS" scheme="http://yoursite.com/categories/OS/"/>
+      <category term="others" scheme="http://yoursite.com/categories/others/"/>
     
     
   </entry>
