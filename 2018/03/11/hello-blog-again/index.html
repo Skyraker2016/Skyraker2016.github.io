@@ -89,7 +89,7 @@
 <meta property="og:description" content="之前的博客是直接克隆自他人的博客代码再进行修改，不太好意思。而且不自己从开始建的话，很多配置用不了、不知道如何更改，因此趁周末闲暇从新用hexo建站并上传至GitHub Pages，并配置好了主题等，特地记录一下踩过的、好的文章和添加的功能。 搭建过程及相关教程下载hexo在桌面右键选择Git Bash here，并输入 npm install -g hexo-cli 等待安装，找个网络比较好的地">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/hello-blog-again-1.png">
-<meta property="og:updated_time" content="2018-03-13T02:30:57.103Z">
+<meta property="og:updated_time" content="2018-03-13T02:40:33.361Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello blog again">
 <meta name="twitter:description" content="之前的博客是直接克隆自他人的博客代码再进行修改，不太好意思。而且不自己从开始建的话，很多配置用不了、不知道如何更改，因此趁周末闲暇从新用hexo建站并上传至GitHub Pages，并配置好了主题等，特地记录一下踩过的、好的文章和添加的功能。 搭建过程及相关教程下载hexo在桌面右键选择Git Bash here，并输入 npm install -g hexo-cli 等待安装，找个网络比较好的地">
@@ -399,26 +399,21 @@
 <p>具体的使用方法：打开<code>.md</code>文件进行编辑，按<code>Ctrl+k</code>再按<code>v</code>即可打开预览窗口，效果如下：</p>
 <p><img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/hello-blog-again-1.png" alt="vscode编辑预览markdown"></p>
 <h2 id="使用Gitment添加评论"><a href="#使用Gitment添加评论" class="headerlink" title="使用Gitment添加评论"></a>使用Gitment添加评论</h2><ol>
-<li>NexT预置Gitment：</li>
-</ol>
-<p>一开始使用Gitment添加时找到的是过去版本的教程，需要修改代码，但是在修改的过程中突然发现原本的文件已经包含了Gitment模块，这才知道NexT的新版本已经预置了Gitment，配置方法<a href="https://ryanluoxu.github.io/2017/11/27/Hexo-Next-%E6%B7%BB%E5%8A%A0-Gitment-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" target="_blank" rel="noopener">参考自这里</a>。</p>
-<ol>
-<li><p>关于<code>Error: Not Found</code>:</p>
-<p>配置时要注意仓库名称要是该仓库本名，而非SSH或HTTPS，例如我的就是<code>Skyraker.github.io</code>。</p>
+<li><p>NexT预置Gitment：<br> 一开始使用Gitment添加时找到的是过去版本的教程，需要修改代码，但是在修改的过程中突然发现原本的文件已经包含了Gitment模块，这才知道NexT的新版本已经预置了Gitment，配置方法<a href="https://ryanluoxu.github.io/2017/11/27/Hexo-Next-%E6%B7%BB%E5%8A%A0-Gitment-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" target="_blank" rel="noopener">参考自这里</a>。</p>
 </li>
-<li><p>关于<code>Error：validation failed</code>: </p>
+<li><p>关于<code>Error: Not Found</code>:<br> 配置时要注意仓库名称要是该仓库本名，而非SSH或HTTPS，例如我的就是<code>Skyraker.github.io</code>。</p>
 </li>
-</ol>
-<p>Gitment的原理就是在关联你的项目，每一个页面下的评论对应一个issue，并给那个issue建立标签<code>gitment</code>和<code>id</code>，其中id是Gitment唯一确定评论显示于哪个位置的特征。而出现<code>Error：validation failed</code>是因为<code>id</code>超出了issue的50个字符的限制。这个id是怎么来的呢？</p>
-<p>在相应的主题中搜索<code>Gitment</code>即可定位至<code>gitment.swig</code>，打开找到<code>id</code>可以看到：</p>
+<li><p>关于<code>Error：validation failed</code>:<br> Gitment的原理就是在关联你的项目，每一个页面下的评论对应一个issue，并给那个issue建立标签<code>gitment</code>和<code>id</code>，其中id是Gitment唯一确定评论显示于哪个位置的特征。而出现<code>Error：validation failed</code>是因为<code>id</code>超出了issue的50个字符的限制。这个id是怎么来的呢？</p>
+<p> 在相应的主题中搜索<code>Gitment</code>即可定位至<code>gitment.swig</code>，打开找到<code>id</code>可以看到：</p>
 <pre><code>id: window.location.pathname, 
-</code></pre><p>即当前id为这个页面在本站中的路径。当文章title为中文时，转码会导致id过长。我们可以改路径名（即<code>permlink</code>）,具体详见<a href="http://www.xjdesyxx.top/2018/02/07/errsln/" target="_blank" rel="noopener">这里</a>，或者改id为</p>
+</code></pre><p> 即当前id为这个页面在本站中的路径。当文章title为中文时，转码会导致id过长。我们可以改路径名（即<code>permlink</code>）,具体详见<a href="http://www.xjdesyxx.top/2018/02/07/errsln/" target="_blank" rel="noopener">这里</a>，或者改id为</p>
 <pre><code>id: &apos;{{ page.date }}&apos;
-</code></pre><p>或</p>
+</code></pre><p> 或</p>
 <pre><code>id: &apos;{{ page.title }}&apos;
-</code></pre><p>以缩短id，但注意这两个数据必须是唯一的，不能重复，否则评论会在多个页面共享；</p>
-<ol>
-<li>初始化本页页面后，可能没那么快加载出来，不要重复初始化，否则会出现两个相同的issue</li>
+</code></pre><p> 以缩短id，但注意这两个数据必须是唯一的，不能重复，否则评论会在多个页面共享；</p>
+</li>
+<li><p>初始化本页页面后，可能没那么快加载出来，不要重复初始化，否则会出现两个相同的issue</p>
+</li>
 </ol>
 <h2 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h2><p>在<code>站点配置文件</code>中，修改配置：</p>
 <pre><code>highlight:
