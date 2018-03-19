@@ -73,8 +73,6 @@
 
 
 
-  
-
 
   <link rel="alternate" href="/atom.xml" title="Skyraker's" type="application/atom+xml" />
 
@@ -83,17 +81,20 @@
 
 
 
-<meta name="description" content="title: tagdate: 2018-3-10 17:51:04 type: “tags”">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Skyraker&#39;s">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta name="description" content="在学习操作系统时需要用虚拟机进行实验，Bochs虚拟机即是免费的又能够在里面进行调试，因此现在改用Bohcs虚拟机。以下记录了安装和配置的过程(仅在windows下)。 下载安装Bochs可以在此处进行下载： 下载完成后运行安装，建议安装到不需要管理员权限的位置。 配置虚拟机参考自，在bochs根目录下新建一个文件bochsrc，内容为：1234567891011121314megs:32romi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bochs虚拟机安装及使用">
+<meta property="og:url" content="http://yoursite.com/2018/03/19/Bochs虚拟机安装及使用/index.html">
 <meta property="og:site_name" content="Skyraker&#39;s">
-<meta property="og:description" content="title: tagdate: 2018-3-10 17:51:04 type: “tags”">
+<meta property="og:description" content="在学习操作系统时需要用虚拟机进行实验，Bochs虚拟机即是免费的又能够在里面进行调试，因此现在改用Bohcs虚拟机。以下记录了安装和配置的过程(仅在windows下)。 下载安装Bochs可以在此处进行下载： 下载完成后运行安装，建议安装到不需要管理员权限的位置。 配置虚拟机参考自，在bochs根目录下新建一个文件bochsrc，内容为：1234567891011121314megs:32romi">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-03-10T09:54:28.436Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/bochs-1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/bochs-2.png">
+<meta property="og:updated_time" content="2018-03-19T14:59:31.639Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Skyraker&#39;s">
-<meta name="twitter:description" content="title: tagdate: 2018-3-10 17:51:04 type: “tags”">
+<meta name="twitter:title" content="Bochs虚拟机安装及使用">
+<meta name="twitter:description" content="在学习操作系统时需要用虚拟机进行实验，Bochs虚拟机即是免费的又能够在里面进行调试，因此现在改用Bohcs虚拟机。以下记录了安装和配置的过程(仅在windows下)。 下载安装Bochs可以在此处进行下载： 下载完成后运行安装，建议安装到不需要管理员权限的位置。 配置虚拟机参考自，在bochs根目录下新建一个文件bochsrc，内容为：1234567891011121314megs:32romi">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/bochs-1.png">
 
 
 
@@ -123,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/19/Bochs虚拟机安装及使用/"/>
 
 
 
 
 
-  <title> | Skyraker's</title>
+  <title>Bochs虚拟机安装及使用 | Skyraker's</title>
   
 
 
@@ -258,34 +259,202 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/19/Bochs虚拟机安装及使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Guangzhi Ye">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/headpic.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Skyraker's">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline"></h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p>title: tag<br>date: 2018-3-10 17:51:04</p>
-<h2 id="type-“tags”"><a href="#type-“tags”" class="headerlink" title="type: “tags”"></a>type: “tags”</h2>
+          <h1 class="post-title" itemprop="name headline">Bochs虚拟机安装及使用</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-19T13:09:57+08:00">
+                2018-03-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OS/" itemprop="url" rel="index">
+                    <span itemprop="name">OS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/03/19/Bochs虚拟机安装及使用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/03/19/Bochs虚拟机安装及使用/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/03/19/Bochs虚拟机安装及使用/" class="leancloud_visitors" data-flag-title="Bochs虚拟机安装及使用">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>在学习操作系统时需要用虚拟机进行实验，Bochs虚拟机即是免费的又能够在里面进行调试，因此现在改用Bohcs虚拟机。以下记录了安装和配置的过程(仅在windows下)。</p>
+<h1 id="下载安装Bochs"><a href="#下载安装Bochs" class="headerlink" title="下载安装Bochs"></a>下载安装Bochs</h1><p>可以在<a href="https://sourceforge.net/projects/bochs/files/bochs/" target="_blank" rel="noopener">此处</a>进行下载：</p>
+<p><img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/bochs-1.png" alt="下载"><br>下载完成后运行安装，建议安装到不需要管理员权限的位置。</p>
+<h1 id="配置虚拟机"><a href="#配置虚拟机" class="headerlink" title="配置虚拟机"></a>配置虚拟机</h1><p><a href="https://www.jianshu.com/p/4ede2d1e467c" target="_blank" rel="noopener">参考自</a>，在bochs根目录下新建一个文件<code>bochsrc</code>，内容为：<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">megs:32</span><br><span class="line"></span><br><span class="line">romimage:<span class="attribute">file</span>=<span class="variable">$BXSHARE</span>/BIOS-bochs-latest</span><br><span class="line">vgaromimage:<span class="attribute">file</span>=<span class="variable">$BXSHARE</span>/VGABIOS-lgpl-latest</span><br><span class="line"></span><br><span class="line">floppya:<span class="attribute">1_44</span>=a.img,status=inserted</span><br><span class="line"></span><br><span class="line">boot:floppy</span><br><span class="line"></span><br><span class="line">log:bochsout.txt</span><br><span class="line"></span><br><span class="line">mouse:<span class="attribute">enabled</span>=0</span><br><span class="line"></span><br><span class="line">keyboard: <span class="attribute">keymap</span>=<span class="variable">$BXSHARE</span>/keymaps/x11-pc-de.map</span><br></pre></td></tr></table></figure></p>
+<p>其中，floppya为A盘的软盘映像，若需要使用B盘，可以加上一行floppyb的配置。</p>
+<h1 id="创建虚拟软盘"><a href="#创建虚拟软盘" class="headerlink" title="创建虚拟软盘"></a>创建虚拟软盘</h1><p>运行<code>bximage</code>，进行软盘创建：</p>
+<p><img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/bochs-2.png" alt="bximage"></p>
+<p>可以看到这个默认的<code>a.img</code>就是上一步中的a盘，我们将二进制文件复制进去运行。</p>
+<h1 id="运行虚拟机"><a href="#运行虚拟机" class="headerlink" title="运行虚拟机"></a>运行虚拟机</h1><p>在Bochs的根目录下，按<code>shift+右键</code>打开power shell窗口，输入<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\bochs<span class="selector-class">.exe</span> -qf bochsrc</span><br></pre></td></tr></table></figure></p>
+<p>运行刚刚配置好的虚拟机（注意，此时<code>a.img</code>中的首扇区必须有正确格式的引导程序，否则会报错）</p>
+<h1 id="使用dd进行文件合并"><a href="#使用dd进行文件合并" class="headerlink" title="使用dd进行文件合并"></a>使用dd进行文件合并</h1><p>在修改软盘时，每次都要用<code>WinHex</code>进行手动修改实在是太麻烦了，Linux上有dd进行文件合并、分割，万幸，在Windows下也有<code>dd for Windows</code>可以帮助我们进行文件合并与分割，下载链接在<a href="https://sourceforge.net/projects/windd/" target="_blank" rel="noopener">这里</a></p>
+<p>使用时，可以用以下语句：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">dd</span> <span class="keyword">if</span>=<span class="number">3</span>_2_0<span class="selector-class">.bin</span> of=<span class="selector-tag">a</span><span class="selector-class">.img</span> bs=<span class="number">512</span> count=<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>if：输入文件</li>
+<li>of：输出文件</li>
+<li>bs：每一块的默认大小（512字节）</li>
+<li>skip：在输出时，跳过of的块数量</li>
+<li>seek：在复制时，跳过if的块数量</li>
+<li>count：复制的块的数量</li>
+<li>conv：输出时文件格式，其中conv=notrunc为不截断输出文件</li>
+<li>还有其它参数及conv的其它值可进行选择，这里只举出常用的不一一列举。</li>
+</ul>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/19/python作业03-条件语句/" rel="next" title="python作业03-条件语句">
+                <i class="fa fa-chevron-left"></i> python作业03-条件语句
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -423,7 +592,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#type-“tags”"><span class="nav-number">1.</span> <span class="nav-text">type: “tags”</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#下载安装Bochs"><span class="nav-number">1.</span> <span class="nav-text">下载安装Bochs</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置虚拟机"><span class="nav-number">2.</span> <span class="nav-text">配置虚拟机</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建虚拟软盘"><span class="nav-number">3.</span> <span class="nav-text">创建虚拟软盘</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运行虚拟机"><span class="nav-number">4.</span> <span class="nav-text">运行虚拟机</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用dd进行文件合并"><span class="nav-number">5.</span> <span class="nav-text">使用dd进行文件合并</span></a></li></ol></div>
             
 
           </div>
@@ -632,7 +801,7 @@
       <script type="text/javascript">
       function renderGitment(){
         var gitment = new Gitmint({
-            id: '1520675668437', 
+            id: '1521436197000', 
             owner: 'Skyraker2016',
             repo: 'Skyraker2016.github.io',
             
