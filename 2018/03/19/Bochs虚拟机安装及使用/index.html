@@ -90,7 +90,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/bochs-1.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/bochs-2.png">
-<meta property="og:updated_time" content="2018-03-19T14:59:31.639Z">
+<meta property="og:updated_time" content="2018-03-24T08:09:54.782Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Bochs虚拟机安装及使用">
 <meta name="twitter:description" content="在学习操作系统时需要用虚拟机进行实验，Bochs虚拟机即是免费的又能够在里面进行调试，因此现在改用Bohcs虚拟机。以下记录了安装和配置的过程(仅在windows下)。 下载安装Bochs可以在此处进行下载： 下载完成后运行安装，建议安装到不需要管理员权限的位置。 配置虚拟机参考自，在bochs根目录下新建一个文件bochsrc，内容为：1234567891011121314megs:32romi">
@@ -391,7 +391,7 @@
 <p>可以看到这个默认的<code>a.img</code>就是上一步中的a盘，我们将二进制文件复制进去运行。</p>
 <h1 id="运行虚拟机"><a href="#运行虚拟机" class="headerlink" title="运行虚拟机"></a>运行虚拟机</h1><p>在Bochs的根目录下，按<code>shift+右键</code>打开power shell窗口，输入<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\bochs<span class="selector-class">.exe</span> -qf bochsrc</span><br></pre></td></tr></table></figure></p>
 <p>运行刚刚配置好的虚拟机（注意，此时<code>a.img</code>中的首扇区必须有正确格式的引导程序，否则会报错）</p>
-<h1 id="使用dd进行文件合并"><a href="#使用dd进行文件合并" class="headerlink" title="使用dd进行文件合并"></a>使用dd进行文件合并</h1><p>在修改软盘时，每次都要用<code>WinHex</code>进行手动修改实在是太麻烦了，Linux上有dd进行文件合并、分割，万幸，在Windows下也有<code>dd for Windows</code>可以帮助我们进行文件合并与分割，下载链接在<a href="https://sourceforge.net/projects/windd/" target="_blank" rel="noopener">这里</a></p>
+<h1 id="使用dd进行文件合并"><a href="#使用dd进行文件合并" class="headerlink" title="使用dd进行文件合并"></a>使用dd进行文件合并</h1><p>在修改软盘时，每次都要用<code>WinHex</code>进行手动修改实在是太麻烦了，Linux上有dd进行文件合并、分割，万幸，在Windows下也有<code>dd for Windows</code>可以帮助我们进行文件合并与分割，下载链接在<a href="http://www.chrysocome.net/downloads/dd-0.5.zip" target="_blank" rel="noopener">这里</a>(已修改)</p>
 <p>使用时，可以用以下语句：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">dd</span> <span class="keyword">if</span>=<span class="number">3</span>_2_0<span class="selector-class">.bin</span> of=<span class="selector-tag">a</span><span class="selector-class">.img</span> bs=<span class="number">512</span> count=<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
 <ul>
 <li>if：输入文件</li>
