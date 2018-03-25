@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Skyraker's" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="Description (if)Select from exercise 5-1 to 5-13 Code (if)5-31234567891011# 5-3 外星人颜色#1 ：假设在游戏中刚射杀了一个外星人，请创建一个名为alien_color 的变量，# 并将其设置为&apos;green&apos; 、&apos;yellow&apos; 或&apos;red&apos; 。# 编写一条if 语句，检查外星人是否是绿色的；如果是，就打印一条消息，指出">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python作业03-条件语句&amp;字典">
+<meta property="og:url" content="http://yoursite.com/2018/03/19/python作业03-条件语句&字典/index.html">
+<meta property="og:site_name" content="Skyraker&#39;s">
+<meta property="og:description" content="Description (if)Select from exercise 5-1 to 5-13 Code (if)5-31234567891011# 5-3 外星人颜色#1 ：假设在游戏中刚射杀了一个外星人，请创建一个名为alien_color 的变量，# 并将其设置为&apos;green&apos; 、&apos;yellow&apos; 或&apos;red&apos; 。# 编写一条if 语句，检查外星人是否是绿色的；如果是，就打印一条消息，指出">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-03-25T15:53:50.305Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python作业03-条件语句&amp;字典">
+<meta name="twitter:description" content="Description (if)Select from exercise 5-1 to 5-13 Code (if)5-31234567891011# 5-3 外星人颜色#1 ：假设在游戏中刚射杀了一个外星人，请创建一个名为alien_color 的变量，# 并将其设置为&apos;green&apos; 、&apos;yellow&apos; 或&apos;red&apos; 。# 编写一条if 语句，检查外星人是否是绿色的；如果是，就打印一条消息，指出">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/03/19/python作业03-条件语句&字典/"/>
+
+
+
+
+
+  <title>python作业03-条件语句&字典 | Skyraker's</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Skyraker's</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/19/python作业03-条件语句&字典/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Guangzhi Ye">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/headpic.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Skyraker's">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">python作业03-条件语句&字典</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-19T12:44:52+08:00">
+                2018-03-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/03/19/python作业03-条件语句&字典/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/03/19/python作业03-条件语句&字典/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/03/19/python作业03-条件语句&字典/" class="leancloud_visitors" data-flag-title="python作业03-条件语句&字典">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Description-if"><a href="#Description-if" class="headerlink" title="Description (if)"></a>Description (if)</h1><p>Select from exercise 5-1 to 5-13</p>
+<h1 id="Code-if"><a href="#Code-if" class="headerlink" title="Code (if)"></a>Code (if)</h1><h2 id="5-3"><a href="#5-3" class="headerlink" title="5-3"></a>5-3</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 5-3 外星人颜色#1 ：假设在游戏中刚射杀了一个外星人，请创建一个名为alien_color 的变量，</span></span><br><span class="line"><span class="comment"># 并将其设置为'green' 、'yellow' 或'red' 。</span></span><br><span class="line"><span class="comment"># 编写一条if 语句，检查外星人是否是绿色的；如果是，就打印一条消息，指出玩家获得了5个点。</span></span><br><span class="line"><span class="comment"># 编写这个程序的两个版本，在一个版本中上述测试通过了，而在另一个版本中未通过（未通过测试时没有输出）。</span></span><br><span class="line"></span><br><span class="line">alien_color = <span class="string">"green"</span></span><br><span class="line"><span class="keyword">if</span> alien_color == <span class="string">"green"</span>:</span><br><span class="line">    print(<span class="string">"Get 5 points!"</span>)</span><br><span class="line">alien_color = <span class="string">"yellow"</span></span><br><span class="line"><span class="keyword">if</span> alien_color == <span class="string">"green"</span>:</span><br><span class="line">    print(<span class="string">"Get 5 points!"</span>)</span><br></pre></td></tr></table></figure>
+<p>result:<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="builtin-name">Get</span> 5 points!</span><br></pre></td></tr></table></figure></p>
+<h2 id="5-6"><a href="#5-6" class="headerlink" title="5-6"></a>5-6</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 5-6 人生的不同阶段 ：设置变量age 的值，再编写一个if-elif-else 结构，根据age 的值判断处于人生的哪个阶段。</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">howold</span><span class="params">(age)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> age&lt;<span class="number">2</span>:</span><br><span class="line">        print(<span class="string">"a baby"</span>)<span class="comment"># 如果一个人的年龄小于2岁，就打印一条消息，指出他是婴儿。</span></span><br><span class="line">    <span class="keyword">elif</span> age&lt;<span class="number">4</span>:</span><br><span class="line">        print(<span class="string">"learning how to walk"</span>)<span class="comment"># 如果一个人的年龄为2（含）～4岁，就打印一条消息，指出他正蹒跚学步。</span></span><br><span class="line">    <span class="keyword">elif</span> age&lt;<span class="number">13</span>:</span><br><span class="line">        print(<span class="string">"a child"</span>)<span class="comment"># 如果一个人的年龄为4（含）～13岁，就打印一条消息，指出他是儿童。</span></span><br><span class="line">    <span class="keyword">elif</span> age&lt;<span class="number">20</span>:</span><br><span class="line">        print(<span class="string">"a teenage"</span>)<span class="comment"># 如果一个人的年龄为13（含）～20岁，就打印一条消息，指出他是青少年。</span></span><br><span class="line">    <span class="keyword">elif</span> age&lt;<span class="number">65</span>:</span><br><span class="line">        print(<span class="string">"an adult"</span>)<span class="comment"># 如果一个人的年龄为20（含）～65岁，就打印一条消息，指出他是成年人。</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">"the old"</span>)<span class="comment"># 如果一个人的年龄超过65（含）岁，就打印一条消息，指出他是老年人。</span></span><br><span class="line">howold(<span class="number">1</span>)</span><br><span class="line">howold(<span class="number">3</span>)</span><br><span class="line">howold(<span class="number">5</span>)</span><br><span class="line">howold(<span class="number">18</span>)</span><br><span class="line">howold(<span class="number">24</span>)</span><br><span class="line">howold(<span class="number">90</span>)</span><br></pre></td></tr></table></figure>
+<p>result:<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">a</span> baby</span><br><span class="line">learning how <span class="built_in">to</span> walk</span><br><span class="line"><span class="keyword">a</span> child</span><br><span class="line"><span class="keyword">a</span> teenage</span><br><span class="line"><span class="keyword">an</span> adult</span><br><span class="line"><span class="keyword">the</span> old</span><br></pre></td></tr></table></figure></p>
+<h2 id="5-8"><a href="#5-8" class="headerlink" title="5-8"></a>5-8</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 5-8 以特殊方式跟管理员打招呼 ：创建一个至少包含5个用户名的列表，且其中一个用户名为'admin' 。</span></span><br><span class="line"><span class="comment"># 想象你要编写代码，在每位用户登录网站后都打印一条问</span></span><br><span class="line"><span class="comment"># 候消息。遍历用户名列表，并向每位用户打印一条问候消息。</span></span><br><span class="line"><span class="comment"># 如果用户名为'admin' ，就打印一条特殊的问候消息，如“Hello admin, would you like to see a status report?”。</span></span><br><span class="line"><span class="comment"># 否则，打印一条普通的问候消息，如“Hello Eric, thank you for logging in again”。</span></span><br><span class="line">users = [<span class="string">"Eric"</span>, <span class="string">"Kris"</span>, <span class="string">"Smith"</span>, <span class="string">"admin"</span>, <span class="string">"Harry"</span>]</span><br><span class="line"><span class="keyword">for</span> user <span class="keyword">in</span> users:</span><br><span class="line">    <span class="keyword">if</span> user == <span class="string">"admin"</span>:</span><br><span class="line">        print(<span class="string">"Hello admin, would you like to see a status report?"</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">"Hello "</span>+user+<span class="string">", thank you for logging in again!"</span>)</span><br></pre></td></tr></table></figure>
+<p>result:<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Hello Eric, thank you <span class="keyword">for</span><span class="built_in"> logging </span><span class="keyword">in</span> again!</span><br><span class="line">Hello Kris, thank you <span class="keyword">for</span><span class="built_in"> logging </span><span class="keyword">in</span> again!</span><br><span class="line">Hello Smith, thank you <span class="keyword">for</span><span class="built_in"> logging </span><span class="keyword">in</span> again!</span><br><span class="line">Hello admin, would you like <span class="keyword">to</span> see a status report?</span><br><span class="line">Hello Harry, thank you <span class="keyword">for</span><span class="built_in"> logging </span><span class="keyword">in</span> again!</span><br></pre></td></tr></table></figure></p>
+<h2 id="5-9"><a href="#5-9" class="headerlink" title="5-9"></a>5-9</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 5-9 处理没有用户的情形 ：在为完成练习5-8编写的程序中，添加一条if 语句，检查用户名列表是否为空。</span></span><br><span class="line"><span class="comment"># 如果为空，就打印消息“We need to find some users!”。</span></span><br><span class="line"><span class="comment"># 删除列表中的所有用户名，确定将打印正确的消息</span></span><br><span class="line">users = []</span><br><span class="line"><span class="keyword">if</span> users:</span><br><span class="line">    <span class="keyword">for</span> user <span class="keyword">in</span> users:</span><br><span class="line">        <span class="keyword">if</span> user == <span class="string">"admin"</span>:</span><br><span class="line">            print(<span class="string">"Hello admin, would you like to see a status report?"</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(<span class="string">"Hello "</span> + user + <span class="string">", thank you for logging in again!"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">"We need to find some users!"</span>)</span><br></pre></td></tr></table></figure>
+<p>result:<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">We need <span class="keyword">to</span> <span class="builtin-name">find</span> some users!</span><br></pre></td></tr></table></figure></p>
+<h2 id="5-11"><a href="#5-11" class="headerlink" title="5-11"></a>5-11</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 5-11 序数 ：序数表示位置，如1st和2nd。大多数序数都以th结尾，只有1、2和3例外。</span></span><br><span class="line"><span class="comment"># 在一个列表中存储数字1~9。</span></span><br><span class="line"><span class="comment"># 遍历这个列表。</span></span><br><span class="line"><span class="comment"># 在循环中使用一个if-elif-else 结构，以打印每个数字对应的序数。输出内容应为1st 、2nd 、3rd 、4th 、5th 、</span></span><br><span class="line"><span class="comment"># 6th 、7th 、8th 和9th ，但每个序数都独占一行。</span></span><br><span class="line">numbers = range(<span class="number">1</span>, <span class="number">10</span>)</span><br><span class="line"><span class="keyword">for</span> number <span class="keyword">in</span> numbers:</span><br><span class="line">    <span class="keyword">if</span> number == <span class="number">1</span>:</span><br><span class="line">        print(<span class="string">'1st'</span>)</span><br><span class="line">    <span class="keyword">elif</span> number == <span class="number">2</span>:</span><br><span class="line">        print(<span class="string">'2nd'</span>)</span><br><span class="line">    <span class="keyword">elif</span> number == <span class="number">3</span>:</span><br><span class="line">        print(<span class="string">'3rd'</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(str(number)+<span class="string">'th'</span>)</span><br></pre></td></tr></table></figure>
+<p>result:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>st</span><br><span class="line"><span class="number">2</span>nd</span><br><span class="line"><span class="number">3</span>rd</span><br><span class="line"><span class="number">4</span>th</span><br><span class="line"><span class="number">5</span>th</span><br><span class="line"><span class="number">6</span>th</span><br><span class="line"><span class="number">7</span>th</span><br><span class="line"><span class="number">8</span>th</span><br><span class="line"><span class="number">9</span>th</span><br></pre></td></tr></table></figure></p>
+<h1 id="Description-dictionary"><a href="#Description-dictionary" class="headerlink" title="Description (dictionary)"></a>Description (dictionary)</h1><p>Select from exercise 6-1 to 5-13</p>
+<h1 id="Code-dictionary"><a href="#Code-dictionary" class="headerlink" title="Code (dictionary)"></a>Code (dictionary)</h1><h2 id="6-3"><a href="#6-3" class="headerlink" title="6-3"></a>6-3</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 6-3 词汇表 ：Python字典可用于模拟现实生活中的字典，但为避免混淆，我们将后者称为词汇表。</span></span><br><span class="line"><span class="comment"># 想出你在前面学过的5个编程词汇，将它们用作词汇表中的键，并将它们的含义作为值存储在词汇表中。</span></span><br><span class="line"><span class="comment"># 以整洁的方式打印每个词汇及其含义。为此，你可以先打印词汇，在它后面加上一个冒号，再打印词汇的含义；也可在一行打印词汇，</span></span><br><span class="line"><span class="comment"># 再使用换行符（\n ）插入一个空行，然后在下一行以缩进的方式打印词汇的含义。</span></span><br><span class="line"></span><br><span class="line">words = &#123;</span><br><span class="line">    <span class="string">'if'</span>: <span class="string">'if what happen then do something'</span>,</span><br><span class="line">    <span class="string">'while'</span>: <span class="string">'loop'</span>,</span><br><span class="line">    <span class="string">'or'</span>: <span class="string">'in bool, A happens or B happens are both fine'</span>,</span><br><span class="line">    <span class="string">'var'</span>: <span class="string">'record some number, string, dictionary etc'</span>,</span><br><span class="line">    <span class="string">'python'</span>: <span class="string">'easy to get star'</span></span><br><span class="line">&#125;</span><br><span class="line">print(<span class="string">'python: '</span>+words[<span class="string">'python'</span>]+<span class="string">'.'</span>)</span><br><span class="line">print(<span class="string">'if: '</span>+words[<span class="string">'if'</span>]+<span class="string">'.'</span>)</span><br></pre></td></tr></table></figure>
+<p>result:<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">python</span>: easy <span class="keyword">to</span> <span class="built_in">get</span> <span class="keyword">star</span>.</span><br><span class="line"><span class="keyword">if</span>: <span class="keyword">if</span> what happen then <span class="keyword">do</span> something.</span><br></pre></td></tr></table></figure></p>
+<h2 id="6-4"><a href="#6-4" class="headerlink" title="6-4"></a>6-4</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 6-4 词汇表2 ：既然你知道了如何遍历字典，现在请整理你为完成练习6-3而编写的代码，将其中的一系列print</span></span><br><span class="line"><span class="comment"># 语句替换为一个遍历字典中的键和值的循环。确定该循环正确无误后，再在词汇表中添加5个Python术语。</span></span><br><span class="line"><span class="comment"># 当你再次运行这个程序时，这些新术语及其含义将自动包含在输出中。</span></span><br><span class="line"></span><br><span class="line">words[<span class="string">'import'</span>] = <span class="string">'as include in c'</span></span><br><span class="line">words[<span class="string">'for'</span>] = <span class="string">'another loop'</span></span><br><span class="line">words[<span class="string">'and'</span>] = <span class="string">'only if A and B both true'</span></span><br><span class="line">words[<span class="string">'class'</span>] = <span class="string">'var define by coder'</span></span><br><span class="line">words[<span class="string">'print'</span>] = <span class="string">'to print string and begin a new line'</span></span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> words.keys():</span><br><span class="line">    print(key + <span class="string">': '</span>+words[key]+<span class="string">'.'</span>)</span><br></pre></td></tr></table></figure>
+<p>result:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">if: if what happen then <span class="keyword">do</span> something.</span><br><span class="line"><span class="keyword">while</span>: loop.</span><br><span class="line"><span class="keyword">or</span>: <span class="keyword">in</span> bool, A happens <span class="keyword">or</span> B happens <span class="keyword">are</span> <span class="keyword">both</span> fine.</span><br><span class="line"><span class="keyword">var</span>: <span class="built_in">record</span> <span class="keyword">some</span> <span class="built_in">number</span>, <span class="keyword">string</span>, dictionary etc.</span><br><span class="line">python: easy <span class="keyword">to</span> <span class="keyword">get</span> star.</span><br><span class="line"><span class="keyword">import</span>: <span class="keyword">as</span> <span class="keyword">include</span> <span class="keyword">in</span> c.</span><br><span class="line"><span class="keyword">for</span>: another loop.</span><br><span class="line"><span class="keyword">and</span>: <span class="keyword">only</span> <span class="keyword">if</span> A <span class="keyword">and</span> B <span class="keyword">both</span> true.</span><br><span class="line"><span class="keyword">class</span>: <span class="keyword">var</span> <span class="keyword">define</span> <span class="keyword">by</span> coder.</span><br><span class="line">print: <span class="keyword">to</span> print <span class="keyword">string</span> <span class="keyword">and</span> <span class="keyword">begin</span> a <span class="keyword">new</span> line.</span><br></pre></td></tr></table></figure></p>
+<h2 id="6-8"><a href="#6-8" class="headerlink" title="6-8"></a>6-8</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#6-8 宠物 ：创建多个字典，对于每个字典，都使用一个宠物的名称来给它命名；在每个字典中，</span></span><br><span class="line"><span class="comment"># 包含宠物的类型及其主人的名字。将这些字典存储在一个名为pets的列表中，再遍历该列表，并将宠物的所有信息都打印出来。</span></span><br><span class="line"></span><br><span class="line">pets = [&#123;<span class="string">"name"</span>: <span class="string">"Kingkong"</span>,</span><br><span class="line">         <span class="string">"type"</span>: <span class="string">"dog"</span>,</span><br><span class="line">         <span class="string">"master"</span>: <span class="string">"Tony"</span>&#125;,</span><br><span class="line">        &#123;<span class="string">"name"</span>: <span class="string">"Kitty"</span>,</span><br><span class="line">         <span class="string">"type"</span>: <span class="string">"cat"</span>,</span><br><span class="line">         <span class="string">"master"</span>: <span class="string">"Jessica"</span>&#125;,</span><br><span class="line">        &#123;<span class="string">"name"</span>: <span class="string">"Big Bird"</span>,</span><br><span class="line">         <span class="string">"type"</span>: <span class="string">"snake"</span>,</span><br><span class="line">         <span class="string">"master"</span>: <span class="string">"Jason"</span>&#125;,</span><br><span class="line">        &#123;<span class="string">"name"</span>: <span class="string">"Son"</span>,</span><br><span class="line">         <span class="string">"type"</span>: <span class="string">"kangaroo"</span>,</span><br><span class="line">         <span class="string">"master"</span>: <span class="string">"Micheal"</span>&#125;,</span><br><span class="line">        ]</span><br><span class="line"><span class="keyword">for</span> pet <span class="keyword">in</span> pets:</span><br><span class="line">    print(pet[<span class="string">"name"</span>]+<span class="string">" is a "</span>+pet[<span class="string">"type"</span>]+<span class="string">", it is "</span>+pet[<span class="string">"master"</span>]+<span class="string">"'s friend!"</span>)</span><br></pre></td></tr></table></figure>
+<p>result:<br><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Kingkong <span class="keyword">is</span> a dog, it <span class="keyword">is</span> Tony<span class="symbol">'s</span> friend!</span><br><span class="line">Kitty <span class="keyword">is</span> a cat, it <span class="keyword">is</span> Jessica<span class="symbol">'s</span> friend!</span><br><span class="line">Big Bird <span class="keyword">is</span> a snake, it <span class="keyword">is</span> Jason<span class="symbol">'s</span> friend!</span><br><span class="line">Son <span class="keyword">is</span> a kangaroo, it <span class="keyword">is</span> Micheal<span class="symbol">'s</span> friend!</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/13/Python作业02-列表/" rel="next" title="Python作业02-列表">
+                <i class="fa fa-chevron-left"></i> Python作业02-列表
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/19/Bochs虚拟机安装及使用/" rel="prev" title="Bochs虚拟机安装及使用">
+                Bochs虚拟机安装及使用 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/headpic.jpg"
+                alt="Guangzhi Ye" />
+            
+              <p class="site-author-name" itemprop="name">Guangzhi Ye</p>
+              <p class="site-description motion-element" itemprop="description">Do not give up thinking.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/skyraker2016" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:13925111409@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Description-if"><span class="nav-number">1.</span> <span class="nav-text">Description (if)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Code-if"><span class="nav-number">2.</span> <span class="nav-text">Code (if)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-3"><span class="nav-number">2.1.</span> <span class="nav-text">5-3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-6"><span class="nav-number">2.2.</span> <span class="nav-text">5-6</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-8"><span class="nav-number">2.3.</span> <span class="nav-text">5-8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-9"><span class="nav-number">2.4.</span> <span class="nav-text">5-9</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-11"><span class="nav-number">2.5.</span> <span class="nav-text">5-11</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Description-dictionary"><span class="nav-number">3.</span> <span class="nav-text">Description (dictionary)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Code-dictionary"><span class="nav-number">4.</span> <span class="nav-text">Code (dictionary)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3"><span class="nav-number">4.1.</span> <span class="nav-text">6-3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4"><span class="nav-number">4.2.</span> <span class="nav-text">6-4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-8"><span class="nav-number">4.3.</span> <span class="nav-text">6-8</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Guangzhi Ye</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: '1521434692000', 
+            owner: 'Skyraker2016',
+            repo: 'Skyraker2016.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: 'a7c00bb47631cde613d4a854e8c8bafbec0300a8',
+            
+                client_id: '7bcc46c3c8cd212e92bd'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("SYBzmNxAh5UvaWyWhl0RDGxO-gzGzoHsz", "2zUJgYwjJIQHC6zyRys1lmoX");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
