@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-26T14:49:34.017Z</updated>
+  <updated>2018-03-29T12:41:20.390Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python作业04-输入&amp;函数</title>
+    <link href="http://yoursite.com/2018/03/29/python%E4%BD%9C%E4%B8%9A04-%E8%BE%93%E5%85%A5-%E5%87%BD%E6%95%B0/"/>
+    <id>http://yoursite.com/2018/03/29/python作业04-输入-函数/</id>
+    <published>2018-03-29T12:00:54.000Z</published>
+    <updated>2018-03-29T12:41:20.390Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Description-input&quot;&gt;&lt;a href=&quot;#Description-input&quot; class=&quot;headerlink&quot; title=&quot;Description (input)&quot;&gt;&lt;/a&gt;Description
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Bochs虚拟机安装及使用</title>
