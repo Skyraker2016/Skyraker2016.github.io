@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-09T02:20:46.706Z</updated>
+  <updated>2018-04-16T06:05:27.499Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python作业06代码测试</title>
+    <link href="http://yoursite.com/2018/04/15/python%E4%BD%9C%E4%B8%9A06%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95/"/>
+    <id>http://yoursite.com/2018/04/15/python作业06代码测试/</id>
+    <published>2018-04-15T02:40:19.000Z</published>
+    <updated>2018-04-16T06:05:27.499Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Description-test&quot;&gt;&lt;a href=&quot;#Description-test&quot; class=&quot;headerlink&quot; title=&quot;Description (test)&quot;&gt;&lt;/a&gt;Description (test)&lt;/h1&gt;&lt;p&gt;Select
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>python作业05类&amp;文件&amp;异常</title>
