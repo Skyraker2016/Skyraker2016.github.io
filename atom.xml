@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-16T06:05:27.499Z</updated>
+  <updated>2018-05-07T11:19:19.013Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,59 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hello OpenGL</title>
+    <link href="http://yoursite.com/2018/05/07/Hello-OpenGL/"/>
+    <id>http://yoursite.com/2018/05/07/Hello-OpenGL/</id>
+    <published>2018-05-07T11:14:45.000Z</published>
+    <updated>2018-05-07T11:19:19.013Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;VSCode-GLFW-GLEW-在ubuntu下的安装&quot;&gt;&lt;a href=&quot;#VSCode-GLFW-GLEW-在ubuntu下的安装&quot; class=&quot;headerlink&quot; title=&quot;VSCode + GLFW + GLEW
+        
+      
+    
+    </summary>
+    
+      <category term="OpenGL" scheme="http://yoursite.com/categories/OpenGL/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Python作业08 LeetCode #213 #120</title>
+    <link href="http://yoursite.com/2018/04/29/Python%E4%BD%9C%E4%B8%9A08-LeetCode-213-120/"/>
+    <id>http://yoursite.com/2018/04/29/Python作业08-LeetCode-213-120/</id>
+    <published>2018-04-29T11:14:29.000Z</published>
+    <updated>2018-05-07T11:18:22.991Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;213-House-Robber-II&quot;&gt;&lt;a href=&quot;#213-House-Robber-II&quot; class=&quot;headerlink&quot; title=&quot;213 House Robber II&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>python作业06代码测试</title>
     <link href="http://yoursite.com/2018/04/15/python%E4%BD%9C%E4%B8%9A06%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95/"/>
     <id>http://yoursite.com/2018/04/15/python作业06代码测试/</id>
     <published>2018-04-15T02:40:19.000Z</published>
-    <updated>2018-04-16T06:05:27.499Z</updated>
+    <updated>2018-05-07T11:17:10.822Z</updated>
     
     <summary type="html">
     
@@ -35,6 +83,8 @@
     
     </summary>
     
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
     
   </entry>
   
@@ -43,7 +93,7 @@
     <link href="http://yoursite.com/2018/04/08/python%E4%BD%9C%E4%B8%9A05%E7%B1%BB%E4%B8%8E%E6%96%87%E4%BB%B6/"/>
     <id>http://yoursite.com/2018/04/08/python作业05类与文件/</id>
     <published>2018-04-08T00:11:08.000Z</published>
-    <updated>2018-04-09T02:20:46.706Z</updated>
+    <updated>2018-05-07T11:17:03.674Z</updated>
     
     <summary type="html">
     
@@ -57,6 +107,8 @@
     
     </summary>
     
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
     
   </entry>
   
@@ -65,7 +117,7 @@
     <link href="http://yoursite.com/2018/03/29/python%E4%BD%9C%E4%B8%9A04-%E8%BE%93%E5%85%A5-%E5%87%BD%E6%95%B0/"/>
     <id>http://yoursite.com/2018/03/29/python作业04-输入-函数/</id>
     <published>2018-03-29T12:00:54.000Z</published>
-    <updated>2018-03-29T12:41:20.390Z</updated>
+    <updated>2018-05-07T11:16:58.898Z</updated>
     
     <summary type="html">
     
@@ -78,6 +130,8 @@
       
     
     </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
     
     
   </entry>
