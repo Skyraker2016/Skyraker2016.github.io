@@ -81,19 +81,19 @@
 
 
 
-<meta name="description" content="VSCode + GLFW + GLEW 在ubuntu下的安装环境说明 开发环境：Linux 运行环境：Linux 运行方式： 首先在/HelloOpenGL文件夹（本文件夹）下打开终端，用export LD_LIBRARY_PATH=./../dll，增加动态库搜索路径 运行可执行文件./helloOpenGL 若失败，则按照GLFW、GLEW的配置方法配置好环境后在本机重新编译   使用库：">
+<meta name="description" content="彩色旋转立方体环境说明 开发环境：Linux 运行环境：Linux 运行方式： 首先在/Cubic文件夹（本文件夹）下打开终端，用export LD_LIBRARY_PATH=./../dll，增加动态库搜索路径 运行可执行文件./cubic 若失败，则按照GLFW、GLEW的配置方法配置好环境后在本机重新编译   使用库：GLFW、GLEW、GLM  知识点 矩阵变换  矩阵的变换分为三种：放缩">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello OpenGL">
-<meta property="og:url" content="http://yoursite.com/2018/05/07/Hello-OpenGL/index.html">
+<meta property="og:title" content="OpenGL 旋转彩色立方体">
+<meta property="og:url" content="http://yoursite.com/2018/05/10/OpenGL-旋转彩色立方体/index.html">
 <meta property="og:site_name" content="Skyraker&#39;s">
-<meta property="og:description" content="VSCode + GLFW + GLEW 在ubuntu下的安装环境说明 开发环境：Linux 运行环境：Linux 运行方式： 首先在/HelloOpenGL文件夹（本文件夹）下打开终端，用export LD_LIBRARY_PATH=./../dll，增加动态库搜索路径 运行可执行文件./helloOpenGL 若失败，则按照GLFW、GLEW的配置方法配置好环境后在本机重新编译   使用库：">
+<meta property="og:description" content="彩色旋转立方体环境说明 开发环境：Linux 运行环境：Linux 运行方式： 首先在/Cubic文件夹（本文件夹）下打开终端，用export LD_LIBRARY_PATH=./../dll，增加动态库搜索路径 运行可执行文件./cubic 若失败，则按照GLFW、GLEW的配置方法配置好环境后在本机重新编译   使用库：GLFW、GLEW、GLM  知识点 矩阵变换  矩阵的变换分为三种：放缩">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/Screenshot%20from%202018-05-07%2016-17-27.png">
-<meta property="og:updated_time" content="2018-05-10T03:44:58.385Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/cubic.gif">
+<meta property="og:updated_time" content="2018-05-10T03:45:20.999Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello OpenGL">
-<meta name="twitter:description" content="VSCode + GLFW + GLEW 在ubuntu下的安装环境说明 开发环境：Linux 运行环境：Linux 运行方式： 首先在/HelloOpenGL文件夹（本文件夹）下打开终端，用export LD_LIBRARY_PATH=./../dll，增加动态库搜索路径 运行可执行文件./helloOpenGL 若失败，则按照GLFW、GLEW的配置方法配置好环境后在本机重新编译   使用库：">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/Screenshot%20from%202018-05-07%2016-17-27.png">
+<meta name="twitter:title" content="OpenGL 旋转彩色立方体">
+<meta name="twitter:description" content="彩色旋转立方体环境说明 开发环境：Linux 运行环境：Linux 运行方式： 首先在/Cubic文件夹（本文件夹）下打开终端，用export LD_LIBRARY_PATH=./../dll，增加动态库搜索路径 运行可执行文件./cubic 若失败，则按照GLFW、GLEW的配置方法配置好环境后在本机重新编译   使用库：GLFW、GLEW、GLM  知识点 矩阵变换  矩阵的变换分为三种：放缩">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/cubic.gif">
 
 
 
@@ -123,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/07/Hello-OpenGL/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/10/OpenGL-旋转彩色立方体/"/>
 
 
 
 
 
-  <title>Hello OpenGL | Skyraker's</title>
+  <title>OpenGL 旋转彩色立方体 | Skyraker's</title>
   
 
 
@@ -270,7 +270,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/07/Hello-OpenGL/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/10/OpenGL-旋转彩色立方体/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Guangzhi Ye">
@@ -287,7 +287,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello OpenGL</h1>
+          <h1 class="post-title" itemprop="name headline">OpenGL 旋转彩色立方体</h1>
         
 
         <div class="post-meta">
@@ -299,8 +299,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-07T19:14:45+08:00">
-                2018-05-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-10T11:43:41+08:00">
+                2018-05-10
               </time>
             
 
@@ -340,8 +340,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/05/07/Hello-OpenGL/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/05/07/Hello-OpenGL/" itemprop="commentsCount"></span>
+                <a href="/2018/05/10/OpenGL-旋转彩色立方体/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/05/10/OpenGL-旋转彩色立方体/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -349,7 +349,7 @@
 
           
           
-             <span id="/2018/05/07/Hello-OpenGL/" class="leancloud_visitors" data-flag-title="Hello OpenGL">
+             <span id="/2018/05/10/OpenGL-旋转彩色立方体/" class="leancloud_visitors" data-flag-title="OpenGL 旋转彩色立方体">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -380,53 +380,77 @@
       
 
       
-        <h1 id="VSCode-GLFW-GLEW-在ubuntu下的安装"><a href="#VSCode-GLFW-GLEW-在ubuntu下的安装" class="headerlink" title="VSCode + GLFW + GLEW 在ubuntu下的安装"></a>VSCode + GLFW + GLEW 在ubuntu下的安装</h1><h2 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h2><ul>
+        <h1 id="彩色旋转立方体"><a href="#彩色旋转立方体" class="headerlink" title="彩色旋转立方体"></a>彩色旋转立方体</h1><h2 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h2><ul>
 <li>开发环境：Linux</li>
 <li>运行环境：Linux</li>
 <li>运行方式：<ul>
-<li>首先在<code>/HelloOpenGL</code>文件夹（本文件夹）下打开终端，用<code>export LD_LIBRARY_PATH=./../dll</code>，增加动态库搜索路径</li>
-<li>运行可执行文件<code>./helloOpenGL</code></li>
+<li>首先在<code>/Cubic</code>文件夹（本文件夹）下打开终端，用<code>export LD_LIBRARY_PATH=./../dll</code>，增加动态库搜索路径</li>
+<li>运行可执行文件<code>./cubic</code></li>
 <li>若失败，则按照GLFW、GLEW的配置方法配置好环境后在本机重新编译</li>
 </ul>
 </li>
-<li>使用库：GLFW、GLEW、GLM<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="OpenGL（包括GLUT）："><a href="#OpenGL（包括GLUT）：" class="headerlink" title="OpenGL（包括GLUT）："></a>OpenGL（包括GLUT）：</h3><figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> install build-essential libgl1-mesa-<span class="built_in">dev</span></span><br><span class="line">sudo apt-<span class="built_in">get</span> install freeglut3-<span class="built_in">dev</span></span><br><span class="line">sudo apt-<span class="built_in">get</span> install libglew-<span class="built_in">dev</span> libsdl2-<span class="built_in">dev</span> ibsdl2-image-<span class="built_in">dev</span> libglm-<span class="built_in">dev</span> libfreetype6-<span class="built_in">dev</span></span><br></pre></td></tr></table></figure>
-</li>
+<li>使用库：GLFW、GLEW、GLM</li>
 </ul>
-<h3 id="GLFW："><a href="#GLFW：" class="headerlink" title="GLFW："></a>GLFW：</h3><ol>
-<li>去<a href="http://www.glfw.org/download.html" target="_blank" rel="noopener">官网</a>下载源码</li>
-<li><p>编译安装：</p>
+<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ol>
+<li><p>矩阵变换</p>
 <ul>
-<li>安装cmake: <code>sudo apt-get install cmake</code></li>
-<li>解压刚刚下载的源码: <code>sudo unzip xxx.zip -d glfw</code>，其中<code>xxx</code>为你刚刚下载的压缩包名</li>
-<li>进入解压后的GLFW根目录（含有include、CMake的那个），进行安装: <figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo cmake .</span><br><span class="line">sudo <span class="built_in">make</span></span><br><span class="line">sudo <span class="built_in">make</span> install</span><br></pre></td></tr></table></figure>
+<li><p>矩阵的变换分为三种：放缩、旋转、平移，三者顺序不应混乱，用矩阵乘法表示：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">glm::mat4 mvp = Projection * View * model;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在本次实验中，使用的是透视视角，即近大远小，使用projection函数可以生成透视变换视角，属于放缩变换：</p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">glm::mat4 Projection = glm::<span class="built_in">perspective</span>(glm::<span class="built_in">radians</span>(<span class="number">90.0</span>f), (<span class="built_in">float</span>) <span class="built_in">width</span> / (<span class="built_in">float</span>)<span class="built_in">height</span>, <span class="number">0.1</span>f, <span class="number">100.0</span>f);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>为了让矩阵旋转，我们首先预设摄像机位置：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">glm::mat4 View = glm::lookAt(</span><br><span class="line">    glm::vec3(<span class="number">4</span>,<span class="number">3</span>,<span class="number">3</span>), <span class="comment">// Camera is at (4,3,3), in World Space</span></span><br><span class="line">    glm::vec3(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>), <span class="comment">// and looks at the origin</span></span><br><span class="line">    glm::vec3(<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>)  <span class="comment">// Head is up (set to 0,-1,0 to look upside-down)</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>再于每次渲染改变角度（旋转矩阵）：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">View = glm::rotate(View, glm::radians(<span class="number">1.0f</span>), glm::vec3(<span class="number">-1.0f</span>, <span class="number">-1.0f</span>, <span class="number">1.0f</span>));</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-</ol>
-<h3 id="GLEW："><a href="#GLEW：" class="headerlink" title="GLEW："></a>GLEW：</h3><ul>
-<li>查看glew：<code>sudo apt-cache search glew</code></li>
-<li>将显示的内容用<code>sudo apt-get install xxx</code>下载下来，其中<code>xxx</code>为要下载的内容</li>
+<li><p>着色器：</p>
+<ul>
+<li>着色器分类：本次实验中用到像素着色器与顶点着色器，顶点着色器用于将外部的顶点信息打包给其他着色器绘制，像素着色器用于染色。</li>
+<li><p>着色器使用<code>GLSL</code>语言进行编写，并在C++中用字符串形式进行输入：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//顶点着色器  </span></span><br><span class="line"><span class="keyword">const</span> GLchar* vertexShaderSource=<span class="string">"#version 330 core\n"</span>  </span><br><span class="line">    <span class="string">"layout (location=0) in vec3 aPos;\n"</span>  </span><br><span class="line">    <span class="string">"layout (location=1) in vec3 vertexColor;\n"</span></span><br><span class="line">    <span class="string">"out vec3 fragmentColor;\n"</span></span><br><span class="line">    <span class="string">"uniform mat4 transform;\n"</span></span><br><span class="line">    <span class="string">"void main()\n"</span>  </span><br><span class="line">    <span class="string">"&#123;\n"</span>  </span><br><span class="line">        <span class="string">"gl_Position = transform * vec4(aPos, 1.0);\n"</span>  </span><br><span class="line">        <span class="string">"fragmentColor = vertexColor;\n"</span></span><br><span class="line">    <span class="string">"&#125;\0"</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>着色器的编译与测试：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> vertexShader = glCreateShader(GL_VERTEX_SHADER);</span><br><span class="line">glShaderSource(vertexShader, <span class="number">1</span>, &amp;vertexShaderSource, <span class="literal">NULL</span>);</span><br><span class="line">glCompileShader(vertexShader);</span><br><span class="line">GLint success;  </span><br><span class="line">GLchar infoLog[<span class="number">512</span>];  </span><br><span class="line">glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &amp;success);  </span><br><span class="line"><span class="keyword">if</span> (!success)  </span><br><span class="line">&#123;  </span><br><span class="line">    glGetShaderInfoLog(vertexShader, <span class="number">512</span>, <span class="literal">NULL</span>, infoLog);  </span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"ERROR::SHADER::VERTEX::COMPILATION_FAILED\n"</span> &lt;&lt; infoLog &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>着色器链接：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> shaderProgram = glCreateProgram();</span><br><span class="line">glAttachShader(shaderProgram, vertexShader);</span><br><span class="line">glAttachShader(shaderProgram, fragmentShader);</span><br><span class="line">glLinkProgram(shaderProgram);</span><br><span class="line">glGetProgramiv(shaderProgram, GL_LINK_STATUS, &amp;success);  </span><br><span class="line"><span class="keyword">if</span> (!success) &#123;  </span><br><span class="line">    glGetProgramInfoLog(shaderProgram, <span class="number">512</span>, <span class="literal">NULL</span>, infoLog);  </span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"ERROR::SHADER::PROGRAM::LINKING_FAILED\n"</span> &lt;&lt; infoLog &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>着色器参数属性：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">glBufferData(GL_ARRAY_BUFFER, <span class="keyword">sizeof</span>(vertices), vertices, GL_STATIC_DRAW);</span><br><span class="line">glVertexAttribPointer(<span class="number">0</span>, <span class="number">3</span>, GL_FLOAT, GL_FALSE, <span class="number">3</span> * <span class="keyword">sizeof</span>(<span class="keyword">float</span>), (<span class="keyword">void</span>*)<span class="number">0</span>);</span><br><span class="line">glEnableVertexAttribArray(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将变换矩阵传入着色器的uniform变量中：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">unsigned</span> <span class="keyword">int</span> transformLoc = glGetUniformLocation(shaderProgram, <span class="string">"transform"</span>);</span><br><span class="line">glUniformMatrix4fv(transformLoc, <span class="number">1</span>, GL_FALSE, glm::value_ptr(mvp));</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -o helloOpenGL helloOpenGL<span class="selector-class">.cpp</span> -lGL -lGLU -lglut -lglfw3 -lX11 -lXrandr -lXinerama -lXi -lXxf86vm -lXcursor -lpthread -lGLEW -ldl</span><br></pre></td></tr></table></figure>
-<h2 id="实例源码"><a href="#实例源码" class="headerlink" title="实例源码"></a>实例源码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;GL/glew.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;GLFW/glfw3.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Is called whenever a key is pressed/released via GLFW  </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">key_callback</span><span class="params">(GLFWwindow* window, <span class="keyword">int</span> key, <span class="keyword">int</span> scancode, <span class="keyword">int</span> action, <span class="keyword">int</span> mode)</span>  </span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">    <span class="keyword">if</span> (key == GLFW_KEY_ESCAPE &amp;&amp; action == GLFW_PRESS)  </span><br><span class="line">        glfwSetWindowShouldClose(window, GL_TRUE);  </span><br><span class="line">&#125;  </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    GLFWwindow* window;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* Initialize the library */</span></span><br><span class="line">    <span class="keyword">if</span> (!glfwInit())</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* Create a windowed mode window and its OpenGL context */</span></span><br><span class="line">    window = glfwCreateWindow(<span class="number">800</span>, <span class="number">600</span>, <span class="string">"The First Opengl Program"</span>, <span class="literal">NULL</span>, <span class="literal">NULL</span>);</span><br><span class="line">    <span class="keyword">if</span> (!window)</span><br><span class="line">    &#123;</span><br><span class="line">        glfwTerminate();</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Set the required callback functions 设置事件回调函数  </span></span><br><span class="line">    glfwSetKeyCallback(window, key_callback);  </span><br><span class="line">    </span><br><span class="line">    <span class="comment">/* Make the window's context current */</span></span><br><span class="line">    glfwMakeContextCurrent(window);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* Loop until the user closes the window */</span></span><br><span class="line">    <span class="keyword">while</span> (!glfwWindowShouldClose(window))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">/* Draw a triangle */</span></span><br><span class="line">        glBegin(GL_QUAD_STRIP);</span><br><span class="line"></span><br><span class="line">        glVertex3f(<span class="number">0.5</span>, <span class="number">0.5</span>, <span class="number">0.0</span>);</span><br><span class="line"></span><br><span class="line">        glVertex3f(<span class="number">0.5</span>, <span class="number">-0.5</span>, <span class="number">0.0</span>);</span><br><span class="line"></span><br><span class="line">        glVertex3f(<span class="number">-0.5</span>, <span class="number">0.5</span>, <span class="number">0.0</span>);</span><br><span class="line"></span><br><span class="line">        glVertex3f(<span class="number">-0.5</span>, <span class="number">-0.5</span>, <span class="number">0.0</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        glEnd();</span><br><span class="line"></span><br><span class="line">        <span class="comment">/* Swap front and back buffers */</span></span><br><span class="line">        glfwSwapBuffers(window);</span><br><span class="line"></span><br><span class="line">        <span class="comment">/* Poll for and process events */</span></span><br><span class="line">        glfwPollEvents();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    glfwTerminate();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p><img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/Screenshot%20from%202018-05-07%2016-17-27.png" alt="helloOpenGL-result"></p>
-<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol>
-<li>GLEW应该在GLFW、GLUT等之前include。</li>
-<li><p>要加上-ldl，否则会出现错误：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/usr/</span>bin<span class="regexp">/x86_64-linux-gnu-ld: /</span><span class="regexp">/usr/</span>local<span class="regexp">/lib/</span>libglfw3.a(vulkan.c.o): undefined reference to symbol <span class="string">'dlclose@@GLIBC_2.2.5'</span></span><br><span class="line"><span class="regexp">//</span>lib<span class="regexp">/x86_64-linux-gnu/</span>libdl.so.<span class="number">2</span>: error adding symbols: DSO missing from command line</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>由于很多教程基于GLUT，又有很多教程基于GLFW、GLEW，因此编译连接了大部分可能用到的库</p>
-</li>
-<li><p>若不调用GLEW，很有可能造成shader的许多问题</p>
+<li><p>深度测试：若不开启深度测试，会导致着色器无法判断覆盖信息，深度测试的用途是用于舍弃被遮盖住的图像，使其更加真实：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">glEnable(GL_DEPTH_TEST);</span><br><span class="line">glDepthFunc(GL_LESS);</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h2 id="参考来源："><a href="#参考来源：" class="headerlink" title="参考来源："></a>参考来源：</h2><p><a href="https://stackoverflow.com/questions/26372359/error-loading-shared-library-glew" target="_blank" rel="noopener">关于GLEW的错误</a></p>
-<p><a href="http://www.kennyspace.com/wordpress/computer-graphics/glfw-config.html" target="_blank" rel="noopener">GLFW的安装</a></p>
-<p><a href="https://blog.csdn.net/seamanj/article/details/50178607" target="_blank" rel="noopener">GLEW的安装</a></p>
-<p><a href="https://blog.csdn.net/karizhang/article/details/51434398" target="_blank" rel="noopener">OpenGL下载安装+GLEW的include顺序问题</a></p>
-<p><a href="https://www.jianshu.com/p/e4a90503d4a6" target="_blank" rel="noopener">OpenGL环境配置</a></p>
-<p><a href="https://blog.csdn.net/qq_28637193/article/details/52395945" target="_blank" rel="noopener">渲染器</a></p>
-<p><a href="https://www.cnblogs.com/graphics/p/3661500.html" target="_blank" rel="noopener">绘制demo</a></p>
+<h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a><a href="https://github.com/Skyraker2016/learn-opengl/blob/master/Cubic/cubic.cpp" target="_blank" rel="noopener">源码</a></h2><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/cubic.gif" alt="cubic.gif"></p>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ul>
+<li><p>本环境中未配置glad，而使用glew，在代码开始时注意此初始化顺序：</p>
+  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">glfwInit();<span class="comment">//初始化  </span></span><br><span class="line"><span class="comment">// Set all the required options for GLFW   </span></span><br><span class="line">glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, <span class="number">3</span>);<span class="comment">//设置主版本号  </span></span><br><span class="line">glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, <span class="number">3</span>);<span class="comment">//设置次版本号  </span></span><br><span class="line">glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);  </span><br><span class="line">glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);  </span><br><span class="line"></span><br><span class="line"><span class="comment">// Create a GLFWwindow object that we can use for GLFW's functions  创建一个窗口  </span></span><br><span class="line">GLFWwindow* window = glfwCreateWindow(<span class="number">800</span>, <span class="number">600</span>, <span class="string">"The perspective projection"</span>, <span class="literal">NULL</span>, <span class="literal">NULL</span>);  </span><br><span class="line">glfwMakeContextCurrent(window);<span class="comment">//设置为当前窗口  </span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Set this to true so GLEW knows to use a modern approach to retrieving function pointers and extensions  </span></span><br><span class="line">glewExperimental = GL_TRUE;  </span><br><span class="line"><span class="comment">// Initialize GLEW to setup the OpenGL Function pointers  </span></span><br><span class="line">glewInit();</span><br></pre></td></tr></table></figure>
+<p>  否则会导致此错误：</p>
+  <figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Segmentation fault (<span class="name">core</span> dumped)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li>若提示<code>./cubic command not found</code>则先<code>chmod u+x cubic</code></li>
+<li><p>在未配置opengl环境的电脑上运行时可能缺少动态链接库，因此将动态链接库打包于项目文件中的<code>dll</code>文件夹，使用时需要用</p>
+ <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="builtin-name">export</span> <span class="attribute">LD_LIBRARY_PATH</span>=xxx</span><br></pre></td></tr></table></figure>
+<p> 增加动态链接库搜索位置，其中<code>xxx</code>为<code>dll</code>文件夹。</p>
+</li>
+</ol>
+<h2 id="参考来源"><a href="#参考来源" class="headerlink" title="参考来源"></a>参考来源</h2><p><a href="https://blog.csdn.net/wodownload2/article/details/78139273" target="_blank" rel="noopener">绘制旋转立方体</a></p>
+<p><a href="https://blog.csdn.net/qq_28637193/article/details/52395945" target="_blank" rel="noopener">规范代码</a></p>
+<p><a href="http://www.opengl-tutorial.org/cn/beginners-tutorials/tutorial-4-a-colored-cube/" target="_blank" rel="noopener">透视教程</a></p>
+<p><a href="https://www.linuxidc.com/Linux/2017-12/149800.htm" target="_blank" rel="noopener">录屏转gif</a></p>
+<p><a href="https://blog.csdn.net/hktkfly6/article/details/61922685" target="_blank" rel="noopener">动态库链接</a></p>
 
       
     </div>
@@ -451,8 +475,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/29/Python作业08-LeetCode-213-120/" rel="next" title="Python作业08 LeetCode #213 #120">
-                <i class="fa fa-chevron-left"></i> Python作业08 LeetCode #213 #120
+              <a href="/2018/05/07/Hello-OpenGL/" rel="next" title="Hello OpenGL">
+                <i class="fa fa-chevron-left"></i> Hello OpenGL
               </a>
             
           </div>
@@ -460,10 +484,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/10/OpenGL-旋转彩色立方体/" rel="prev" title="OpenGL 旋转彩色立方体">
-                OpenGL 旋转彩色立方体 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -620,7 +640,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#VSCode-GLFW-GLEW-在ubuntu下的安装"><span class="nav-number">1.</span> <span class="nav-text">VSCode + GLFW + GLEW 在ubuntu下的安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境说明"><span class="nav-number">1.1.</span> <span class="nav-text">环境说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#OpenGL（包括GLUT）："><span class="nav-number">1.2.1.</span> <span class="nav-text">OpenGL（包括GLUT）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GLFW："><span class="nav-number">1.2.2.</span> <span class="nav-text">GLFW：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GLEW："><span class="nav-number">1.2.3.</span> <span class="nav-text">GLEW：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编译"><span class="nav-number">1.3.</span> <span class="nav-text">编译</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例源码"><span class="nav-number">1.4.</span> <span class="nav-text">实例源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#效果"><span class="nav-number">1.5.</span> <span class="nav-text">效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意事项"><span class="nav-number">1.6.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考来源："><span class="nav-number">1.7.</span> <span class="nav-text">参考来源：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#彩色旋转立方体"><span class="nav-number">1.</span> <span class="nav-text">彩色旋转立方体</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境说明"><span class="nav-number">1.1.</span> <span class="nav-text">环境说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识点"><span class="nav-number">1.2.</span> <span class="nav-text">知识点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#源码"><span class="nav-number">1.3.</span> <span class="nav-text">源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结果"><span class="nav-number">1.4.</span> <span class="nav-text">结果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意事项"><span class="nav-number">1.5.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考来源"><span class="nav-number">1.6.</span> <span class="nav-text">参考来源</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -829,7 +849,7 @@
       <script type="text/javascript">
       function renderGitment(){
         var gitment = new Gitmint({
-            id: '1525691685000', 
+            id: '1525923821000', 
             owner: 'Skyraker2016',
             repo: 'Skyraker2016.github.io',
             

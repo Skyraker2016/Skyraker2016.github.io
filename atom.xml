@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-07T11:19:19.013Z</updated>
+  <updated>2018-05-10T03:45:20.999Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>OpenGL 旋转彩色立方体</title>
+    <link href="http://yoursite.com/2018/05/10/OpenGL-%E6%97%8B%E8%BD%AC%E5%BD%A9%E8%89%B2%E7%AB%8B%E6%96%B9%E4%BD%93/"/>
+    <id>http://yoursite.com/2018/05/10/OpenGL-旋转彩色立方体/</id>
+    <published>2018-05-10T03:43:41.000Z</published>
+    <updated>2018-05-10T03:45:20.999Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;彩色旋转立方体&quot;&gt;&lt;a href=&quot;#彩色旋转立方体&quot; class=&quot;headerlink&quot; title=&quot;彩色旋转立方体&quot;&gt;&lt;/a&gt;彩色旋转立方体&lt;/h1&gt;&lt;h2 id=&quot;环境说明&quot;&gt;&lt;a href=&quot;#环境说明&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="OpenGL" scheme="http://yoursite.com/categories/OpenGL/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Hello OpenGL</title>
     <link href="http://yoursite.com/2018/05/07/Hello-OpenGL/"/>
     <id>http://yoursite.com/2018/05/07/Hello-OpenGL/</id>
     <published>2018-05-07T11:14:45.000Z</published>
-    <updated>2018-05-07T11:19:19.013Z</updated>
+    <updated>2018-05-10T03:44:58.385Z</updated>
     
     <summary type="html">
     
