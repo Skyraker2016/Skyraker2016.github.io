@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-10T03:45:20.999Z</updated>
+  <updated>2018-05-16T14:44:23.891Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>星球的公转与自转</title>
+    <link href="http://yoursite.com/2018/05/16/%E6%98%9F%E7%90%83%E7%9A%84%E5%85%AC%E8%BD%AC%E4%B8%8E%E8%87%AA%E8%BD%AC/"/>
+    <id>http://yoursite.com/2018/05/16/星球的公转与自转/</id>
+    <published>2018-05-16T14:43:16.000Z</published>
+    <updated>2018-05-16T14:44:23.891Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;环境说明&quot;&gt;&lt;a href=&quot;#环境说明&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="OpenGL" scheme="http://yoursite.com/categories/OpenGL/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>OpenGL 旋转彩色立方体</title>
