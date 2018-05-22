@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-19T07:46:32.161Z</updated>
+  <updated>2018-05-22T03:03:44.349Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>星球的公转与自转</title>
-    <link href="http://yoursite.com/2018/05/16/%E6%98%9F%E7%90%83%E7%9A%84%E5%85%AC%E8%BD%AC%E4%B8%8E%E8%87%AA%E8%BD%AC/"/>
-    <id>http://yoursite.com/2018/05/16/星球的公转与自转/</id>
-    <published>2018-05-16T14:43:16.000Z</published>
-    <updated>2018-05-19T07:46:32.161Z</updated>
+    <title>Numpy库学习</title>
+    <link href="http://yoursite.com/2018/05/22/Numpy%E5%BA%93%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2018/05/22/Numpy库学习/</id>
+    <published>2018-05-22T03:03:04.000Z</published>
+    <updated>2018-05-22T03:03:44.349Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,32 @@
       
         
         
-          &lt;h2 id=&quot;环境说明&quot;&gt;&lt;a href=&quot;#环境说明&quot; class=&quot;headerlink&quot;
+          &lt;p&gt;Learning Numpy, a lib of python with matrix and other calculation.&lt;/p&gt;
+&lt;h1 id=&quot;Prepare&quot;&gt;&lt;a href=&quot;#Prepare&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>星球的公转与自转</title>
+    <link href="http://yoursite.com/2018/05/16/%E6%98%9F%E7%90%83%E7%9A%84%E5%85%AC%E8%BD%AC%E4%B8%8E%E8%87%AA%E8%BD%AC/"/>
+    <id>http://yoursite.com/2018/05/16/星球的公转与自转/</id>
+    <published>2018-05-16T14:43:16.000Z</published>
+    <updated>2018-05-22T03:04:41.240Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;星球公转与自转&quot;&gt;&lt;a href=&quot;#星球公转与自转&quot; class=&quot;headerlink&quot;
         
       
     

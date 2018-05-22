@@ -81,12 +81,12 @@
 
 
 
-<meta name="description" content="环境说明 开发环境：Linux 运行环境：Linux 运行方式： 打开终端，用export LD_LIBRARY_PATH=./../dll，增加动态库搜索路径 运行可执行文件./planet_rotation 若失败，则按照GLFW、GLEW的配置方法配置好环境后在本机重新编译 附有运行成功的demo，可以作为参考   使用库：GLFW、GLEW、GLM  运行结果 ESC：退出程序 D：按下后">
+<meta name="description" content="星球公转与自转 更新：将公转矩阵与摄像机矩阵分离，公用变换（摄像机、透视）与各个物体的单独变换分离，使代码更符合逻辑。  环境说明 开发环境：Linux 运行环境：Linux 运行方式： 打开终端，用export LD_LIBRARY_PATH=./../dll，增加动态库搜索路径 运行可执行文件./planet_rotation 若失败，则按照GLFW、GLEW的配置方法配置好环境后在本机重新编">
 <meta property="og:type" content="article">
 <meta property="og:title" content="星球的公转与自转">
 <meta property="og:url" content="http://yoursite.com/2018/05/16/星球的公转与自转/index.html">
 <meta property="og:site_name" content="Skyraker&#39;s">
-<meta property="og:description" content="环境说明 开发环境：Linux 运行环境：Linux 运行方式： 打开终端，用export LD_LIBRARY_PATH=./../dll，增加动态库搜索路径 运行可执行文件./planet_rotation 若失败，则按照GLFW、GLEW的配置方法配置好环境后在本机重新编译 附有运行成功的demo，可以作为参考   使用库：GLFW、GLEW、GLM  运行结果 ESC：退出程序 D：按下后">
+<meta property="og:description" content="星球公转与自转 更新：将公转矩阵与摄像机矩阵分离，公用变换（摄像机、透视）与各个物体的单独变换分离，使代码更符合逻辑。  环境说明 开发环境：Linux 运行环境：Linux 运行方式： 打开终端，用export LD_LIBRARY_PATH=./../dll，增加动态库搜索路径 运行可执行文件./planet_rotation 若失败，则按照GLFW、GLEW的配置方法配置好环境后在本机重新编">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/Sun_and_planet_1.gif">
 <meta property="og:image" content="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/Sun_and_planet_2.gif">
@@ -97,10 +97,10 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/SUN_110_2.gif">
 <meta property="og:image" content="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/SUN_ERR_001_1.gif">
 <meta property="og:image" content="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/SUN_002_2.gif">
-<meta property="og:updated_time" content="2018-05-19T07:46:32.161Z">
+<meta property="og:updated_time" content="2018-05-22T03:04:41.240Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="星球的公转与自转">
-<meta name="twitter:description" content="环境说明 开发环境：Linux 运行环境：Linux 运行方式： 打开终端，用export LD_LIBRARY_PATH=./../dll，增加动态库搜索路径 运行可执行文件./planet_rotation 若失败，则按照GLFW、GLEW的配置方法配置好环境后在本机重新编译 附有运行成功的demo，可以作为参考   使用库：GLFW、GLEW、GLM  运行结果 ESC：退出程序 D：按下后">
+<meta name="twitter:description" content="星球公转与自转 更新：将公转矩阵与摄像机矩阵分离，公用变换（摄像机、透视）与各个物体的单独变换分离，使代码更符合逻辑。  环境说明 开发环境：Linux 运行环境：Linux 运行方式： 打开终端，用export LD_LIBRARY_PATH=./../dll，增加动态库搜索路径 运行可执行文件./planet_rotation 若失败，则按照GLFW、GLEW的配置方法配置好环境后在本机重新编">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/Sun_and_planet_1.gif">
 
 
@@ -388,7 +388,10 @@
       
 
       
-        <h2 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h2><ul>
+        <h1 id="星球公转与自转"><a href="#星球公转与自转" class="headerlink" title="星球公转与自转"></a>星球公转与自转</h1><ul>
+<li>更新：将公转矩阵与摄像机矩阵分离，公用变换（摄像机、透视）与各个物体的单独变换分离，使代码更符合逻辑。</li>
+</ul>
+<h2 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h2><ul>
 <li>开发环境：Linux</li>
 <li>运行环境：Linux</li>
 <li>运行方式：<ul>
@@ -521,6 +524,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/05/22/Numpy库学习/" rel="prev" title="Numpy库学习">
+                Numpy库学习 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -607,7 +614,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -676,7 +683,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境说明"><span class="nav-number">1.</span> <span class="nav-text">环境说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行结果"><span class="nav-number">2.</span> <span class="nav-text">运行结果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现过程"><span class="nav-number">3.</span> <span class="nav-text">实现过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识点"><span class="nav-number">4.</span> <span class="nav-text">知识点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验过程"><span class="nav-number">5.</span> <span class="nav-text">实验过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#源代码"><span class="nav-number">6.</span> <span class="nav-text">源代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">7.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#星球公转与自转"><span class="nav-number">1.</span> <span class="nav-text">星球公转与自转</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境说明"><span class="nav-number">1.1.</span> <span class="nav-text">环境说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行结果"><span class="nav-number">1.2.</span> <span class="nav-text">运行结果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现过程"><span class="nav-number">1.3.</span> <span class="nav-text">实现过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识点"><span class="nav-number">1.4.</span> <span class="nav-text">知识点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验过程"><span class="nav-number">1.5.</span> <span class="nav-text">实验过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#源代码"><span class="nav-number">1.6.</span> <span class="nav-text">源代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">1.7.</span> <span class="nav-text">参考资料</span></a></li></ol></li></ol></div>
             
 
           </div>

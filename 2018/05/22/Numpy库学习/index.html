@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Skyraker's" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="Learning Numpy, a lib of python with matrix and other calculation. PrepareGenerate matrices A, with random Gaussian entries, B, a Toeplitz matrix, where A ∈Rn×m and B ∈Rm×m, for n = 200, m = 500. Code">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Numpy库学习">
+<meta property="og:url" content="http://yoursite.com/2018/05/22/Numpy库学习/index.html">
+<meta property="og:site_name" content="Skyraker&#39;s">
+<meta property="og:description" content="Learning Numpy, a lib of python with matrix and other calculation. PrepareGenerate matrices A, with random Gaussian entries, B, a Toeplitz matrix, where A ∈Rn×m and B ∈Rm×m, for n = 200, m = 500. Code">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-05-22T03:03:44.349Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Numpy库学习">
+<meta name="twitter:description" content="Learning Numpy, a lib of python with matrix and other calculation. PrepareGenerate matrices A, with random Gaussian entries, B, a Toeplitz matrix, where A ∈Rn×m and B ∈Rm×m, for n = 200, m = 500. Code">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/05/22/Numpy库学习/"/>
+
+
+
+
+
+  <title>Numpy库学习 | Skyraker's</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Skyraker's</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/22/Numpy库学习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Guangzhi Ye">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/headpic.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Skyraker's">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Numpy库学习</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-22T11:03:04+08:00">
+                2018-05-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/22/Numpy库学习/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/05/22/Numpy库学习/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/05/22/Numpy库学习/" class="leancloud_visitors" data-flag-title="Numpy库学习">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Learning Numpy, a lib of python with matrix and other calculation.</p>
+<h1 id="Prepare"><a href="#Prepare" class="headerlink" title="Prepare"></a>Prepare</h1><p>Generate matrices A, with random Gaussian entries, B, a Toeplitz matrix, where A ∈Rn×m and B ∈Rm×m, for n = 200, m = 500.</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy </span><br><span class="line"><span class="keyword">from</span> scipy.linalg <span class="keyword">import</span> toeplitz</span><br><span class="line"></span><br><span class="line">numpy.random.seed()</span><br><span class="line">n = <span class="number">200</span></span><br><span class="line">m = <span class="number">500</span></span><br><span class="line"></span><br><span class="line">A = numpy.random.normal(size = [n, m])</span><br><span class="line">B = toeplitz(numpy.random.normal(size=m))</span><br><span class="line"></span><br><span class="line">print(<span class="string">"------------A-----------\n"</span>+str(A))</span><br><span class="line">print(<span class="string">"------------B-----------\n"</span>+str(B))</span><br></pre></td></tr></table></figure>
+<h2 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h2><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">[[-<span class="number">0.49837536</span> -<span class="number">0.3247838</span>   <span class="number">0.50678674</span> ..., -<span class="number">1.2703934</span>   <span class="number">0.76603943</span></span><br><span class="line">   <span class="number">0.03755445</span>]</span><br><span class="line"> [-<span class="number">0.03462894</span> -<span class="number">0.21418493</span>  <span class="number">1.22520135</span> ...,  <span class="number">0.84866266</span>  <span class="number">0.40158282</span></span><br><span class="line">  -<span class="number">0.65401731</span>]</span><br><span class="line"> [ <span class="number">1.1291174</span>   <span class="number">0.49403126</span> -<span class="number">0.28698245</span> ...,  <span class="number">0.61324651</span>  <span class="number">0.73156374</span></span><br><span class="line">  -<span class="number">1.58197964</span>]</span><br><span class="line"> ...,</span><br><span class="line"> [-<span class="number">0.68737602</span> -<span class="number">0.89741706</span>  <span class="number">0.12970931</span> ..., -<span class="number">0.82061635</span>  <span class="number">0.09854131</span></span><br><span class="line">   <span class="number">1.00242481</span>]</span><br><span class="line"> [-<span class="number">0.31053207</span> -<span class="number">0.05350655</span> -<span class="number">1.51289055</span> ..., -<span class="number">2.26626492</span>  <span class="number">0.79240834</span></span><br><span class="line">  -<span class="number">0.73548947</span>]</span><br><span class="line"> [ <span class="number">0.29646267</span>  <span class="number">0.44302565</span>  <span class="number">1.34552379</span> ...,  <span class="number">0.12526137</span> -<span class="number">0.74942753</span></span><br><span class="line">  -<span class="number">1.40240914</span>]]</span><br><span class="line">------------B-----------</span><br><span class="line">[[ <span class="number">1.44784231</span> -<span class="number">0.33696399</span> -<span class="number">0.1432767</span>  ...,  <span class="number">0.26606438</span> -<span class="number">0.09475546</span></span><br><span class="line">  -<span class="number">1.50552307</span>]</span><br><span class="line"> [-<span class="number">0.33696399</span>  <span class="number">1.44784231</span> -<span class="number">0.33696399</span> ..., -<span class="number">1.16119122</span>  <span class="number">0.26606438</span></span><br><span class="line">  -<span class="number">0.09475546</span>]</span><br><span class="line"> [-<span class="number">0.1432767</span>  -<span class="number">0.33696399</span>  <span class="number">1.44784231</span> ..., -<span class="number">1.39562368</span> -<span class="number">1.16119122</span></span><br><span class="line">   <span class="number">0.26606438</span>]</span><br><span class="line"> ...,</span><br><span class="line"> [ <span class="number">0.26606438</span> -<span class="number">1.16119122</span> -<span class="number">1.39562368</span> ...,  <span class="number">1.44784231</span> -<span class="number">0.33696399</span></span><br><span class="line">  -<span class="number">0.1432767</span> ]</span><br><span class="line"> [-<span class="number">0.09475546</span>  <span class="number">0.26606438</span> -<span class="number">1.16119122</span> ..., -<span class="number">0.33696399</span>  <span class="number">1.44784231</span></span><br><span class="line">  -<span class="number">0.33696399</span>]</span><br><span class="line"> [-<span class="number">1.50552307</span> -<span class="number">0.09475546</span>  <span class="number">0.26606438</span> ..., -<span class="number">0.1432767</span>  -<span class="number">0.33696399</span></span><br><span class="line">   <span class="number">1.44784231</span>]]</span><br></pre></td></tr></table></figure>
+<h2 id="Knowledge"><a href="#Knowledge" class="headerlink" title="Knowledge"></a>Knowledge</h2><ol>
+<li>random.normal() to create a matrix with Gaussian entries.</li>
+<li>toepltitz() to create a toepltitz matrix.</li>
+<li>random.seed() , without argument, set random seed by system time.</li>
+</ol>
+<h1 id="Exercise-9-1-Matrix-operations"><a href="#Exercise-9-1-Matrix-operations" class="headerlink" title="Exercise 9.1: Matrix operations"></a>Exercise 9.1: Matrix operations</h1><p>Calculate A + A, AA’, A’A and AB. Write a function that computes A(B − λI) for any λ.</p>
+<h2 id="Code-1"><a href="#Code-1" class="headerlink" title="Code"></a>Code</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">A_add_A = A + A</span><br><span class="line">A_mul_AT = numpy.matmul(A, A.transpose())</span><br><span class="line">AT_mul_A = numpy.matmul(A.transpose(), A)</span><br><span class="line">A_mul_B = numpy.matmul(A, B)</span><br><span class="line">print(<span class="string">"---------- A+A -----------\n"</span>+str(A_add_A))</span><br><span class="line">print(<span class="string">"---------- AA' -----------\n"</span>+str(A_mul_AT))</span><br><span class="line">print(<span class="string">"---------- A'A -----------\n"</span>+str(AT_mul_A))</span><br><span class="line">print(<span class="string">"---------- AB ------------\n"</span>+str(A_mul_B))</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">E_9_1</span><span class="params">(A, B, N)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> numpy.matmul(A, B-N*numpy.eye([len(B), len(B)]))</span><br><span class="line"></span><br><span class="line">print(<span class="string">"--------- E_9_1 ----------\n"</span>+str(E_9_1(A, B, <span class="number">3</span>)))</span><br></pre></td></tr></table></figure>
+<h2 id="Result-1"><a href="#Result-1" class="headerlink" title="Result"></a>Result</h2><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">---------- <span class="keyword">A</span>+<span class="keyword">A</span> -----------</span><br><span class="line">[[-<span class="number">0.99675071</span> -<span class="number">0.6495676</span>   <span class="number">1.01357349</span> ..., -<span class="number">2.5407868</span>   <span class="number">1.53207886</span></span><br><span class="line">   <span class="number">0.0751089</span> ]</span><br><span class="line"> [-<span class="number">0.06925787</span> -<span class="number">0.42836986</span>  <span class="number">2.4504027</span>  ...,  <span class="number">1.69732532</span>  <span class="number">0.80316565</span></span><br><span class="line">  -<span class="number">1.30803462</span>]</span><br><span class="line"> [ <span class="number">2.25823479</span>  <span class="number">0.98806253</span> -<span class="number">0.5739649</span>  ...,  <span class="number">1.22649302</span>  <span class="number">1.46312748</span></span><br><span class="line">  -<span class="number">3.16395929</span>]</span><br><span class="line"> ...,</span><br><span class="line"> [-<span class="number">1.37475203</span> -<span class="number">1.79483411</span>  <span class="number">0.25941863</span> ..., -<span class="number">1.64123271</span>  <span class="number">0.19708262</span></span><br><span class="line">   <span class="number">2.00484962</span>]</span><br><span class="line"> [-<span class="number">0.62106414</span> -<span class="number">0.1070131</span>  -<span class="number">3.0257811</span>  ..., -<span class="number">4.53252983</span>  <span class="number">1.58481669</span></span><br><span class="line">  -<span class="number">1.47097894</span>]</span><br><span class="line"> [ <span class="number">0.59292533</span>  <span class="number">0.8860513</span>   <span class="number">2.69104758</span> ...,  <span class="number">0.25052273</span> -<span class="number">1.49885506</span></span><br><span class="line">  -<span class="number">2.80481829</span>]]</span><br><span class="line">---------- AA' -----------</span><br><span class="line">[[ <span class="number">524</span>.<span class="number">50900633</span>  -<span class="number">23.41422424</span>   -<span class="number">8.4109328</span>  ...,  -<span class="number">17.09509132</span></span><br><span class="line">   -<span class="number">36.58226516</span>   <span class="number">22.36854305</span>]</span><br><span class="line"> [ -<span class="number">23.41422424</span>  <span class="number">474</span>.<span class="number">25665538</span>  -<span class="number">20.03371708</span> ...,  -<span class="number">15.65752606</span></span><br><span class="line">    <span class="number">14.95693007</span>   -<span class="number">6.58265367</span>]</span><br><span class="line"> [  -<span class="number">8.4109328</span>   -<span class="number">20.03371708</span>  <span class="number">534</span>.<span class="number">41749229</span> ...,  -<span class="number">10.27103728</span></span><br><span class="line">    <span class="number">19.68694583</span>   <span class="number">30.70304678</span>]</span><br><span class="line"> ...,</span><br><span class="line"> [ -<span class="number">17.09509132</span>  -<span class="number">15.65752606</span>  -<span class="number">10.27103728</span> ...,  <span class="number">440</span>.<span class="number">6393497</span>    -<span class="number">3.86846872</span></span><br><span class="line">    <span class="number">24.44312808</span>]</span><br><span class="line"> [ -<span class="number">36.58226516</span>   <span class="number">14.95693007</span>   <span class="number">19.68694583</span> ...,   -<span class="number">3.86846872</span></span><br><span class="line">   <span class="number">460</span>.<span class="number">44551208</span>  -<span class="number">24.6430389</span> ]</span><br><span class="line"> [  <span class="number">22.36854305</span>   -<span class="number">6.58265367</span>   <span class="number">30.70304678</span> ...,   <span class="number">24.44312808</span>  -<span class="number">24.6430389</span></span><br><span class="line">   <span class="number">533</span>.<span class="number">38452907</span>]]</span><br><span class="line">---------- <span class="keyword">A</span>'<span class="keyword">A</span> -----------</span><br><span class="line">[[ <span class="number">207.71499004</span>   -<span class="number">8.83528023</span>   <span class="number">17.29332948</span> ...,    <span class="number">1.35094389</span></span><br><span class="line">     <span class="number">9.97232568</span>   <span class="number">18.87072786</span>]</span><br><span class="line"> [  -<span class="number">8.83528023</span>  <span class="number">151.22418385</span>   <span class="number">18.14374619</span> ...,    <span class="number">0.76927965</span></span><br><span class="line">     <span class="number">4.16070767</span>  -<span class="number">16.40379885</span>]</span><br><span class="line"> [  <span class="number">17.29332948</span>   <span class="number">18.14374619</span>  <span class="number">205.02249127</span> ...,   -<span class="number">8.18432486</span></span><br><span class="line">    -<span class="number">9.26707911</span>    <span class="number">2.07063859</span>]</span><br><span class="line"> ...,</span><br><span class="line"> [   <span class="number">1.35094389</span>    <span class="number">0.76927965</span>   -<span class="number">8.18432486</span> ...,  <span class="number">208.97270412</span></span><br><span class="line">    -<span class="number">5.71621365</span>    <span class="number">8.51065013</span>]</span><br><span class="line"> [   <span class="number">9.97232568</span>    <span class="number">4.16070767</span>   -<span class="number">9.26707911</span> ...,   -<span class="number">5.71621365</span></span><br><span class="line">   <span class="number">174.85487874</span>   -<span class="number">6.98119382</span>]</span><br><span class="line"> [  <span class="number">18.87072786</span>  -<span class="number">16.40379885</span>    <span class="number">2.07063859</span> ...,    <span class="number">8.51065013</span></span><br><span class="line">    -<span class="number">6.98119382</span>  <span class="number">186.52479968</span>]]</span><br><span class="line">---------- AB ------------</span><br><span class="line">[[-<span class="number">14.87853525</span>   <span class="number">8.70049763</span>   <span class="number">0.66427479</span> ..., -<span class="number">40.15235048</span>  <span class="number">38.96819378</span></span><br><span class="line">   <span class="number">36.98761191</span>]</span><br><span class="line"> [  <span class="number">8.62765483</span> -<span class="number">38.65652814</span>   <span class="number">1.54867974</span> ...,  <span class="number">51.0022929</span>    <span class="number">2.29161362</span></span><br><span class="line">    <span class="number">2.36645638</span>]</span><br><span class="line"> [-<span class="number">28.67531663</span> -<span class="number">23.03994764</span>   <span class="number">5.9337154</span>  ...,  -<span class="number">1.57998333</span>  <span class="number">35.43202865</span></span><br><span class="line">   -<span class="number">1.02604062</span>]</span><br><span class="line"> ...,</span><br><span class="line"> [ <span class="number">21.1088727</span>  -<span class="number">24.70137887</span>   <span class="number">2.29477385</span> ...,  <span class="number">20.56806809</span> -<span class="number">33.32895855</span></span><br><span class="line">  -<span class="number">10.71314031</span>]</span><br><span class="line"> [ <span class="number">16.33190225</span> -<span class="number">17.93547546</span>  -<span class="number">9.57141851</span> ..., -<span class="number">40.75340698</span>  <span class="number">65.49378203</span></span><br><span class="line">  -<span class="number">19.09691261</span>]</span><br><span class="line"> [-<span class="number">29.11460503</span> -<span class="number">43.80853239</span>  <span class="number">35.2469557</span>  ...,  <span class="number">15.52438326</span>  <span class="number">20.15859321</span></span><br><span class="line">  -<span class="number">22.71350542</span>]]</span><br><span class="line">--------- E_9_1 ----------</span><br><span class="line">[[-<span class="number">13.38340918</span>   <span class="number">9.67484904</span>  -<span class="number">0.85608544</span> ..., -<span class="number">36.34117028</span>  <span class="number">36.67007549</span></span><br><span class="line">   <span class="number">36.87494856</span>]</span><br><span class="line"> [  <span class="number">8.73154164</span> -<span class="number">38.01397334</span>  -<span class="number">2.12692431</span> ...,  <span class="number">48.45630492</span>   <span class="number">1.08686515</span></span><br><span class="line">    <span class="number">4.32850831</span>]</span><br><span class="line"> [-<span class="number">32.06266882</span> -<span class="number">24.52204143</span>   <span class="number">6.79466275</span> ...,  -<span class="number">3.41972285</span>  <span class="number">33.23733743</span></span><br><span class="line">    <span class="number">3.71989831</span>]</span><br><span class="line"> ...,</span><br><span class="line"> [ <span class="number">23.17100075</span> -<span class="number">22.0091277</span>    <span class="number">1.90564591</span> ...,  <span class="number">23.02991715</span> -<span class="number">33.62458247</span></span><br><span class="line">  -<span class="number">13.72041474</span>]</span><br><span class="line"> [ <span class="number">17.26349845</span> -<span class="number">17.77495581</span>  -<span class="number">5.03274686</span> ..., -<span class="number">33.95461223</span>  <span class="number">63.116557</span></span><br><span class="line">  -<span class="number">16.89044419</span>]</span><br><span class="line"> [-<span class="number">30.00399303</span> -<span class="number">45.13760934</span>  <span class="number">31.21038433</span> ...,  <span class="number">15.14859916</span>  <span class="number">22.40687581</span></span><br><span class="line">  -<span class="number">18.50627799</span>]]</span><br></pre></td></tr></table></figure>
+<h2 id="Knowledge-1"><a href="#Knowledge-1" class="headerlink" title="Knowledge"></a>Knowledge</h2><ol>
+<li>matmul() to calculate the mul of 2 matrics.</li>
+<li>eye(k) to calculate a diagonal matrix, k*k</li>
+<li>transpose() to return matrix’s Inverse matrix</li>
+</ol>
+<h1 id="Exercise-9-2-Solving-a-linear-system"><a href="#Exercise-9-2-Solving-a-linear-system" class="headerlink" title="Exercise 9.2: Solving a linear system"></a>Exercise 9.2: Solving a linear system</h1><p>Generate a vector b with m entries and solve Bx = b</p>
+<h2 id="Code-2"><a href="#Code-2" class="headerlink" title="Code"></a>Code</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">b = numpy.random.normal(size=m)</span><br><span class="line">x = numpy.linalg.solve(B, b)</span><br><span class="line"></span><br><span class="line">print(<span class="string">"--------- E_9_2 ----------\n"</span>+str(x))</span><br></pre></td></tr></table></figure>
+<h2 id="Result-2"><a href="#Result-2" class="headerlink" title="Result"></a>Result</h2><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line">--------- E_9_2 ----------</span><br><span class="line">[ <span class="number">0.77346147</span> -<span class="number">0.80520425</span> -<span class="number">0.35482528</span> -<span class="number">0.56178735</span> -<span class="number">0.21607332</span>  <span class="number">0.09578284</span></span><br><span class="line">  <span class="number">0.45176672</span> -<span class="number">0.349336</span>   -<span class="number">0.07061673</span> -<span class="number">0.67937045</span>  <span class="number">0.77608967</span>  <span class="number">0.02769846</span></span><br><span class="line"> -<span class="number">0.00266615</span> -<span class="number">0.78878366</span>  <span class="number">0.32858871</span> -<span class="number">0.22730774</span>  <span class="number">0.46410093</span>  <span class="number">0.08025457</span></span><br><span class="line"> -<span class="number">0.39018536</span>  <span class="number">0.31449226</span> -<span class="number">0.15399999</span> -<span class="number">0.90204851</span>  <span class="number">0.36424562</span>  <span class="number">0.61096627</span></span><br><span class="line">  <span class="number">0.33907227</span> -<span class="number">0.78779662</span> -<span class="number">0.48162797</span> -<span class="number">0.64274742</span>  <span class="number">0.12995262</span>  <span class="number">0.99430534</span></span><br><span class="line"> -<span class="number">0.14856798</span> -<span class="number">1.15273747</span>  <span class="number">0.09436944</span>  <span class="number">0.40647302</span>  <span class="number">0.65276383</span> -<span class="number">0.10382041</span></span><br><span class="line">  <span class="number">0.41243053</span> -<span class="number">0.29856156</span>  <span class="number">0.63452485</span> -<span class="number">0.22499859</span> -<span class="number">0.30249207</span> -<span class="number">0.14497932</span></span><br><span class="line">  <span class="number">0.85522387</span>  <span class="number">0.21110914</span> -<span class="number">0.23258855</span> -<span class="number">0.9897657</span>  -<span class="number">0.31338026</span> -<span class="number">0.26002534</span></span><br><span class="line">  <span class="number">0.924013</span>   -<span class="number">0.47043625</span> -<span class="number">0.45807153</span> -<span class="number">0.75775808</span>  <span class="number">1.12480813</span>  <span class="number">0.30321897</span></span><br><span class="line"> -<span class="number">0.29125859</span> -<span class="number">0.33289894</span> -<span class="number">0.64971968</span>  <span class="number">0.50094724</span>  <span class="number">0.36235713</span> -<span class="number">0.00269059</span></span><br><span class="line"> -<span class="number">0.15268968</span> -<span class="number">0.01259865</span>  <span class="number">0.41392597</span> -<span class="number">0.83904654</span> -<span class="number">0.47292343</span> -<span class="number">0.18366766</span></span><br><span class="line">  <span class="number">0.15149868</span>  <span class="number">1.16077591</span> -<span class="number">0.53859254</span> -<span class="number">0.98168055</span> -<span class="number">0.42284948</span>  <span class="number">1.11918415</span></span><br><span class="line">  <span class="number">0.47384948</span> -<span class="number">0.21576477</span> -<span class="number">0.57785042</span>  <span class="number">0.16373249</span>  <span class="number">0.58937659</span>  <span class="number">0.05069881</span></span><br><span class="line"> -<span class="number">0.60646457</span> -<span class="number">0.07515867</span> -<span class="number">0.25892701</span>  <span class="number">0.60705024</span> -<span class="number">0.40504958</span> -<span class="number">0.41706291</span></span><br><span class="line">  <span class="number">0.02971281</span>  <span class="number">0.69272723</span> -<span class="number">0.27455502</span> -<span class="number">0.26949703</span> -<span class="number">0.88870169</span> -<span class="number">0.1796936</span></span><br><span class="line">  <span class="number">0.3022728</span>   <span class="number">0.32450019</span> -<span class="number">0.40309466</span> -<span class="number">0.28997186</span>  <span class="number">0.28757543</span>  <span class="number">0.83201615</span></span><br><span class="line">  <span class="number">0.18273413</span>  <span class="number">0.19503945</span> -<span class="number">0.83802164</span>  <span class="number">0.13698447</span>  <span class="number">0.35706851</span>  <span class="number">0.41057604</span></span><br><span class="line">  <span class="number">0.15437131</span> -<span class="number">0.12593118</span> -<span class="number">0.78262502</span>  <span class="number">0.46311827</span>  <span class="number">0.18733747</span> -<span class="number">0.12280002</span></span><br><span class="line"> -<span class="number">0.17000113</span>  <span class="number">0.72736406</span>  <span class="number">0.04638688</span> -<span class="number">0.0446584</span>  -<span class="number">0.3740762</span>   <span class="number">0.10985653</span></span><br><span class="line">  <span class="number">0.55118338</span>  <span class="number">0.58155485</span> -<span class="number">0.31415809</span>  <span class="number">0.02940531</span>  <span class="number">0.26057846</span>  <span class="number">1.10319678</span></span><br><span class="line">  <span class="number">0.32003339</span> -<span class="number">0.66484382</span> -<span class="number">0.24373552</span>  <span class="number">0.85396941</span>  <span class="number">0.25111252</span> -<span class="number">0.07437428</span></span><br><span class="line"> -<span class="number">0.42373725</span> -<span class="number">0.00220312</span>  <span class="number">0.49085239</span>  <span class="number">0.58744762</span> -<span class="number">0.73623476</span>  <span class="number">0.00606373</span></span><br><span class="line">  <span class="number">0.30887715</span>  <span class="number">0.40351642</span>  <span class="number">0.24192468</span> -<span class="number">0.60608552</span> -<span class="number">0.06592915</span>  <span class="number">0.57245086</span></span><br><span class="line">  <span class="number">1.18607234</span> -<span class="number">0.05819671</span> -<span class="number">0.63773722</span> -<span class="number">0.8275492</span>   <span class="number">0.47117888</span>  <span class="number">0.8240523</span></span><br><span class="line">  <span class="number">0.09995859</span> -<span class="number">1.1189529</span>  -<span class="number">0.68472816</span>  <span class="number">0.08958122</span>  <span class="number">0.94135285</span> -<span class="number">0.21713449</span></span><br><span class="line"> -<span class="number">0.22415887</span> -<span class="number">0.73924185</span> -<span class="number">0.00985684</span>  <span class="number">0.53434199</span> -<span class="number">0.22782094</span> -<span class="number">0.00677473</span></span><br><span class="line">  <span class="number">0.18406202</span>  <span class="number">0.25589949</span>  <span class="number">0.02174665</span> -<span class="number">0.47176496</span> -<span class="number">1.00158691</span>  <span class="number">0.29509947</span></span><br><span class="line">  <span class="number">0.46664914</span> -<span class="number">0.65511163</span> -<span class="number">0.15173256</span> -<span class="number">0.22610517</span>  <span class="number">0.71416397</span>  <span class="number">0.42033317</span></span><br><span class="line"> -<span class="number">0.8626862</span>  -<span class="number">0.95496022</span>  <span class="number">0.41023983</span>  <span class="number">0.69597171</span>  <span class="number">0.79422447</span> -<span class="number">0.10630244</span></span><br><span class="line"> -<span class="number">0.90460346</span>  <span class="number">0.04098153</span>  <span class="number">0.52159034</span>  <span class="number">0.65757128</span> -<span class="number">0.40015286</span> -<span class="number">0.10895269</span></span><br><span class="line"> -<span class="number">0.21034717</span>  <span class="number">0.56477992</span>  <span class="number">0.35828024</span>  <span class="number">0.08569485</span> -<span class="number">0.29118951</span>  <span class="number">0.26209546</span></span><br><span class="line"> -<span class="number">0.08259761</span> -<span class="number">0.49767682</span>  <span class="number">0.00403437</span>  <span class="number">0.15095307</span>  <span class="number">0.35145479</span>  <span class="number">0.5900982</span></span><br><span class="line">  <span class="number">0.02764191</span> -<span class="number">0.2800535</span>   <span class="number">0.37674186</span>  <span class="number">0.24215259</span>  <span class="number">0.19028278</span> -<span class="number">0.22832022</span></span><br><span class="line"> -<span class="number">0.58452005</span>  <span class="number">0.23195453</span>  <span class="number">1.01708531</span>  <span class="number">0.21018793</span> -<span class="number">0.07069491</span> -<span class="number">0.20749496</span></span><br><span class="line"> -<span class="number">0.30999703</span>  <span class="number">0.98823655</span>  <span class="number">0.88781881</span>  <span class="number">0.01026305</span> -<span class="number">0.31819752</span> -<span class="number">0.45149265</span></span><br><span class="line">  <span class="number">0.23417009</span>  <span class="number">0.20983107</span>  <span class="number">0.22389019</span> -<span class="number">0.00310436</span>  <span class="number">0.33739053</span> -<span class="number">0.02782074</span></span><br><span class="line">  <span class="number">0.05340627</span> -<span class="number">0.24885277</span>  <span class="number">0.25400433</span>  <span class="number">0.64797729</span> -<span class="number">0.03559467</span> -<span class="number">0.05009246</span></span><br><span class="line"> -<span class="number">0.08380507</span>  <span class="number">0.36138515</span>  <span class="number">0.5550696</span>   <span class="number">0.28391703</span> -<span class="number">0.39964763</span>  <span class="number">0.33188527</span></span><br><span class="line"> -<span class="number">0.15623489</span>  <span class="number">0.53671244</span> -<span class="number">0.07852636</span> -<span class="number">0.33260849</span> -<span class="number">0.26049435</span>  <span class="number">0.16521133</span></span><br><span class="line"> -<span class="number">0.29556138</span> -<span class="number">0.14604016</span>  <span class="number">0.1189506</span>  -<span class="number">0.72699557</span>  <span class="number">0.75795078</span> -<span class="number">0.72868493</span></span><br><span class="line">  <span class="number">0.60271873</span> -<span class="number">0.62082569</span>  <span class="number">0.20283552</span>  <span class="number">0.06472603</span>  <span class="number">0.31866239</span> -<span class="number">0.90097767</span></span><br><span class="line"> -<span class="number">0.15603714</span> -<span class="number">0.53582783</span>  <span class="number">0.88605567</span> -<span class="number">0.36223599</span> -<span class="number">0.59827917</span> -<span class="number">1.29951569</span></span><br><span class="line">  <span class="number">0.1108652</span>   <span class="number">0.66520771</span>  <span class="number">0.01635112</span> -<span class="number">0.47215453</span> -<span class="number">1.24440155</span> -<span class="number">0.08236616</span></span><br><span class="line">  <span class="number">0.77307018</span>  <span class="number">0.08110942</span>  <span class="number">0.20703049</span> -<span class="number">1.09960752</span>  <span class="number">0.53298015</span> -<span class="number">0.1027147</span></span><br><span class="line">  <span class="number">0.57313429</span> -<span class="number">0.26114314</span>  <span class="number">0.36161462</span> -<span class="number">0.63713623</span>  <span class="number">0.24713223</span> -<span class="number">0.12035843</span></span><br><span class="line">  <span class="number">0.11065281</span>  <span class="number">0.09846977</span> -<span class="number">0.43356553</span> -<span class="number">0.02745542</span> -<span class="number">0.03750936</span>  <span class="number">0.15417482</span></span><br><span class="line">  <span class="number">0.02681122</span>  <span class="number">0.35293284</span> -<span class="number">0.22082268</span>  <span class="number">0.52545969</span> -<span class="number">0.52711138</span>  <span class="number">0.94215319</span></span><br><span class="line">  <span class="number">0.59478862</span>  <span class="number">0.44168817</span> -<span class="number">0.27060941</span> -<span class="number">0.43870625</span>  <span class="number">0.34660181</span>  <span class="number">1.0296679</span></span><br><span class="line">  <span class="number">0.96253921</span>  <span class="number">0.09362239</span>  <span class="number">0.12398285</span> -<span class="number">0.32504824</span>  <span class="number">0.59667371</span> -<span class="number">0.29713152</span></span><br><span class="line"> -<span class="number">0.15533326</span> -<span class="number">0.08547569</span>  <span class="number">0.24128572</span> -<span class="number">0.25817327</span>  <span class="number">0.12638511</span> -<span class="number">0.32930891</span></span><br><span class="line">  <span class="number">0.34818106</span>  <span class="number">0.62209695</span>  <span class="number">0.00579373</span> -<span class="number">0.09340648</span>  <span class="number">0.29222168</span>  <span class="number">0.50828812</span></span><br><span class="line">  <span class="number">0.03484351</span>  <span class="number">0.3983519</span>  -<span class="number">0.65951852</span>  <span class="number">0.07763202</span>  <span class="number">0.09992687</span>  <span class="number">0.31966399</span></span><br><span class="line">  <span class="number">0.19685432</span> -<span class="number">0.37118144</span> -<span class="number">0.13390334</span>  <span class="number">0.54808429</span>  <span class="number">0.50920353</span> -<span class="number">0.074975</span></span><br><span class="line"> -<span class="number">0.76687343</span> -<span class="number">0.43923484</span> -<span class="number">0.09119431</span>  <span class="number">0.32772465</span>  <span class="number">0.34325338</span>  <span class="number">0.01731712</span></span><br><span class="line"> -<span class="number">0.28073798</span>  <span class="number">0.39537496</span>  <span class="number">0.09365181</span> -<span class="number">0.24057869</span> -<span class="number">0.5238085</span>  -<span class="number">0.3035102</span></span><br><span class="line">  <span class="number">0.53520429</span>  <span class="number">0.94732342</span> -<span class="number">0.40593518</span> -<span class="number">0.37112931</span> -<span class="number">0.0610225</span>   <span class="number">0.26211594</span></span><br><span class="line">  <span class="number">0.51096725</span> -<span class="number">0.74657876</span> -<span class="number">0.4668039</span>   <span class="number">0.34383364</span>  <span class="number">0.65990638</span> -<span class="number">0.67455365</span></span><br><span class="line"> -<span class="number">0.20302455</span> -<span class="number">0.51223175</span>  <span class="number">0.20865335</span>  <span class="number">0.31091778</span> -<span class="number">0.3855612</span>  -<span class="number">0.58707168</span></span><br><span class="line">  <span class="number">0.21290637</span>  <span class="number">0.28386365</span>  <span class="number">0.25445908</span> -<span class="number">0.42757652</span> -<span class="number">0.34554999</span>  <span class="number">0.57824806</span></span><br><span class="line">  <span class="number">0.56947678</span> -<span class="number">0.44043856</span> -<span class="number">0.59497373</span> -<span class="number">0.19046726</span>  <span class="number">0.78359797</span>  <span class="number">0.125395</span></span><br><span class="line">  <span class="number">0.01909045</span> -<span class="number">1.25379069</span> -<span class="number">0.09729798</span>  <span class="number">0.52626197</span>  <span class="number">0.78733424</span> -<span class="number">0.54835847</span></span><br><span class="line"> -<span class="number">0.47638112</span> -<span class="number">0.07003016</span>  <span class="number">0.55939806</span>  <span class="number">1.16409273</span> -<span class="number">0.0810496</span>  -<span class="number">0.18461299</span></span><br><span class="line">  <span class="number">0.41337285</span>  <span class="number">0.72340257</span>  <span class="number">0.47537153</span>  <span class="number">0.11145316</span> -<span class="number">0.41716581</span>  <span class="number">0.15447172</span></span><br><span class="line">  <span class="number">0.87950718</span>  <span class="number">0.32799822</span> -<span class="number">0.72525093</span> -<span class="number">0.25424443</span> -<span class="number">0.33243891</span>  <span class="number">0.89624186</span></span><br><span class="line"> -<span class="number">0.24327463</span> -<span class="number">0.377505</span>   -<span class="number">0.01318703</span>  <span class="number">1.15073861</span>  <span class="number">0.50827694</span>  <span class="number">0.14629782</span></span><br><span class="line"> -<span class="number">0.60745337</span>  <span class="number">0.35594258</span>  <span class="number">0.77265696</span>  <span class="number">0.51980829</span> -<span class="number">0.43604754</span>  <span class="number">0.19361863</span></span><br><span class="line">  <span class="number">0.0974694</span>   <span class="number">0.12374675</span>  <span class="number">0.22393652</span> -<span class="number">0.25111504</span> -<span class="number">0.16791473</span>  <span class="number">0.66888136</span></span><br><span class="line">  <span class="number">0.08905014</span> -<span class="number">0.24185122</span> -<span class="number">0.82934214</span>  <span class="number">0.17298365</span>  <span class="number">0.32383379</span>  <span class="number">0.38730725</span></span><br><span class="line"> -<span class="number">0.55691312</span> -<span class="number">0.14960641</span> -<span class="number">0.3161664</span>   <span class="number">1.00423863</span> -<span class="number">0.13530144</span>  <span class="number">0.2758329</span></span><br><span class="line"> -<span class="number">0.59409022</span> -<span class="number">0.72711962</span>  <span class="number">0.18561096</span>  <span class="number">0.29493483</span> -<span class="number">0.49462417</span> -<span class="number">0.02535275</span></span><br><span class="line"> -<span class="number">0.32179269</span>  <span class="number">0.63802358</span>  <span class="number">0.06450911</span> -<span class="number">0.36244535</span> -<span class="number">0.55088169</span>  <span class="number">0.47010579</span></span><br><span class="line"> -<span class="number">0.03932424</span> -<span class="number">0.05139748</span> -<span class="number">0.72489824</span>  <span class="number">0.43677258</span>  <span class="number">0.85363747</span>  <span class="number">0.59513256</span></span><br><span class="line"> -<span class="number">1.1427693</span>  -<span class="number">0.75490234</span> -<span class="number">0.05380666</span>  <span class="number">0.84642801</span>  <span class="number">0.97061214</span> -<span class="number">0.82256622</span></span><br><span class="line"> -<span class="number">1.12268162</span> -<span class="number">0.11974293</span>  <span class="number">0.25058075</span> -<span class="number">0.14730279</span> -<span class="number">0.41490229</span>  <span class="number">0.47094733</span></span><br><span class="line">  <span class="number">0.0695535</span>  -<span class="number">0.06111872</span> -<span class="number">0.00325791</span> -<span class="number">0.69918284</span>  <span class="number">0.97462969</span>  <span class="number">0.10417971</span></span><br><span class="line"> -<span class="number">0.06695869</span> -<span class="number">1.23309132</span> -<span class="number">0.17049135</span>  <span class="number">0.64043296</span>  <span class="number">0.82727541</span> -<span class="number">0.20828416</span></span><br><span class="line"> -<span class="number">0.59323465</span> -<span class="number">0.65802288</span>  <span class="number">0.32621394</span>  <span class="number">0.5368197</span>   <span class="number">0.37921229</span> -<span class="number">1.08605397</span></span><br><span class="line">  <span class="number">0.16858299</span>  <span class="number">0.03444726</span>  <span class="number">0.11315069</span>  <span class="number">0.05051093</span>  <span class="number">0.03860219</span> -<span class="number">0.35531796</span></span><br><span class="line">  <span class="number">0.3553949</span>   <span class="number">0.39874088</span> -<span class="number">0.52344943</span> -<span class="number">0.13202249</span>  <span class="number">0.91263459</span>  <span class="number">0.32986441</span></span><br><span class="line">  <span class="number">0.26566883</span> -<span class="number">0.62952324</span> -<span class="number">0.54520924</span> -<span class="number">0.43928257</span>  <span class="number">1.0950506</span>   <span class="number">0.1665704</span></span><br><span class="line"> -<span class="number">1.02249691</span> -<span class="number">0.05817481</span> -<span class="number">0.30783025</span>  <span class="number">0.09503854</span>  <span class="number">0.06272448</span> -<span class="number">0.35042346</span></span><br><span class="line">  <span class="number">0.06067587</span>  <span class="number">0.08451991</span>  <span class="number">0.3850205</span>  -<span class="number">0.77288649</span>  <span class="number">0.17066585</span>  <span class="number">0.10336318</span></span><br><span class="line">  <span class="number">0.37866533</span> -<span class="number">0.63292289</span> -<span class="number">0.15179168</span>  <span class="number">0.06741788</span>  <span class="number">0.41384271</span> -<span class="number">0.29224392</span></span><br><span class="line">  <span class="number">0.39719698</span> -<span class="number">1.22197233</span>]</span><br></pre></td></tr></table></figure>
+<h2 id="Knowledge-2"><a href="#Knowledge-2" class="headerlink" title="Knowledge"></a>Knowledge</h2><ol>
+<li>numpy.linalg.solve(a, b) to calculate the result of ax = b</li>
+</ol>
+<h1 id="Exercise-9-3-Norms"><a href="#Exercise-9-3-Norms" class="headerlink" title="Exercise 9.3: Norms"></a>Exercise 9.3: Norms</h1><p>Compute the Frobenius norm of A: |A|F and the infinity norm of B: |B|∞. Also find the largest and smallest singular values of B.</p>
+<h2 id="Code-3"><a href="#Code-3" class="headerlink" title="Code"></a>Code</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">A_FN = numpy.linalg.norm(A, <span class="string">'fro'</span>)</span><br><span class="line">B_IN = numpy.linalg.norm(B, numpy.inf)</span><br><span class="line">print(<span class="string">"---------- A_FN ------------\n"</span>+str(A_FN))</span><br><span class="line">print(<span class="string">"---------- B_IN ------------\n"</span>+str(B_IN))</span><br><span class="line"></span><br><span class="line">U, sigma, V = numpy.linalg.svd(B)</span><br><span class="line">B_max_singular = numpy.max(sigma)</span><br><span class="line">B_min_singular = numpy.min(sigma)</span><br><span class="line">print(<span class="string">"---------- B_max_singular ------------\n"</span>+str(B_max_singular))</span><br><span class="line">print(<span class="string">"---------- B_min_singular ------------\n"</span>+str(B_min_singular))</span><br></pre></td></tr></table></figure>
+<h2 id="Result-3"><a href="#Result-3" class="headerlink" title="Result"></a>Result</h2><figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="comment">A_FN</span> <span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span></span><br><span class="line"><span class="comment">316</span><span class="string">.</span><span class="comment">813378033</span></span><br><span class="line"><span class="comment"></span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="comment">B_IN</span> <span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span></span><br><span class="line"><span class="comment">387</span><span class="string">.</span><span class="comment">19726512</span></span><br><span class="line"><span class="comment"></span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="comment">B_max_singular</span> <span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span></span><br><span class="line"><span class="comment">51</span><span class="string">.</span><span class="comment">6474766426</span></span><br><span class="line"><span class="comment"></span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="comment">B_min_singular</span> <span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span></span><br><span class="line"><span class="comment">0</span><span class="string">.</span><span class="comment">0562452006537</span></span><br></pre></td></tr></table></figure>
+<h2 id="Knowledge-3"><a href="#Knowledge-3" class="headerlink" title="Knowledge"></a>Knowledge</h2><ol>
+<li>矩阵范数：norm, numpy.linalg.norm()</li>
+<li>奇异值分解：singular values， numpy.linalg.svd()</li>
+</ol>
+<h1 id="Exercise-9-4-Power-iteration"><a href="#Exercise-9-4-Power-iteration" class="headerlink" title="Exercise 9.4: Power iteration"></a>Exercise 9.4: Power iteration</h1><p>Generate a matrix Z, n × n, with Gaussian entries, and use the power iteration to find the largest eigenvalue and corresponding eigenvector of Z. How many iterations are needed till convergence?</p>
+<p>Optional: use the time.clock() method to compare computation time when varying n.</p>
+<h2 id="Code-4"><a href="#Code-4" class="headerlink" title="Code"></a>Code</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">Z = numpy.random.normal(size=[n, n])</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">power_iteration_eigenvalue</span><span class="params">( X, err=<span class="number">0.01</span>)</span>:</span></span><br><span class="line">    x = numpy.random.normal(size=len(X)).transpose()</span><br><span class="line">    step = numpy.inf</span><br><span class="line">    times = <span class="number">0</span></span><br><span class="line">    time_begin = time.clock()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span> step &gt; err:</span><br><span class="line">        old = numpy.max(x)</span><br><span class="line">        x = x/old</span><br><span class="line">        x = numpy.matmul(X, x)</span><br><span class="line">        new = numpy.max(x)</span><br><span class="line">        step = abs(old-new)</span><br><span class="line">        times += <span class="number">1</span></span><br><span class="line">        <span class="comment"># print("step "+str(times)+" : "+str(new))</span></span><br><span class="line"></span><br><span class="line">    time_end = time.clock()</span><br><span class="line">    <span class="keyword">return</span> x, new, times, time_end-time_begin</span><br><span class="line"></span><br><span class="line">[eigenvector, eigenvalue, times, running_time] = power_iteration_eigenvalue(Z)</span><br><span class="line"></span><br><span class="line">print(<span class="string">"------------ E_9_4 ----------------"</span>)</span><br><span class="line">print(<span class="string">"eigenvector: "</span>+str(eigenvector))</span><br><span class="line">print(<span class="string">" eigenvalue: "</span>+str(eigenvalue))</span><br><span class="line">print(<span class="string">" step count: "</span>+str(times))</span><br><span class="line">print(<span class="string">"  time used: "</span>+str(running_time))</span><br></pre></td></tr></table></figure>
+<h2 id="Result-4"><a href="#Result-4" class="headerlink" title="Result"></a>Result</h2><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">------------ E_9_4 ----------------</span><br><span class="line">eigenvector: [  6.19366521e<span class="string">+00</span>  <span class="string">-7</span>.19111305e<span class="string">+00</span>   7.47822455e<span class="string">+00</span>   1.76596816e<span class="string">+00</span></span><br><span class="line">  <span class="string">-1</span>.22108278e<span class="string">+01</span>  <span class="string">-6</span>.68997718e<span class="string">+00</span>  <span class="string">-1</span>.07959431e<span class="string">+01</span>   7.38413171e<span class="string">+00</span></span><br><span class="line">   9.60996846e<span class="string">+00</span>  <span class="string">-3</span>.39415864e<span class="string">+00</span>  <span class="string">-1</span>.23836889e<span class="string">+01</span>   1.60311426e<span class="string">+01</span></span><br><span class="line">  <span class="string">-3</span>.55845284e<span class="string">-01</span>  <span class="string">-1</span>.69182976e<span class="string">+01</span>   6.50582275e<span class="string">+00</span>  <span class="string">-3</span>.93769884e<span class="string">+00</span></span><br><span class="line">   7.23395058e<span class="string">+00</span>  <span class="string">-6</span>.30992140e<span class="string">+00</span>   3.77506490e<span class="string">+00</span>  <span class="string">-3</span>.23313667e<span class="string">+00</span></span><br><span class="line">   6.64974007e<span class="string">+00</span>  <span class="string">-7</span>.24150321e<span class="string">+00</span>   9.88020162e<span class="string">+00</span>   2.08854412e<span class="string">-03</span></span><br><span class="line">   3.07409841e<span class="string">+00</span>   3.42129651e<span class="string">+00</span>  <span class="string">-5</span>.92382223e<span class="string">+00</span>  <span class="string">-1</span>.35043015e<span class="string">+00</span></span><br><span class="line">  <span class="string">-1</span>.40770229e<span class="string">+00</span>   1.24531978e<span class="string">+01</span>  <span class="string">-6</span>.32025548e<span class="string">+00</span>  <span class="string">-1</span>.26441627e<span class="string">+01</span></span><br><span class="line">   3.26831772e<span class="string">-01</span>  <span class="string">-1</span>.42739520e<span class="string">+00</span>   1.32925887e<span class="string">+00</span>   1.06598272e<span class="string">+01</span></span><br><span class="line">  <span class="string">-8</span>.48197449e<span class="string">+00</span>   4.82646327e<span class="string">+00</span>   3.67864359e<span class="string">+00</span>  <span class="string">-2</span>.92456117e<span class="string">+00</span></span><br><span class="line">   1.49065221e<span class="string">+01</span>  <span class="string">-3</span>.89251672e<span class="string">+00</span>   1.24128342e<span class="string">+01</span>   1.27677631e<span class="string">+01</span></span><br><span class="line">  <span class="string">-1</span>.11263113e<span class="string">+01</span>  <span class="string">-1</span>.46350312e<span class="string">+01</span>   9.36651121e<span class="string">+00</span>  <span class="string">-3</span>.84124488e<span class="string">-01</span></span><br><span class="line">  <span class="string">-5</span>.67795245e<span class="string">+00</span>  <span class="string">-8</span>.75638867e<span class="string">+00</span>   6.02814460e<span class="string">+00</span>  <span class="string">-9</span>.83530958e<span class="string">-01</span></span><br><span class="line">   6.50873016e<span class="string">+00</span>   9.18944025e<span class="string">+00</span>  <span class="string">-1</span>.08015910e<span class="string">+01</span>  <span class="string">-2</span>.27073094e<span class="string">+00</span></span><br><span class="line">   2.05116066e<span class="string">+00</span>   9.74180888e<span class="string">+00</span>   4.34640807e<span class="string">+00</span>  <span class="string">-1</span>.45355560e<span class="string">+00</span></span><br><span class="line">   1.72229371e<span class="string">+00</span>   1.60129994e<span class="string">+00</span>  <span class="string">-9</span>.49922896e<span class="string">+00</span>  <span class="string">-9</span>.26528224e<span class="string">+00</span></span><br><span class="line">   1.41245323e<span class="string">+01</span>   1.29324148e<span class="string">+00</span>   1.15170129e<span class="string">+01</span>  <span class="string">-2</span>.78286401e<span class="string">+00</span></span><br><span class="line">  <span class="string">-2</span>.41103992e<span class="string">+00</span>  <span class="string">-6</span>.04664999e<span class="string">+00</span>   1.60510520e<span class="string">+01</span>   9.06866735e<span class="string">+00</span></span><br><span class="line">  <span class="string">-2</span>.39722406e<span class="string">+00</span>  <span class="string">-7</span>.74249726e<span class="string">+00</span>  <span class="string">-6</span>.22329381e<span class="string">+00</span>   5.66999289e<span class="string">+00</span></span><br><span class="line">   7.07244637e<span class="string">-01</span>  <span class="string">-1</span>.42750525e<span class="string">+01</span>   1.00944549e<span class="string">+01</span>  <span class="string">-1</span>.56414851e<span class="string">-01</span></span><br><span class="line">  <span class="string">-6</span>.77685962e<span class="string">+00</span>  <span class="string">-1</span>.31324847e<span class="string">+00</span>   1.40962962e<span class="string">+01</span>  <span class="string">-2</span>.82314517e<span class="string">+00</span></span><br><span class="line">   1.15847925e<span class="string">+00</span>  <span class="string">-1</span>.45499963e<span class="string">+01</span>  <span class="string">-1</span>.47587123e<span class="string">+00</span>  <span class="string">-5</span>.45102517e<span class="string">+00</span></span><br><span class="line">   2.07919993e<span class="string">+00</span>   1.48515566e<span class="string">+00</span>  <span class="string">-3</span>.34405736e<span class="string">+00</span>  <span class="string">-4</span>.93831256e<span class="string">-01</span></span><br><span class="line">   3.52542969e<span class="string">+00</span>  <span class="string">-4</span>.49030531e<span class="string">+00</span>  <span class="string">-4</span>.14344570e<span class="string">+00</span>  <span class="string">-6</span>.73085059e<span class="string">+00</span></span><br><span class="line">  <span class="string">-1</span>.96366164e<span class="string">+00</span>  <span class="string">-4</span>.73358636e<span class="string">+00</span>  <span class="string">-1</span>.42491876e<span class="string">+01</span>   7.14478669e<span class="string">-01</span></span><br><span class="line">  <span class="string">-4</span>.03345293e<span class="string">+00</span>  <span class="string">-8</span>.64438839e<span class="string">-01</span>  <span class="string">-1</span>.91710524e<span class="string">+00</span>   4.02300501e<span class="string">-01</span></span><br><span class="line">  <span class="string">-3</span>.12336156e<span class="string">+00</span>   3.25908960e<span class="string">+00</span>   8.73984942e<span class="string">+00</span>   1.80387754e<span class="string">+00</span></span><br><span class="line">   5.37126471e<span class="string">-01</span>   2.33427637e<span class="string">-01</span>   7.20753102e<span class="string">+00</span>   8.38898454e<span class="string">+00</span></span><br><span class="line">   6.73706722e<span class="string">+00</span>   2.25368920e<span class="string">+00</span>   4.03456123e<span class="string">+00</span>  <span class="string">-5</span>.26635000e<span class="string">-01</span></span><br><span class="line">  <span class="string">-1</span>.09389778e<span class="string">+01</span>  <span class="string">-1</span>.69632014e<span class="string">+01</span>  <span class="string">-5</span>.04630146e<span class="string">+00</span>   2.99535217e<span class="string">+00</span></span><br><span class="line">  <span class="string">-4</span>.97695971e<span class="string">+00</span>   7.08832858e<span class="string">+00</span>  <span class="string">-1</span>.42509689e<span class="string">+00</span>   5.44444010e<span class="string">-01</span></span><br><span class="line">   1.14700391e<span class="string">+00</span>  <span class="string">-3</span>.34913269e<span class="string">+00</span>  <span class="string">-1</span>.68841359e<span class="string">+00</span>  <span class="string">-1</span>.85218648e<span class="string">+00</span></span><br><span class="line">   6.17064696e<span class="string">+00</span>  <span class="string">-1</span>.17127043e<span class="string">+00</span>  <span class="string">-7</span>.25388347e<span class="string">+00</span>  <span class="string">-2</span>.70293145e<span class="string">+00</span></span><br><span class="line">  <span class="string">-8</span>.28104371e<span class="string">+00</span>   1.64055792e<span class="string">+00</span>   4.94486141e<span class="string">+00</span>   4.18690047e<span class="string">+00</span></span><br><span class="line">  <span class="string">-9</span>.94856800e<span class="string">+00</span>  <span class="string">-8</span>.29269461e<span class="string">+00</span>   5.81317629e<span class="string">+00</span>  <span class="string">-1</span>.31414167e<span class="string">+01</span></span><br><span class="line">   8.10423657e<span class="string">-01</span>  <span class="string">-1</span>.30089443e<span class="string">+01</span>  <span class="string">-7</span>.10088385e<span class="string">+00</span>  <span class="string">-7</span>.62918634e<span class="string">+00</span></span><br><span class="line">   5.14150493e<span class="string">+00</span>   4.43537243e<span class="string">+00</span>  <span class="string">-3</span>.52960575e<span class="string">-01</span>  <span class="string">-1</span>.35215797e<span class="string">+00</span></span><br><span class="line">  <span class="string">-5</span>.68239918e<span class="string">+00</span>  <span class="string">-5</span>.78998103e<span class="string">+00</span>  <span class="string">-4</span>.91632266e<span class="string">-01</span>  <span class="string">-2</span>.68038511e<span class="string">+00</span></span><br><span class="line">  <span class="string">-1</span>.03668811e<span class="string">+01</span>   5.49950249e<span class="string">+00</span>  <span class="string">-2</span>.26436209e<span class="string">+00</span>   1.23865979e<span class="string">+01</span></span><br><span class="line">   6.14732355e<span class="string">+00</span>   4.31623361e<span class="string">+00</span>  <span class="string">-8</span>.40648179e<span class="string">+00</span>  <span class="string">-3</span>.72063488e<span class="string">+00</span></span><br><span class="line">   2.01815136e<span class="string">+00</span>  <span class="string">-5</span>.14877954e<span class="string">-01</span>  <span class="string">-1</span>.16816147e<span class="string">+00</span>  <span class="string">-2</span>.24455122e<span class="string">+01</span></span><br><span class="line">  <span class="string">-5</span>.57878300e<span class="string">+00</span>   3.10970510e<span class="string">-01</span>   1.29690655e<span class="string">+00</span>  <span class="string">-1</span>.69972653e<span class="string">+01</span></span><br><span class="line">   1.58677609e<span class="string">+01</span>  <span class="string">-5</span>.77551543e<span class="string">+00</span>  <span class="string">-4</span>.36274195e<span class="string">+00</span>  <span class="string">-5</span>.63981586e<span class="string">+00</span></span><br><span class="line">  <span class="string">-4</span>.54383986e<span class="string">+00</span>  <span class="string">-7</span>.16379461e<span class="string">-01</span>  <span class="string">-4</span>.07212591e<span class="string">+00</span>  <span class="string">-5</span>.45036929e<span class="string">+00</span></span><br><span class="line">  <span class="string">-9</span>.33501142e<span class="string">+00</span>  <span class="string">-1</span>.46760018e<span class="string">+01</span>  <span class="string">-4</span>.31132630e<span class="string">+00</span>   1.16448053e<span class="string">+01</span></span><br><span class="line">   6.21216923e<span class="string">+00</span>  <span class="string">-6</span>.78022246e<span class="string">+00</span>   4.13536082e<span class="string">+00</span>   3.69218241e<span class="string">+00</span></span><br><span class="line">   1.97466803e<span class="string">+00</span>  <span class="string">-1</span>.08666389e<span class="string">+00</span>   8.80475201e<span class="string">+00</span>   2.46159249e<span class="string">+00</span></span><br><span class="line">   2.21402112e<span class="string">+00</span>  <span class="string">-2</span>.46765512e<span class="string">+00</span>   3.57973968e<span class="string">+00</span>  <span class="string">-1</span>.11716056e<span class="string">-01</span></span><br><span class="line">  <span class="string">-8</span>.24346370e<span class="string">+00</span>  <span class="string">-2</span>.90508233e<span class="string">+00</span>   4.13721878e<span class="string">+00</span>  <span class="string">-4</span>.10881873e<span class="string">+00</span></span><br><span class="line">   5.15073997e<span class="string">+00</span>  <span class="string">-1</span>.22542384e<span class="string">+01</span>   3.96149388e<span class="string">+00</span>  <span class="string">-1</span>.13627510e<span class="string">+01</span>]</span><br><span class="line"> eigenvalue: 16.0510519646</span><br><span class="line"> step count: 68</span><br><span class="line">  time used: 0.007216</span><br></pre></td></tr></table></figure>
+<h2 id="Knowledge-4"><a href="#Knowledge-4" class="headerlink" title="Knowledge"></a>Knowledge</h2><ol>
+<li>eigenvalue: 特征值</li>
+<li>幂迭代法：x(k) = x(k-1)*A</li>
+</ol>
+<h1 id="Exercise-9-5-Singular-values"><a href="#Exercise-9-5-Singular-values" class="headerlink" title="Exercise 9.5: Singular values"></a>Exercise 9.5: Singular values</h1><p>Generate an n × n matrix, denoted by C, where each entry is 1 with probability p and 0 otherwise. Use<br>the linear algebra library of Scipy to compute the singular values of C. What can you say about the<br>relationship between n, p and the largest singular value?</p>
+<h2 id="Code-5"><a href="#Code-5" class="headerlink" title="Code"></a>Code</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">p = <span class="number">0.1</span></span><br><span class="line">print(<span class="string">"-------------- E_9_5 ------------------"</span>)</span><br><span class="line"><span class="keyword">while</span> p&lt;<span class="number">1</span>:</span><br><span class="line">    C = numpy.random.binomial(<span class="number">1</span>, p, [n, n])</span><br><span class="line">    U, singular_value, V = numpy.linalg.svd(C)</span><br><span class="line">    max_singular = numpy.max(singular_value)</span><br><span class="line">    print(<span class="string">"n= "</span>+str(n)+<span class="string">"    p= "</span>+str(p)+<span class="string">"   max_singular= "</span>+ str(max_singular))</span><br><span class="line">    p += <span class="number">0.1</span></span><br></pre></td></tr></table></figure>
+<h2 id="Result-5"><a href="#Result-5" class="headerlink" title="Result"></a>Result</h2><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">-------------- E_9_5 ------------------</span><br><span class="line">n= <span class="number">200</span>    p= <span class="number">0.1</span>   max_singular= <span class="number">20.6567657213</span></span><br><span class="line">n= <span class="number">200</span>    p= <span class="number">0.2</span>   max_singular= <span class="number">40.4920520455</span></span><br><span class="line">n= <span class="number">200</span>    p= <span class="number">0.3</span>   max_singular= <span class="number">60.6782510601</span></span><br><span class="line">n= <span class="number">200</span>    p= <span class="number">0.4</span>   max_singular= <span class="number">81.0362830637</span></span><br><span class="line">n= <span class="number">200</span>    p= <span class="number">0.5</span>   max_singular= <span class="number">101.14764207</span></span><br><span class="line">n= <span class="number">200</span>    p= <span class="number">0.6</span>   max_singular= <span class="number">120.373897161</span></span><br><span class="line">n= <span class="number">200</span>    p= <span class="number">0.7</span>   max_singular= <span class="number">139.768077408</span></span><br><span class="line">n= <span class="number">200</span>    p= <span class="number">0.8</span>   max_singular= <span class="number">160.37471516</span></span><br><span class="line">n= <span class="number">200</span>    p= <span class="number">0.9</span>   max_singular= <span class="number">179.191890776</span></span><br><span class="line">n= <span class="number">200</span>    p= <span class="number">1.0</span>   max_singular= <span class="number">200.0</span></span><br></pre></td></tr></table></figure>
+<h2 id="Knowledge-5"><a href="#Knowledge-5" class="headerlink" title="Knowledge"></a>Knowledge</h2><ol>
+<li>random.binomial(n, p, size), n is 0~n, p is probability, size is size</li>
+<li>we can find that <code>max_singular = n * p</code></li>
+</ol>
+<h1 id="Exercise-9-6-Nearest-neighbor"><a href="#Exercise-9-6-Nearest-neighbor" class="headerlink" title="Exercise 9.6: Nearest neighbor"></a>Exercise 9.6: Nearest neighbor</h1><p>Write a function that takes a value z and an array A and finds the element in A that is closest to z. The<br>function should return the closest value, not index.</p>
+<p>Hint: Use the built-in functionality of Numpy rather than writing code to find this value manually. In<br>particular, use brackets and argmin.</p>
+<h2 id="Code-6"><a href="#Code-6" class="headerlink" title="Code"></a>Code</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">closest</span><span class="params">( X, z)</span>:</span></span><br><span class="line">    ind = numpy.argmin(numpy.abs(X - z * numpy.ones((len(X), len(X[<span class="number">0</span>])))))</span><br><span class="line">    <span class="keyword">return</span> X[ind//len(X[<span class="number">0</span>])][ind%len(X[<span class="number">0</span>])]</span><br><span class="line"></span><br><span class="line">print(<span class="string">"-------------- Closest ---------------"</span>)</span><br><span class="line">z = <span class="number">-1</span></span><br><span class="line"><span class="keyword">while</span> z &lt;= <span class="number">1</span>:</span><br><span class="line">    print(<span class="string">"z= "</span>+str(z)+<span class="string">"     closest= "</span>+str(closest(A, z)))</span><br><span class="line">    z += <span class="number">0.1</span></span><br></pre></td></tr></table></figure>
+<h2 id="Result-6"><a href="#Result-6" class="headerlink" title="Result"></a>Result</h2><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">-------------- Closest ---------------</span><br><span class="line">z= <span class="number">-1</span>     closest= <span class="number">-1.00000868018</span></span><br><span class="line">z= <span class="number">-0.9</span>     closest= <span class="number">-0.899991177575</span></span><br><span class="line">z= <span class="number">-0.8</span>     closest= <span class="number">-0.799982994952</span></span><br><span class="line">z= <span class="number">-0.7</span>     closest= <span class="number">-0.699995902891</span></span><br><span class="line">z= <span class="number">-0.6</span>     closest= <span class="number">-0.59999964816</span></span><br><span class="line">z= <span class="number">-0.5</span>     closest= <span class="number">-0.499995702358</span></span><br><span class="line">z= <span class="number">-0.4</span>     closest= <span class="number">-0.399997886746</span></span><br><span class="line">z= <span class="number">-0.3</span>     closest= <span class="number">-0.299999122356</span></span><br><span class="line">z= <span class="number">-0.2</span>     closest= <span class="number">-0.200002337307</span></span><br><span class="line">z= <span class="number">-0.1</span>     closest= <span class="number">-0.0999872558528</span></span><br><span class="line">z= <span class="number">-1.38777878078e-16</span>     closest= <span class="number">-1.45838021333e-05</span></span><br><span class="line">z= <span class="number">0.1</span>     closest= <span class="number">0.10001924864</span></span><br><span class="line">z= <span class="number">0.2</span>     closest= <span class="number">0.200009578588</span></span><br><span class="line">z= <span class="number">0.3</span>     closest= <span class="number">0.30001507798</span></span><br><span class="line">z= <span class="number">0.4</span>     closest= <span class="number">0.399992197442</span></span><br><span class="line">z= <span class="number">0.5</span>     closest= <span class="number">0.499998597393</span></span><br><span class="line">z= <span class="number">0.6</span>     closest= <span class="number">0.599983955592</span></span><br><span class="line">z= <span class="number">0.7</span>     closest= <span class="number">0.700043443047</span></span><br><span class="line">z= <span class="number">0.8</span>     closest= <span class="number">0.800006259776</span></span><br><span class="line">z= <span class="number">0.9</span>     closest= <span class="number">0.900013425609</span></span><br><span class="line">z= <span class="number">1.0</span>     closest= <span class="number">1.00000424317</span></span><br></pre></td></tr></table></figure>
+<h2 id="Knowledge-6"><a href="#Knowledge-6" class="headerlink" title="Knowledge"></a>Knowledge</h2><ol>
+<li>argmin(X) to return X’s minimum’s index</li>
+</ol>
+<!-- # Problem
+## Code
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="Result-7"><a href="#Result-7" class="headerlink" title="Result"></a>Result</h2><h2 id="Knowledge-–-gt"><a href="#Knowledge-–-gt" class="headerlink" title="Knowledge –&gt;"></a>Knowledge –&gt;</h2>-->
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/16/星球的公转与自转/" rel="next" title="星球的公转与自转">
+                <i class="fa fa-chevron-left"></i> 星球的公转与自转
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/headpic.jpg"
+                alt="Guangzhi Ye" />
+            
+              <p class="site-author-name" itemprop="name">Guangzhi Ye</p>
+              <p class="site-description motion-element" itemprop="description">Do not give up thinking.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/skyraker2016" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:13925111409@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Prepare"><span class="nav-number">1.</span> <span class="nav-text">Prepare</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Code"><span class="nav-number">1.1.</span> <span class="nav-text">Code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Result"><span class="nav-number">1.2.</span> <span class="nav-text">Result</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Knowledge"><span class="nav-number">1.3.</span> <span class="nav-text">Knowledge</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Exercise-9-1-Matrix-operations"><span class="nav-number">2.</span> <span class="nav-text">Exercise 9.1: Matrix operations</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-1"><span class="nav-number">2.1.</span> <span class="nav-text">Code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Result-1"><span class="nav-number">2.2.</span> <span class="nav-text">Result</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Knowledge-1"><span class="nav-number">2.3.</span> <span class="nav-text">Knowledge</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Exercise-9-2-Solving-a-linear-system"><span class="nav-number">3.</span> <span class="nav-text">Exercise 9.2: Solving a linear system</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-2"><span class="nav-number">3.1.</span> <span class="nav-text">Code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Result-2"><span class="nav-number">3.2.</span> <span class="nav-text">Result</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Knowledge-2"><span class="nav-number">3.3.</span> <span class="nav-text">Knowledge</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Exercise-9-3-Norms"><span class="nav-number">4.</span> <span class="nav-text">Exercise 9.3: Norms</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-3"><span class="nav-number">4.1.</span> <span class="nav-text">Code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Result-3"><span class="nav-number">4.2.</span> <span class="nav-text">Result</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Knowledge-3"><span class="nav-number">4.3.</span> <span class="nav-text">Knowledge</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Exercise-9-4-Power-iteration"><span class="nav-number">5.</span> <span class="nav-text">Exercise 9.4: Power iteration</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-4"><span class="nav-number">5.1.</span> <span class="nav-text">Code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Result-4"><span class="nav-number">5.2.</span> <span class="nav-text">Result</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Knowledge-4"><span class="nav-number">5.3.</span> <span class="nav-text">Knowledge</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Exercise-9-5-Singular-values"><span class="nav-number">6.</span> <span class="nav-text">Exercise 9.5: Singular values</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-5"><span class="nav-number">6.1.</span> <span class="nav-text">Code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Result-5"><span class="nav-number">6.2.</span> <span class="nav-text">Result</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Knowledge-5"><span class="nav-number">6.3.</span> <span class="nav-text">Knowledge</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Exercise-9-6-Nearest-neighbor"><span class="nav-number">7.</span> <span class="nav-text">Exercise 9.6: Nearest neighbor</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-6"><span class="nav-number">7.1.</span> <span class="nav-text">Code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Result-6"><span class="nav-number">7.2.</span> <span class="nav-text">Result</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Knowledge-6"><span class="nav-number">7.3.</span> <span class="nav-text">Knowledge</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Guangzhi Ye</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: '1526958184000', 
+            owner: 'Skyraker2016',
+            repo: 'Skyraker2016.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: 'a7c00bb47631cde613d4a854e8c8bafbec0300a8',
+            
+                client_id: '7bcc46c3c8cd212e92bd'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("SYBzmNxAh5UvaWyWhl0RDGxO-gzGzoHsz", "2zUJgYwjJIQHC6zyRys1lmoX");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
