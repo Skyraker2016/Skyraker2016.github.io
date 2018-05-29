@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-22T03:03:44.349Z</updated>
+  <updated>2018-05-29T02:09:51.833Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Matplotlib库学习</title>
+    <link href="http://yoursite.com/2018/05/29/Matplotlib%E5%BA%93%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2018/05/29/Matplotlib库学习/</id>
+    <published>2018-05-29T02:09:27.000Z</published>
+    <updated>2018-05-29T02:09:51.833Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Learning matplotlib, a lib to draw chart, figure, etc..&lt;/p&gt;
+&lt;h1 id=&quot;Exercise-11-1-Plotting-a-function&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Numpy库学习</title>
     <link href="http://yoursite.com/2018/05/22/Numpy%E5%BA%93%E5%AD%A6%E4%B9%A0/"/>
     <id>http://yoursite.com/2018/05/22/Numpy库学习/</id>
     <published>2018-05-22T03:03:04.000Z</published>
-    <updated>2018-05-22T03:03:44.349Z</updated>
+    <updated>2018-05-22T03:06:31.610Z</updated>
     
     <summary type="html">
     
