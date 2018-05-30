@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-29T02:09:51.833Z</updated>
+  <updated>2018-05-30T04:41:52.284Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Bezier三次曲线</title>
+    <link href="http://yoursite.com/2018/05/30/Bezier%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/"/>
+    <id>http://yoursite.com/2018/05/30/Bezier三次曲线/</id>
+    <published>2018-05-30T04:19:08.000Z</published>
+    <updated>2018-05-30T04:41:52.284Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;环境说明&quot;&gt;&lt;a href=&quot;#环境说明&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="OpenGL" scheme="http://yoursite.com/categories/OpenGL/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Matplotlib库学习</title>
