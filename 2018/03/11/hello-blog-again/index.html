@@ -11,6 +11,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
+<link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet">
 
 
 
@@ -81,18 +82,18 @@
 
 
 
-<meta name="description" content="之前的博客是直接克隆自他人的博客代码再进行修改，不太好意思。而且不自己从开始建的话，很多配置用不了、不知道如何更改，因此趁周末闲暇从新用hexo建站并上传至GitHub Pages，并配置好了主题等，特地记录一下踩过的、好的文章和添加的功能。 搭建过程及相关教程下载hexo在桌面右键选择Git Bash here，并输入 npm install -g hexo-cli 等待安装，找个网络比较好的地">
+<meta name="description" content="之前的博客是直接克隆自他人的博客代码再进行修改，不太好意思。而且不自己从开始建的话，很多配置用不了、不知道如何更改，因此趁周末闲暇 从新用hexo建站并上传至GitHub Pages，并配置好了主题等，特地记录一下踩过的、好的文章和添加的功能。  搭建过程及相关教程  下载hexo 在桌面右键选择Git Bash here，并输入 npm install -g hexo-cli  等待安装，找个网">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello blog again">
 <meta property="og:url" content="http://yoursite.com/2018/03/11/hello-blog-again/index.html">
 <meta property="og:site_name" content="Skyraker&#39;s">
-<meta property="og:description" content="之前的博客是直接克隆自他人的博客代码再进行修改，不太好意思。而且不自己从开始建的话，很多配置用不了、不知道如何更改，因此趁周末闲暇从新用hexo建站并上传至GitHub Pages，并配置好了主题等，特地记录一下踩过的、好的文章和添加的功能。 搭建过程及相关教程下载hexo在桌面右键选择Git Bash here，并输入 npm install -g hexo-cli 等待安装，找个网络比较好的地">
+<meta property="og:description" content="之前的博客是直接克隆自他人的博客代码再进行修改，不太好意思。而且不自己从开始建的话，很多配置用不了、不知道如何更改，因此趁周末闲暇 从新用hexo建站并上传至GitHub Pages，并配置好了主题等，特地记录一下踩过的、好的文章和添加的功能。  搭建过程及相关教程  下载hexo 在桌面右键选择Git Bash here，并输入 npm install -g hexo-cli  等待安装，找个网">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/hello-blog-again-1.png">
 <meta property="og:updated_time" content="2018-03-13T03:07:38.109Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello blog again">
-<meta name="twitter:description" content="之前的博客是直接克隆自他人的博客代码再进行修改，不太好意思。而且不自己从开始建的话，很多配置用不了、不知道如何更改，因此趁周末闲暇从新用hexo建站并上传至GitHub Pages，并配置好了主题等，特地记录一下踩过的、好的文章和添加的功能。 搭建过程及相关教程下载hexo在桌面右键选择Git Bash here，并输入 npm install -g hexo-cli 等待安装，找个网络比较好的地">
+<meta name="twitter:description" content="之前的博客是直接克隆自他人的博客代码再进行修改，不太好意思。而且不自己从开始建的话，很多配置用不了、不知道如何更改，因此趁周末闲暇 从新用hexo建站并上传至GitHub Pages，并配置好了主题等，特地记录一下踩过的、好的文章和添加的功能。  搭建过程及相关教程  下载hexo 在桌面右键选择Git Bash here，并输入 npm install -g hexo-cli  等待安装，找个网">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/hello-blog-again-1.png">
 
 
@@ -380,13 +381,19 @@
       
 
       
-        <p>之前的博客是直接克隆自他人的博客代码再进行修改，不太好意思。而且不自己从开始建的话，很多配置用不了、不知道如何更改，因此趁周末闲暇<br>从新用hexo建站并上传至GitHub Pages，并配置好了主题等，特地记录一下踩过的、好的文章和添加的功能。</p>
-<h1 id="搭建过程及相关教程"><a href="#搭建过程及相关教程" class="headerlink" title="搭建过程及相关教程"></a>搭建过程及相关教程</h1><h2 id="下载hexo"><a href="#下载hexo" class="headerlink" title="下载hexo"></a>下载hexo</h2><p>在桌面右键选择<code>Git Bash here</code>，并输入</p>
+        <p>之前的博客是直接克隆自他人的博客代码再进行修改，不太好意思。而且不自己从开始建的话，很多配置用不了、不知道如何更改，因此趁周末闲暇<br>
+从新用hexo建站并上传至GitHub Pages，并配置好了主题等，特地记录一下踩过的、好的文章和添加的功能。</p>
+<h1 id="搭建过程及相关教程"><a class="markdownIt-Anchor" href="#搭建过程及相关教程"></a> 搭建过程及相关教程</h1>
+<h2 id="下载hexo"><a class="markdownIt-Anchor" href="#下载hexo"></a> 下载hexo</h2>
+<p>在桌面右键选择<code>Git Bash here</code>，并输入</p>
 <pre><code>npm install -g hexo-cli
-</code></pre><p>等待安装，找个网络比较好的地方等吧……</p>
+</code></pre>
+<p>等待安装，找个网络比较好的地方等吧……</p>
 <p>接下来具体的部署内容详见<a href="https://www.jianshu.com/p/2b9f202c13fd" target="_blank" rel="noopener">这个教程</a>，算是见得比较全的一篇教程了。</p>
-<h2 id="添加主题NexT"><a href="#添加主题NexT" class="headerlink" title="添加主题NexT"></a>添加主题NexT</h2><p>将主题下载然后放进<code>/theme</code>，我这里用的是NexT主题。具体参见<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">NexT项目</a>，以及<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">使用文档</a></p>
-<h1 id="添加的功能"><a href="#添加的功能" class="headerlink" title="添加的功能"></a>添加的功能</h1><ul>
+<h2 id="添加主题next"><a class="markdownIt-Anchor" href="#添加主题next"></a> 添加主题NexT</h2>
+<p>将主题下载然后放进<code>/theme</code>，我这里用的是NexT主题。具体参见<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">NexT项目</a>，以及<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">使用文档</a></p>
+<h1 id="添加的功能"><a class="markdownIt-Anchor" href="#添加的功能"></a> 添加的功能</h1>
+<ul>
 <li>RSS订阅</li>
 <li>添加分类页</li>
 <li>背景动画</li>
@@ -395,37 +402,53 @@
 <li>使用Gitment添加评论</li>
 <li>支持markdown代码高亮</li>
 </ul>
-<h1 id="踩过的坑"><a href="#踩过的坑" class="headerlink" title="踩过的坑"></a>踩过的坑</h1><h2 id="markdown编辑器的选择"><a href="#markdown编辑器的选择" class="headerlink" title="markdown编辑器的选择"></a>markdown编辑器的选择</h2><p>一开始用的<code>NotePad++</code>，首先是不支持预览，其次是它的<code>front-matter</code>添加后会被当成普通的markdown语法。因此现在改用<code>vscode</code>进行markdown的编辑器。</p>
+<h1 id="踩过的坑"><a class="markdownIt-Anchor" href="#踩过的坑"></a> 踩过的坑</h1>
+<h2 id="markdown编辑器的选择"><a class="markdownIt-Anchor" href="#markdown编辑器的选择"></a> markdown编辑器的选择</h2>
+<p>一开始用的<code>NotePad++</code>，首先是不支持预览，其次是它的<code>front-matter</code>添加后会被当成普通的markdown语法。因此现在改用<code>vscode</code>进行markdown的编辑器。</p>
 <p>具体的使用方法：打开<code>.md</code>文件进行编辑，按<code>Ctrl+k</code>再按<code>v</code>即可打开预览窗口，效果如下：</p>
 <p><img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/hello-blog-again-1.png" alt="vscode编辑预览markdown"></p>
-<h2 id="使用Gitment添加评论"><a href="#使用Gitment添加评论" class="headerlink" title="使用Gitment添加评论"></a>使用Gitment添加评论</h2><ol>
-<li><p>NexT预置Gitment：<br> 一开始使用Gitment添加时找到的是过去版本的教程，需要修改代码，但是在修改的过程中突然发现原本的文件已经包含了Gitment模块，这才知道NexT的新版本已经预置了Gitment，配置方法<a href="https://ryanluoxu.github.io/2017/11/27/Hexo-Next-%E6%B7%BB%E5%8A%A0-Gitment-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" target="_blank" rel="noopener">参考自这里</a>。</p>
+<h2 id="使用gitment添加评论"><a class="markdownIt-Anchor" href="#使用gitment添加评论"></a> 使用Gitment添加评论</h2>
+<ol>
+<li>
+<p>NexT预置Gitment：<br>
+一开始使用Gitment添加时找到的是过去版本的教程，需要修改代码，但是在修改的过程中突然发现原本的文件已经包含了Gitment模块，这才知道NexT的新版本已经预置了Gitment，配置方法<a href="https://ryanluoxu.github.io/2017/11/27/Hexo-Next-%E6%B7%BB%E5%8A%A0-Gitment-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" target="_blank" rel="noopener">参考自这里</a>。</p>
 </li>
-<li><p>关于<code>Error: Not Found</code>:<br> 配置时要注意仓库名称要是该仓库本名，而非SSH或HTTPS，例如我的就是<code>Skyraker.github.io</code>。</p>
+<li>
+<p>关于<code>Error: Not Found</code>:<br>
+配置时要注意仓库名称要是该仓库本名，而非SSH或HTTPS，例如我的就是<code>Skyraker.github.io</code>。</p>
 </li>
-<li><p>关于<code>Error：validation failed</code>:<br> Gitment的原理就是在关联你的项目，每一个页面下的评论对应一个issue，并给那个issue建立标签<code>gitment</code>和<code>id</code>，其中id是Gitment唯一确定评论显示于哪个位置的特征。而出现<code>Error：validation failed</code>是因为<code>id</code>超出了issue的50个字符的限制。这个id是怎么来的呢？</p>
-<p> 在相应的主题中搜索<code>Gitment</code>即可定位至<code>gitment.swig</code>，打开找到<code>id</code>可以看到：</p>
-<pre><code>id: window.location.pathname, 
-</code></pre><p> 即当前id为这个页面在本站中的路径。当文章title为中文时，转码会导致id过长。我们可以改路径名（即<code>permlink</code>）,具体详见<a href="http://www.xjdesyxx.top/2018/02/07/errsln/" target="_blank" rel="noopener">这里</a>，或者改id为</p>
-<pre><code>id: &apos;{{ page.date }}&apos;
-</code></pre><p> 或</p>
-<pre><code>id: &apos;{{ page.title }}&apos;
-</code></pre><p> 以缩短id，但注意这两个数据必须是唯一的，不能重复，否则评论会在多个页面共享。<a href="http://ihtc.cc/2018/02/25/2018-02-25%20_Gitment%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD%E6%8E%A5%E5%85%A5%E8%B8%A9%E5%9D%91%E6%95%99%E7%A8%8B/" target="_blank" rel="noopener">参考并修改自这里</a></p>
+<li>
+<p>关于<code>Error：validation failed</code>:<br>
+Gitment的原理就是在关联你的项目，每一个页面下的评论对应一个issue，并给那个issue建立标签<code>gitment</code>和<code>id</code>，其中id是Gitment唯一确定评论显示于哪个位置的特征。而出现<code>Error：validation failed</code>是因为<code>id</code>超出了issue的50个字符的限制。这个id是怎么来的呢？</p>
+<p>在相应的主题中搜索<code>Gitment</code>即可定位至<code>gitment.swig</code>，打开找到<code>id</code>可以看到：</p>
+<pre><code> id: window.location.pathname, 
+</code></pre>
+<p>即当前id为这个页面在本站中的路径。当文章title为中文时，转码会导致id过长。我们可以改路径名（即<code>permlink</code>）,具体详见<a href="http://www.xjdesyxx.top/2018/02/07/errsln/" target="_blank" rel="noopener">这里</a>，或者改id为</p>
+<pre><code> id: '{{ page.date }}'
+</code></pre>
+<p>或</p>
+<pre><code> id: '{{ page.title }}'
+</code></pre>
+<p>以缩短id，但注意这两个数据必须是唯一的，不能重复，否则评论会在多个页面共享。<a href="http://ihtc.cc/2018/02/25/2018-02-25%20_Gitment%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD%E6%8E%A5%E5%85%A5%E8%B8%A9%E5%9D%91%E6%95%99%E7%A8%8B/" target="_blank" rel="noopener">参考并修改自这里</a></p>
 </li>
-<li><p>初始化本页页面后，可能没那么快加载出来，不要重复初始化，否则会出现两个相同的issue</p>
+<li>
+<p>初始化本页页面后，可能没那么快加载出来，不要重复初始化，否则会出现两个相同的issue</p>
 </li>
 </ol>
-<h2 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h2><p>在<code>站点配置文件</code>中，修改配置：</p>
+<h2 id="代码高亮"><a class="markdownIt-Anchor" href="#代码高亮"></a> 代码高亮</h2>
+<p>在<code>站点配置文件</code>中，修改配置：</p>
 <pre><code>highlight:
     enable: true 
     auto_detect: true 
     line_number: true
     tab_replace:
-</code></pre><p>即可打开代码高亮的自动探测、行号显示。</p>
+</code></pre>
+<p>即可打开代码高亮的自动探测、行号显示。</p>
 <p>在<code>主题配置文件</code>中，修改配置选择高亮风格：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Code Highlight theme</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Available value:</span></span><br><span class="line"><span class="meta">#</span><span class="bash">    normal | night | night eighties | night blue | night bright</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> https://github.com/chriskempson/tomorrow-theme</span></span><br><span class="line">highlight_theme: night</span><br></pre></td></tr></table></figure>
-<p>最后在编辑markdown时，引用代码，<br>可以得到如下效果：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"Hello world!"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
+<p>最后在编辑markdown时，引用代码，<br>
+可以得到如下效果：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"Hello world!"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -618,7 +641,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建过程及相关教程"><span class="nav-number">1.</span> <span class="nav-text">搭建过程及相关教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载hexo"><span class="nav-number">1.1.</span> <span class="nav-text">下载hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加主题NexT"><span class="nav-number">1.2.</span> <span class="nav-text">添加主题NexT</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加的功能"><span class="nav-number">2.</span> <span class="nav-text">添加的功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#踩过的坑"><span class="nav-number">3.</span> <span class="nav-text">踩过的坑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#markdown编辑器的选择"><span class="nav-number">3.1.</span> <span class="nav-text">markdown编辑器的选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用Gitment添加评论"><span class="nav-number">3.2.</span> <span class="nav-text">使用Gitment添加评论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码高亮"><span class="nav-number">3.3.</span> <span class="nav-text">代码高亮</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建过程及相关教程"><span class="nav-number">1.</span> <span class="nav-text"> 搭建过程及相关教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载hexo"><span class="nav-number">1.1.</span> <span class="nav-text"> 下载hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加主题next"><span class="nav-number">1.2.</span> <span class="nav-text"> 添加主题NexT</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加的功能"><span class="nav-number">2.</span> <span class="nav-text"> 添加的功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#踩过的坑"><span class="nav-number">3.</span> <span class="nav-text"> 踩过的坑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#markdown编辑器的选择"><span class="nav-number">3.1.</span> <span class="nav-text"> markdown编辑器的选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用gitment添加评论"><span class="nav-number">3.2.</span> <span class="nav-text"> 使用Gitment添加评论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码高亮"><span class="nav-number">3.3.</span> <span class="nav-text"> 代码高亮</span></a></li></ol></li></ol></div>
             
 
           </div>

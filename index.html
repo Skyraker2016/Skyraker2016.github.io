@@ -11,6 +11,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
+<link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet">
 
 
 
@@ -373,7 +374,9 @@
         
           
           Learning scipy
-Exercise 10.1: Least squaresGenerate matrix A ∈ $R_{m×n}$ with m &gt; n. Also generate some vector b ∈ $R_m$ .Now find $x=arg \min_x||A
+ Exercise 10.1: Least squares
+Generate matrix A ∈ Rm×nR_{m×n}Rm×n​ with m &gt; n. Also generate some vector b ∈ RmR_mRm​ .
+Now find x=a
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -532,12 +535,21 @@ Exercise 10.1: Least squaresGenerate matrix A ∈ $R_{m×n}$ with m &gt; n. Also
       
         
           
-          使用assimp库进行模型文件的加载与操作环境说明
+           使用assimp库进行模型文件的加载与操作
+ 环境说明
+
+
 开发环境: Linux
+
+
 库: assimp， glew， glfw， glut
+
+
 运行环境: Linux
+
+
 编译指令
-  1g++ -o loadModel loadModel.cpp -lGL -lGLU -lglut -lglfw3 -lX11 -
+  1g++ -o loadModel loadModel.cpp -lGL -lGLU -lglut -lgl
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -696,13 +708,15 @@ Exercise 10.1: Least squaresGenerate matrix A ∈ $R_{m×n}$ with m &gt; n. Also
       
         
           
-          环境说明
+           环境说明
+
 开发环境：Linux
 运行环境：Linux
 运行方式：
+
 首先在/Bezier文件夹（本文件夹）下打开终端，用export LD_LIBRARY_PATH=./../dll，增加动态库搜索路径
 运行可执行文件./Bezier
-若失败，则按照GLFW、GLEW的配置方法配置好环境后在本机重新编
+若失败，则按照GLFW、GLEW的配置方法配置好环境后在本机
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -861,8 +875,10 @@ Exercise 10.1: Least squaresGenerate matrix A ∈ $R_{m×n}$ with m &gt; n. Also
       
         
           
-          Learning matplotlib, a lib to draw chart, figure, etc..
-Exercise 11.1: Plotting a functionPlot the function$$ f(x) = sin^2(x-2)e^{-x^2} $$over the int
+          Learning matplotlib, a lib to draw chart, figure, etc…
+ Exercise 11.1: Plotting a function
+Plot the function
+f(x)=sin2(x−2)e−x2f(x) = sin^2(x-2)e^{-x^
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1022,7 +1038,8 @@ Exercise 11.1: Plotting a functionPlot the function$$ f(x) = sin^2(x-2)e^{-x^2} 
         
           
           Learning Numpy, a lib of python with matrix and other calculation.
-PrepareGenerate matrices A, with random Gaussian entries, B, a Toeplitz matrix, whe
+ Prepare
+Generate matrices A, with random Gaussian entries, B, a Toeplitz matrix, w
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1181,15 +1198,18 @@ PrepareGenerate matrices A, with random Gaussian entries, B, a Toeplitz matrix, 
       
         
           
-          星球公转与自转
+           星球公转与自转
+
 更新：将公转矩阵与摄像机矩阵分离，公用变换（摄像机、透视）与各个物体的单独变换分离，使代码更符合逻辑。
 
-环境说明
+ 环境说明
+
 开发环境：Linux
 运行环境：Linux
 运行方式：
+
 打开终端，用export LD_LIBRARY_PATH=./../dll，增加动态库搜索路径
-运行可执行文件.
+运行可
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1348,13 +1368,16 @@ PrepareGenerate matrices A, with random Gaussian entries, B, a Toeplitz matrix, 
       
         
           
-          彩色旋转立方体环境说明
+           彩色旋转立方体
+ 环境说明
+
 开发环境：Linux
 运行环境：Linux
 运行方式：
+
 首先在/Cubic文件夹（本文件夹）下打开终端，用export LD_LIBRARY_PATH=./../dll，增加动态库搜索路径
 运行可执行文件./cubic
-若失败，则按照GLFW、GLEW的配置方法配置好环境后在
+若失败，则按照GLFW、GLEW的配置方法配置
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1513,12 +1536,15 @@ PrepareGenerate matrices A, with random Gaussian entries, B, a Toeplitz matrix, 
       
         
           
-          VSCode + GLFW + GLEW 在ubuntu下的安装环境说明
+           VSCode + GLFW + GLEW 在ubuntu下的安装
+ 环境说明
+
 开发环境：Linux
 运行环境：Linux
 运行方式：
+
 首先在/HelloOpenGL文件夹（本文件夹）下打开终端，用export LD_LIBRARY_PATH=./../dll，增加动态库搜索路径
-运行可执行文件./hel
+运行可执行文件
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1677,7 +1703,9 @@ PrepareGenerate matrices A, with random Gaussian entries, B, a Toeplitz matrix, 
       
         
           
-          213 House Robber II原题After robbing those houses on that street, the thief has found himself a new place for his thievery so that he will not get too m
+           213 House Robber II
+ 原题
+After robbing those houses on that street, the thief has found himself a new place for his thievery so that he will not get t
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1836,8 +1864,12 @@ PrepareGenerate matrices A, with random Gaussian entries, B, a Toeplitz matrix, 
       
         
           
-          Description (test)Select from exercise 11-1 to 11-3
-Code (test)11-1in city_functions.py:12def city_functions( city, country):    return city+', '+coun
+           Description (test)
+Select from exercise 11-1 to 11-3
+ Code (test)
+ 11-1
+in city_functions.py:
+12def city_functions( city, country):    return city+',
           ...
           <!--noindex-->
           <div class="post-button text-center">

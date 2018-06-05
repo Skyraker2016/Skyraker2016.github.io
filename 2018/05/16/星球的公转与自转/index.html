@@ -11,6 +11,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
+<link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet">
 
 
 
@@ -81,12 +82,12 @@
 
 
 
-<meta name="description" content="星球公转与自转 更新：将公转矩阵与摄像机矩阵分离，公用变换（摄像机、透视）与各个物体的单独变换分离，使代码更符合逻辑。  环境说明 开发环境：Linux 运行环境：Linux 运行方式： 打开终端，用export LD_LIBRARY_PATH=./../dll，增加动态库搜索路径 运行可执行文件./planet_rotation 若失败，则按照GLFW、GLEW的配置方法配置好环境后在本机重新编">
+<meta name="description" content="星球公转与自转  更新：将公转矩阵与摄像机矩阵分离，公用变换（摄像机、透视）与各个物体的单独变换分离，使代码更符合逻辑。   环境说明  开发环境：Linux 运行环境：Linux 运行方式：  打开终端，用export LD_LIBRARY_PATH=./../dll，增加动态库搜索路径 运行可执行文件./planet_rotation 若失败，则按照GLFW、GLEW的配置方法配置好环境后在">
 <meta property="og:type" content="article">
 <meta property="og:title" content="星球的公转与自转">
 <meta property="og:url" content="http://yoursite.com/2018/05/16/星球的公转与自转/index.html">
 <meta property="og:site_name" content="Skyraker&#39;s">
-<meta property="og:description" content="星球公转与自转 更新：将公转矩阵与摄像机矩阵分离，公用变换（摄像机、透视）与各个物体的单独变换分离，使代码更符合逻辑。  环境说明 开发环境：Linux 运行环境：Linux 运行方式： 打开终端，用export LD_LIBRARY_PATH=./../dll，增加动态库搜索路径 运行可执行文件./planet_rotation 若失败，则按照GLFW、GLEW的配置方法配置好环境后在本机重新编">
+<meta property="og:description" content="星球公转与自转  更新：将公转矩阵与摄像机矩阵分离，公用变换（摄像机、透视）与各个物体的单独变换分离，使代码更符合逻辑。   环境说明  开发环境：Linux 运行环境：Linux 运行方式：  打开终端，用export LD_LIBRARY_PATH=./../dll，增加动态库搜索路径 运行可执行文件./planet_rotation 若失败，则按照GLFW、GLEW的配置方法配置好环境后在">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/Sun_and_planet_1.gif">
 <meta property="og:image" content="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/Sun_and_planet_2.gif">
@@ -100,7 +101,7 @@
 <meta property="og:updated_time" content="2018-05-22T03:04:41.240Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="星球的公转与自转">
-<meta name="twitter:description" content="星球公转与自转 更新：将公转矩阵与摄像机矩阵分离，公用变换（摄像机、透视）与各个物体的单独变换分离，使代码更符合逻辑。  环境说明 开发环境：Linux 运行环境：Linux 运行方式： 打开终端，用export LD_LIBRARY_PATH=./../dll，增加动态库搜索路径 运行可执行文件./planet_rotation 若失败，则按照GLFW、GLEW的配置方法配置好环境后在本机重新编">
+<meta name="twitter:description" content="星球公转与自转  更新：将公转矩阵与摄像机矩阵分离，公用变换（摄像机、透视）与各个物体的单独变换分离，使代码更符合逻辑。   环境说明  开发环境：Linux 运行环境：Linux 运行方式：  打开终端，用export LD_LIBRARY_PATH=./../dll，增加动态库搜索路径 运行可执行文件./planet_rotation 若失败，则按照GLFW、GLEW的配置方法配置好环境后在">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/Sun_and_planet_1.gif">
 
 
@@ -388,13 +389,16 @@
       
 
       
-        <h1 id="星球公转与自转"><a href="#星球公转与自转" class="headerlink" title="星球公转与自转"></a>星球公转与自转</h1><ul>
+        <h1 id="星球公转与自转"><a class="markdownIt-Anchor" href="#星球公转与自转"></a> 星球公转与自转</h1>
+<ul>
 <li>更新：将公转矩阵与摄像机矩阵分离，公用变换（摄像机、透视）与各个物体的单独变换分离，使代码更符合逻辑。</li>
 </ul>
-<h2 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h2><ul>
+<h2 id="环境说明"><a class="markdownIt-Anchor" href="#环境说明"></a> 环境说明</h2>
+<ul>
 <li>开发环境：Linux</li>
 <li>运行环境：Linux</li>
-<li>运行方式：<ul>
+<li>运行方式：
+<ul>
 <li>打开终端，用<code>export LD_LIBRARY_PATH=./../dll</code>，增加动态库搜索路径</li>
 <li>运行可执行文件<code>./planet_rotation</code></li>
 <li>若失败，则按照GLFW、GLEW的配置方法配置好环境后在本机重新编译</li>
@@ -403,33 +407,61 @@
 </li>
 <li>使用库：GLFW、GLEW、GLM</li>
 </ul>
-<h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><ul>
-<li><code>ESC</code>：退出程序</li>
-<li><code>D</code>：按下后逆时针自转</li>
-<li><code>shift</code>+<code>D</code>：顺时针自转</li>
-<li><code>Y</code>：按下后逆时针公转</li>
-<li><code>shift</code>+<code>Y</code>：顺时针公转</li>
-<li>方向键：旋转观察视角</li>
-<li><p>公转与自转：<br>  <img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/Sun_and_planet_1.gif" alt="不交互"></p>
+<h2 id="运行结果"><a class="markdownIt-Anchor" href="#运行结果"></a> 运行结果</h2>
+<ul>
+<li>
+<p><code>ESC</code>：退出程序</p>
 </li>
-<li><p>改变旋转方向：<br>  <img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/Sun_and_planet_2.gif" alt="控制自转公转方向"></p>
+<li>
+<p><code>D</code>：按下后逆时针自转</p>
 </li>
-<li><p>更改观察视角<br>  <img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/Sun_and_planet_3.gif" alt="控制观察视角"></p>
-<h2 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h2></li>
+<li>
+<p><code>shift</code>+<code>D</code>：顺时针自转</p>
+</li>
+<li>
+<p><code>Y</code>：按下后逆时针公转</p>
+</li>
+<li>
+<p><code>shift</code>+<code>Y</code>：顺时针公转</p>
+</li>
+<li>
+<p>方向键：旋转观察视角</p>
+</li>
+<li>
+<p>公转与自转：<br>
+<img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/Sun_and_planet_1.gif" alt="不交互"></p>
+</li>
+<li>
+<p>改变旋转方向：<br>
+<img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/Sun_and_planet_2.gif" alt="控制自转公转方向"></p>
+</li>
+<li>
+<p>更改观察视角<br>
+<img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/Sun_and_planet_3.gif" alt="控制观察视角"></p>
+</li>
 </ul>
+<h2 id="实现过程"><a class="markdownIt-Anchor" href="#实现过程"></a> 实现过程</h2>
 <ol>
-<li><p>生成球体：</p>
+<li>
+<p>生成球体：</p>
 <ul>
 <li>生成顶点：遍历每个纬度、经度，计算纬度、经度映射到球体上的坐标</li>
 <li>生成球面三角：在北极点与南极点处，与相邻纬度生成三角；在其余纬度上，与相邻纬度生成四边形（即两个三角）</li>
 </ul>
 </li>
-<li><p>生成缓冲区：将生成的球体顶点与顶点索引绑定至缓冲区，VAO分别为<code>SUM</code>和<code>PLANET</code>，代表大球（太阳）及小球（行星）</p>
+<li>
+<p>生成缓冲区：将生成的球体顶点与顶点索引绑定至缓冲区，VAO分别为<code>SUM</code>和<code>PLANET</code>，代表大球（太阳）及小球（行星）</p>
 </li>
-<li>生成着色器<!-- 4. 绘制：`View`管理公转及观察视角，`model`和`model_planet`分别管理两个星球
- 1. 旋转摄像矩阵`View`，产生公转的情景。同时，为了避免大球跟随旋转，需要反向旋转。
- 2. 以小球原点所在的ｚ方向为轴，旋转小球——将小球移动至原点进行旋转，再移动回自己的轨迹上。 --></li>
-<li>绘制：<code>View</code>作为摄像机视角，<code>Projection</code>为透视矩阵，这二者为全局公用。<ol>
+<li>
+<p>生成着色器</p>
+</li>
+</ol>
+<!-- 4. 绘制：`View`管理公转及观察视角，`model`和`model_planet`分别管理两个星球
+    1. 旋转摄像矩阵`View`，产生公转的情景。同时，为了避免大球跟随旋转，需要反向旋转。
+    2. 以小球原点所在的ｚ方向为轴，旋转小球——将小球移动至原点进行旋转，再移动回自己的轨迹上。 -->
+<ol start="4">
+<li>绘制：<code>View</code>作为摄像机视角，<code>Projection</code>为透视矩阵，这二者为全局公用。
+<ol>
 <li>按处理对象，分为两种矩阵——公共矩阵及单个模型的矩阵；</li>
 <li><code>self_trans</code>设为小球的旋转矩阵，管理自转；</li>
 <li><code>position_trans</code>设为小球的轨道初始坐标</li>
@@ -438,7 +470,8 @@
 <li>分别绑定两个缓冲区，分别绘制两个星球。</li>
 </ol>
 </li>
-<li>交互：设置键盘事件，管理自转与公转的旋转角度<ul>
+<li>交互：设置键盘事件，管理自转与公转的旋转角度
+<ul>
 <li><code>ESC</code>：退出程序</li>
 <li><code>D</code>：按下后逆时针自转</li>
 <li><code>shift</code>+<code>D</code>：顺时针自转</li>
@@ -448,47 +481,68 @@
 </ul>
 </li>
 </ol>
-<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ol>
-<li><p>多个物体绘制:</p>
-<p> 当多个物体需要绘制时，每个物体有自己的顶点缓冲区、顶点索引缓冲区，因此为每一个物体设置一个顶点数组（VAO），此后每次需要此物体时，直接绑定该顶点数组，同时绑定内部的数据格式。</p>
+<h2 id="知识点"><a class="markdownIt-Anchor" href="#知识点"></a> 知识点</h2>
+<ol>
+<li>
+<p>多个物体绘制:</p>
+<p>当多个物体需要绘制时，每个物体有自己的顶点缓冲区、顶点索引缓冲区，因此为每一个物体设置一个顶点数组（VAO），此后每次需要此物体时，直接绑定该顶点数组，同时绑定内部的数据格式。</p>
 </li>
-<li><p>球体生成：</p>
-<p> 遍历球体的每个纬度、经度，通过三角函数运算得到对应经纬度的正交右手系坐标:</p>
+<li>
+<p>球体生成：</p>
+<p>遍历球体的每个纬度、经度，通过三角函数运算得到对应经纬度的正交右手系坐标:</p>
  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">unsigned</span> <span class="keyword">int</span> i=<span class="number">0</span>; i &lt;= HorSlide; i++)&#123;</span><br><span class="line">    <span class="keyword">float</span> hor_angle = hor_step * i;</span><br><span class="line">    <span class="keyword">float</span> z_cur = radius * <span class="built_in">cos</span>(hor_angle);   <span class="comment">//z原点坐标</span></span><br><span class="line">    <span class="keyword">float</span> r_cur = radius * <span class="built_in">sin</span>(hor_angle);   <span class="comment">//纬度平面半径</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">unsigned</span> <span class="keyword">int</span> j=<span class="number">0</span>; j &lt;= VerSlide; j++)&#123;</span><br><span class="line">        <span class="keyword">float</span> ver_angle = j*ver_step;</span><br><span class="line">        <span class="keyword">float</span> x_cur = r_cur * <span class="built_in">cos</span>(ver_angle);   </span><br><span class="line">        <span class="comment">//顶点入vector </span></span><br><span class="line">        vects.push_back(x_cur+x);</span><br><span class="line">        vects.push_back(y_cur+y);</span><br><span class="line">        vects.push_back(z_cur+z);</span><br><span class="line">... ...</span><br></pre></td></tr></table></figure>
-<p> 并对每个相邻的纬度生成球面三角:</p>
+<p>并对每个相邻的纬度生成球面三角:</p>
  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//插入球面三角形顶点索引</span></span><br><span class="line"><span class="keyword">if</span> (i &gt; <span class="number">0</span> &amp;&amp; j &gt; <span class="number">0</span>)&#123;</span><br><span class="line">    <span class="comment">//若以自我为一个四边形的右下角，其绘制曲面三角的点：</span></span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">int</span> ru = index - VerSlide;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">int</span> lu = index - VerSlide - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">int</span> ld = index <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">int</span> rd = index;</span><br><span class="line">    <span class="comment">//上或下一圈为一个点，添加的为三角形</span></span><br><span class="line">    <span class="keyword">if</span> (i == <span class="number">1</span>)&#123;               </span><br><span class="line">        inds.push_back(ru);</span><br><span class="line">        inds.push_back(ld);</span><br><span class="line">        inds.push_back(rd);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (i == HorSlide)&#123;</span><br><span class="line">        inds.push_back(ru);</span><br><span class="line">        inds.push_back(lu);</span><br><span class="line">        inds.push_back(rd);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//四边行情况——添加两个三角形</span></span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        inds.push_back(ru);</span><br><span class="line">        inds.push_back(ld);</span><br><span class="line">        inds.push_back(rd);</span><br><span class="line">        inds.push_back(ru);</span><br><span class="line">        inds.push_back(lu);</span><br><span class="line">        inds.push_back(ld);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>旋转变换：</p>
+<li>
+<p>旋转变换：</p>
 <ul>
-<li><p>公转：通过旋转摄像机函数，得到公转的效果，同时反向等速旋转大球，使其独立于公转不旋转：</p>
+<li>
+<p>公转：通过旋转摄像机函数，得到公转的效果，同时反向等速旋转大球，使其独立于公转不旋转：</p>
   <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">View = glm::rotate(View, glm::radians(public_rotate), glm::vec3(<span class="number">0</span>, <span class="number">0</span>, <span class="number">1.0f</span>));   <span class="comment">//旋转视角以公转</span></span><br><span class="line">model = glm::rotate(model, glm::radians(-public_rotate), glm::vec3(<span class="number">0</span>, <span class="number">0</span>, <span class="number">1.0f</span>)); <span class="comment">//旋转大球以让大球看起来静止</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>自转：在绘制完大球后，绑定小球缓冲区，并计算自传的变换矩阵。其中，最关键的是 <strong>绕任意轴旋转</strong>:</p>
+<li>
+<p>自转：在绘制完大球后，绑定小球缓冲区，并计算自传的变换矩阵。其中，最关键的是 <strong>绕任意轴旋转</strong>:</p>
 <ol>
 <li>将小球移动至原点</li>
 <li>在原点对小球进行旋转</li>
 <li>将小球移动回自己的轨迹</li>
-<li>生成变换矩阵，绘制。<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">glBindVertexArray(PLANET);</span><br><span class="line">planet_self = planet_self + self_rotate;</span><br><span class="line"><span class="keyword">if</span> (planet_self &gt; <span class="number">360</span>)</span><br><span class="line">    planet_self -= <span class="number">360</span>;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (planet_self &lt; <span class="number">0</span>)</span><br><span class="line">    planet_self += <span class="number">360</span>;</span><br><span class="line">planet_public = (planet_public + public_rotate);</span><br><span class="line"><span class="keyword">if</span> (planet_public &gt; <span class="number">360</span>)</span><br><span class="line">    planet_public -= <span class="number">360</span>;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (planet_public &lt; <span class="number">0</span>)</span><br><span class="line">    planet_public += <span class="number">360</span>;</span><br><span class="line">glm::mat4 public_trans = glm::rotate(model, glm::radians(planet_public), glm::vec3(<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>));</span><br><span class="line">glm::mat4 position_trans = glm::translate(model, position);</span><br><span class="line">glm::mat4 self_trans = glm::rotate(model, glm::radians(planet_self), glm::vec3(<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>));</span><br><span class="line">mvp = Projection * View * public_trans * position_trans * self_trans;</span><br><span class="line">glUniformMatrix4fv(transformLoc, <span class="number">1</span>, GL_FALSE, glm::value_ptr(mvp));</span><br><span class="line"></span><br><span class="line">glDrawElements(GL_LINE_STRIP, indsP.size(), GL_UNSIGNED_INT, (<span class="keyword">void</span>*)<span class="number">0</span>); <span class="comment">// we use index buffer, so set it to null.</span></span><br></pre></td></tr></table></figure>
-</li>
+<li>生成变换矩阵，绘制。</li>
 </ol>
+  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">glBindVertexArray(PLANET);</span><br><span class="line">planet_self = planet_self + self_rotate;</span><br><span class="line"><span class="keyword">if</span> (planet_self &gt; <span class="number">360</span>)</span><br><span class="line">    planet_self -= <span class="number">360</span>;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (planet_self &lt; <span class="number">0</span>)</span><br><span class="line">    planet_self += <span class="number">360</span>;</span><br><span class="line">planet_public = (planet_public + public_rotate);</span><br><span class="line"><span class="keyword">if</span> (planet_public &gt; <span class="number">360</span>)</span><br><span class="line">    planet_public -= <span class="number">360</span>;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (planet_public &lt; <span class="number">0</span>)</span><br><span class="line">    planet_public += <span class="number">360</span>;</span><br><span class="line">glm::mat4 public_trans = glm::rotate(model, glm::radians(planet_public), glm::vec3(<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>));</span><br><span class="line">glm::mat4 position_trans = glm::translate(model, position);</span><br><span class="line">glm::mat4 self_trans = glm::rotate(model, glm::radians(planet_self), glm::vec3(<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>));</span><br><span class="line">mvp = Projection * View * public_trans * position_trans * self_trans;</span><br><span class="line">glUniformMatrix4fv(transformLoc, <span class="number">1</span>, GL_FALSE, glm::value_ptr(mvp));</span><br><span class="line"></span><br><span class="line">glDrawElements(GL_LINE_STRIP, indsP.size(), GL_UNSIGNED_INT, (<span class="keyword">void</span>*)<span class="number">0</span>); <span class="comment">// we use index buffer, so set it to null.</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-<li><p>按键交互：<a href="https://www.jianshu.com/p/2c3abf684294" target="_blank" rel="noopener">转自</a></p>
+<li>
+<p>按键交互：<a href="https://www.jianshu.com/p/2c3abf684294" target="_blank" rel="noopener">转自</a></p>
  <figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">key <span class="keyword">include</span>/GLFW/glfw3.h 中定义的 GLFW_KEY_* 包含一些按键的ASCII码</span><br><span class="line">scancde</span><br><span class="line"><span class="keyword">action</span> 按键动作</span><br><span class="line">GLFW_RELEASE 松开</span><br><span class="line">GLFW_PRESS 按下</span><br><span class="line">GLFW_REPEAT 重复，一直按着</span><br><span class="line">mods 按键模式</span><br><span class="line">GLFW_MOD_SHIFT 按下Shift键</span><br><span class="line">GLFW_MOD_CONTROL 按下Ctrl键</span><br><span class="line">GLFW_MOD_ALT 按下Alt键</span><br><span class="line">GLFW_MOD_SUPER</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h2 id="实验过程"><a href="#实验过程" class="headerlink" title="实验过程"></a>实验过程</h2><ol>
-<li><p>最后一个顶点总在原点——总有个“小尾巴”与原点相连<br> <img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/SUN000_1.gif" alt="0,0,0 with tail"><br><img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/SUN110_1.gif" alt="1,1,0 with tail"><br>index算错，整体向后偏移一个，因此最后一个index对应的点在原点，更改后：<br><img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/SUN_000_2.gif" alt="0,0,0 without tail"><br><img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/SUN_110_2.gif" alt="1,1,0 without tail"></p>
+<h2 id="实验过程"><a class="markdownIt-Anchor" href="#实验过程"></a> 实验过程</h2>
+<ol>
+<li>
+<p>最后一个顶点总在原点——总有个“小尾巴”与原点相连<br>
+<img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/SUN000_1.gif" alt="0,0,0 with tail"><br>
+<img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/SUN110_1.gif" alt="1,1,0 with tail"><br>
+index算错，整体向后偏移一个，因此最后一个index对应的点在原点，更改后：<br>
+<img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/SUN_000_2.gif" alt="0,0,0 without tail"><br>
+<img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/SUN_110_2.gif" alt="1,1,0 without tail"></p>
 </li>
-<li><p>生成圆时ｚ坐标偏移出错:<br><img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/SUN_ERR_001_1.gif" alt="0,0,1 with tail -- broken"><br>输出坐标发现，z的坐标在不断叠加：</p>
-<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">-8</span>.74228e<span class="string">-08</span> 0 0</span><br><span class="line"><span class="string">-8</span>.63465e<span class="string">-08</span> <span class="string">-1</span>.36759e<span class="string">-08</span> 1</span><br><span class="line"><span class="string">-8</span>.3144e<span class="string">-08</span> <span class="string">-2</span>.70151e<span class="string">-08</span> 2</span><br><span class="line"><span class="string">-7</span>.78943e<span class="string">-08</span> <span class="string">-3</span>.96891e<span class="string">-08</span> 3</span><br><span class="line"><span class="string">-7</span>.07265e<span class="string">-08</span> <span class="string">-5</span>.13858e<span class="string">-08</span> 4</span><br><span class="line"><span class="string">-6</span>.18172e<span class="string">-08</span> <span class="string">-6</span>.18172e<span class="string">-08</span> 5</span><br><span class="line"><span class="string">-5</span>.13858e<span class="string">-08</span> <span class="string">-7</span>.07265e<span class="string">-08</span> 6</span><br><span class="line"><span class="string">-3</span>.96891e<span class="string">-08</span> <span class="string">-7</span>.78943e<span class="string">-08</span> 7</span><br><span class="line"><span class="string">-2</span>.70151e<span class="string">-08</span> <span class="string">-8</span>.3144e<span class="string">-08</span> 8</span><br><span class="line"><span class="string">-1</span>.36759e<span class="string">-08</span> <span class="string">-8</span>.63465e<span class="string">-08</span> 9</span><br></pre></td></tr></table></figure>
+<li>
+<p>生成圆时ｚ坐标偏移出错:<br>
+<img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/SUN_ERR_001_1.gif" alt="0,0,1 with tail -- broken"><br>
+输出坐标发现，z的坐标在不断叠加：</p>
 </li>
 </ol>
-<p>原来是z坐标没有在纬度平面上循环时重置……<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//根据原点坐标，进行平移</span></span><br><span class="line">x_cur += x;</span><br><span class="line">y_cur += y;</span><br><span class="line">z_cur += z;</span><br><span class="line"><span class="comment">//顶点入vector </span></span><br><span class="line">vects.push_back(x_cur);</span><br><span class="line">vects.push_back(y_cur);</span><br><span class="line">vects.push_back(z_cur);</span><br></pre></td></tr></table></figure></p>
-<p>改为以下即可：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vects.push_back(x_cur+x);</span><br><span class="line">vects.push_back(y_cur+y);</span><br><span class="line">vects.push_back(z_cur+z);</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">-8</span>.74228e<span class="string">-08</span> 0 0</span><br><span class="line"><span class="string">-8</span>.63465e<span class="string">-08</span> <span class="string">-1</span>.36759e<span class="string">-08</span> 1</span><br><span class="line"><span class="string">-8</span>.3144e<span class="string">-08</span> <span class="string">-2</span>.70151e<span class="string">-08</span> 2</span><br><span class="line"><span class="string">-7</span>.78943e<span class="string">-08</span> <span class="string">-3</span>.96891e<span class="string">-08</span> 3</span><br><span class="line"><span class="string">-7</span>.07265e<span class="string">-08</span> <span class="string">-5</span>.13858e<span class="string">-08</span> 4</span><br><span class="line"><span class="string">-6</span>.18172e<span class="string">-08</span> <span class="string">-6</span>.18172e<span class="string">-08</span> 5</span><br><span class="line"><span class="string">-5</span>.13858e<span class="string">-08</span> <span class="string">-7</span>.07265e<span class="string">-08</span> 6</span><br><span class="line"><span class="string">-3</span>.96891e<span class="string">-08</span> <span class="string">-7</span>.78943e<span class="string">-08</span> 7</span><br><span class="line"><span class="string">-2</span>.70151e<span class="string">-08</span> <span class="string">-8</span>.3144e<span class="string">-08</span> 8</span><br><span class="line"><span class="string">-1</span>.36759e<span class="string">-08</span> <span class="string">-8</span>.63465e<span class="string">-08</span> 9</span><br></pre></td></tr></table></figure>
+<p>原来是z坐标没有在纬度平面上循环时重置……</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//根据原点坐标，进行平移</span></span><br><span class="line">x_cur += x;</span><br><span class="line">y_cur += y;</span><br><span class="line">z_cur += z;</span><br><span class="line"><span class="comment">//顶点入vector </span></span><br><span class="line">vects.push_back(x_cur);</span><br><span class="line">vects.push_back(y_cur);</span><br><span class="line">vects.push_back(z_cur);</span><br></pre></td></tr></table></figure>
+<p>改为以下即可：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vects.push_back(x_cur+x);</span><br><span class="line">vects.push_back(y_cur+y);</span><br><span class="line">vects.push_back(z_cur+z);</span><br></pre></td></tr></table></figure>
 <p><img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/SUN_002_2.gif" alt="0,0,1 success"></p>
-<h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a><a href="https://github.com/Skyraker2016/learn-opengl/tree/master/PlanetRotation" target="_blank" rel="noopener">源代码</a></h2><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="http://ningxingxing.com/archives/178" target="_blank" rel="noopener">球体生成</a></p>
+<h2 id="源代码"><a class="markdownIt-Anchor" href="#源代码"></a> <a href="https://github.com/Skyraker2016/learn-opengl/tree/master/PlanetRotation" target="_blank" rel="noopener">源代码</a></h2>
+<h2 id="参考资料"><a class="markdownIt-Anchor" href="#参考资料"></a> 参考资料</h2>
+<p><a href="http://ningxingxing.com/archives/178" target="_blank" rel="noopener">球体生成</a></p>
 <p><a href="https://www.jianshu.com/p/2c3abf684294" target="_blank" rel="noopener">按键</a></p>
 
       
@@ -683,7 +737,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#星球公转与自转"><span class="nav-number">1.</span> <span class="nav-text">星球公转与自转</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境说明"><span class="nav-number">1.1.</span> <span class="nav-text">环境说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行结果"><span class="nav-number">1.2.</span> <span class="nav-text">运行结果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现过程"><span class="nav-number">1.3.</span> <span class="nav-text">实现过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识点"><span class="nav-number">1.4.</span> <span class="nav-text">知识点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验过程"><span class="nav-number">1.5.</span> <span class="nav-text">实验过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#源代码"><span class="nav-number">1.6.</span> <span class="nav-text">源代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">1.7.</span> <span class="nav-text">参考资料</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#星球公转与自转"><span class="nav-number">1.</span> <span class="nav-text"> 星球公转与自转</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境说明"><span class="nav-number">1.1.</span> <span class="nav-text"> 环境说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行结果"><span class="nav-number">1.2.</span> <span class="nav-text"> 运行结果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现过程"><span class="nav-number">1.3.</span> <span class="nav-text"> 实现过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识点"><span class="nav-number">1.4.</span> <span class="nav-text"> 知识点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验过程"><span class="nav-number">1.5.</span> <span class="nav-text"> 实验过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#源代码"><span class="nav-number">1.6.</span> <span class="nav-text"> 源代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">1.7.</span> <span class="nav-text"> 参考资料</span></a></li></ol></li></ol></div>
             
 
           </div>
