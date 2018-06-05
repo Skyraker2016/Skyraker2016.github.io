@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-04T15:22:48.100Z</updated>
+  <updated>2018-06-05T06:02:08.944Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Scipy库习题</title>
+    <link href="http://yoursite.com/2018/06/05/Scipy%E5%BA%93%E4%B9%A0%E9%A2%98/"/>
+    <id>http://yoursite.com/2018/06/05/Scipy库习题/</id>
+    <published>2018-06-05T06:01:46.000Z</published>
+    <updated>2018-06-05T06:02:08.944Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Learning scipy&lt;/p&gt;
+&lt;h1 id=&quot;Exercise-10-1-Least-squares&quot;&gt;&lt;a href=&quot;#Exercise-10-1-Least-squares&quot; class=&quot;headerlink&quot; title=&quot;Exercise 10.1:
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>基于assimp库的模型加载</title>
