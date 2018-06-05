@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-05T06:02:08.944Z</updated>
+  <updated>2018-06-05T16:02:28.860Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2018/06/05/Scipy%E5%BA%93%E4%B9%A0%E9%A2%98/"/>
     <id>http://yoursite.com/2018/06/05/Scipy库习题/</id>
     <published>2018-06-05T06:01:46.000Z</published>
-    <updated>2018-06-05T06:02:08.944Z</updated>
+    <updated>2018-06-05T16:02:28.860Z</updated>
     
     <summary type="html">
     
@@ -30,7 +30,7 @@
         
         
           &lt;p&gt;Learning scipy&lt;/p&gt;
-&lt;h1 id=&quot;exercise-101-least-squares&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#exercise-101-least-squares&quot;&gt;&lt;/a&gt; Exercise
+&lt;h1 id=&quot;Exercise-10-1-Least-squares&quot;&gt;&lt;a href=&quot;#Exercise-10-1-Least-squares&quot; class=&quot;headerlink&quot; title=&quot;Exercise 10.1:
         
       
     
@@ -54,8 +54,7 @@
       
         
         
-          &lt;h1 id=&quot;使用assimp库进行模型文件的加载与操作&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#使用assimp库进行模型文件的加载与操作&quot;&gt;&lt;/a&gt; 使用assimp库进行模型文件的加载与操作&lt;/h1&gt;
-&lt;h2 id=&quot;环境说明&quot;&gt;&lt;a
+          &lt;h1 id=&quot;使用assimp库进行模型文件的加载与操作&quot;&gt;&lt;a href=&quot;#使用assimp库进行模型文件的加载与操作&quot; class=&quot;headerlink&quot;
         
       
     
@@ -79,7 +78,7 @@
       
         
         
-          &lt;h2 id=&quot;环境说明&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#环境说明&quot;&gt;&lt;/a&gt;
+          &lt;h2 id=&quot;环境说明&quot;&gt;&lt;a href=&quot;#环境说明&quot; class=&quot;headerlink&quot;
         
       
     
@@ -95,7 +94,7 @@
     <link href="http://yoursite.com/2018/05/29/Matplotlib%E5%BA%93%E5%AD%A6%E4%B9%A0/"/>
     <id>http://yoursite.com/2018/05/29/Matplotlib库学习/</id>
     <published>2018-05-29T02:09:27.000Z</published>
-    <updated>2018-05-29T02:09:51.833Z</updated>
+    <updated>2018-06-05T16:02:38.224Z</updated>
     
     <summary type="html">
     
@@ -103,8 +102,8 @@
       
         
         
-          &lt;p&gt;Learning matplotlib, a lib to draw chart, figure, etc…&lt;/p&gt;
-&lt;h1 id=&quot;exercise-111-plotting-a-function&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;
+          &lt;p&gt;Learning matplotlib, a lib to draw chart, figure, etc..&lt;/p&gt;
+&lt;h1 id=&quot;Exercise-11-1-Plotting-a-function&quot;&gt;&lt;a
         
       
     
@@ -129,7 +128,7 @@
         
         
           &lt;p&gt;Learning Numpy, a lib of python with matrix and other calculation.&lt;/p&gt;
-&lt;h1 id=&quot;prepare&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;
+&lt;h1 id=&quot;Prepare&quot;&gt;&lt;a href=&quot;#Prepare&quot; class=&quot;headerlink&quot;
         
       
     
@@ -153,7 +152,7 @@
       
         
         
-          &lt;h1 id=&quot;星球公转与自转&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#星球公转与自转&quot;&gt;&lt;/a&gt;
+          &lt;h1 id=&quot;星球公转与自转&quot;&gt;&lt;a href=&quot;#星球公转与自转&quot; class=&quot;headerlink&quot;
         
       
     
@@ -177,8 +176,7 @@
       
         
         
-          &lt;h1 id=&quot;彩色旋转立方体&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#彩色旋转立方体&quot;&gt;&lt;/a&gt; 彩色旋转立方体&lt;/h1&gt;
-&lt;h2 id=&quot;环境说明&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;
+          &lt;h1 id=&quot;彩色旋转立方体&quot;&gt;&lt;a href=&quot;#彩色旋转立方体&quot; class=&quot;headerlink&quot; title=&quot;彩色旋转立方体&quot;&gt;&lt;/a&gt;彩色旋转立方体&lt;/h1&gt;&lt;h2 id=&quot;环境说明&quot;&gt;&lt;a href=&quot;#环境说明&quot; class=&quot;headerlink&quot;
         
       
     
@@ -202,7 +200,7 @@
       
         
         
-          &lt;h1 id=&quot;vscode-glfw-glew-在ubuntu下的安装&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#vscode-glfw-glew-在ubuntu下的安装&quot;&gt;&lt;/a&gt; VSCode + GLFW + GLEW
+          &lt;h1 id=&quot;VSCode-GLFW-GLEW-在ubuntu下的安装&quot;&gt;&lt;a href=&quot;#VSCode-GLFW-GLEW-在ubuntu下的安装&quot; class=&quot;headerlink&quot; title=&quot;VSCode + GLFW + GLEW
         
       
     
@@ -226,7 +224,7 @@
       
         
         
-          &lt;h2 id=&quot;213-house-robber-ii&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#213-house-robber-ii&quot;&gt;&lt;/a&gt; &lt;a
+          &lt;h2 id=&quot;213-House-Robber-II&quot;&gt;&lt;a href=&quot;#213-House-Robber-II&quot; class=&quot;headerlink&quot; title=&quot;213 House Robber II&quot;&gt;&lt;/a&gt;&lt;a
         
       
     
@@ -250,8 +248,7 @@
       
         
         
-          &lt;h1 id=&quot;description-test&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#description-test&quot;&gt;&lt;/a&gt; Description (test)&lt;/h1&gt;
-&lt;p&gt;Select from exercise 11-1
+          &lt;h1 id=&quot;Description-test&quot;&gt;&lt;a href=&quot;#Description-test&quot; class=&quot;headerlink&quot; title=&quot;Description (test)&quot;&gt;&lt;/a&gt;Description (test)&lt;/h1&gt;&lt;p&gt;Select
         
       
     
@@ -275,8 +272,7 @@
       
         
         
-          &lt;h1 id=&quot;description-class&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#description-class&quot;&gt;&lt;/a&gt; Description (class)&lt;/h1&gt;
-&lt;p&gt;Select from exercise 9-1
+          &lt;h1 id=&quot;Description-class&quot;&gt;&lt;a href=&quot;#Description-class&quot; class=&quot;headerlink&quot; title=&quot;Description (class)&quot;&gt;&lt;/a&gt;Description
         
       
     
@@ -300,8 +296,7 @@
       
         
         
-          &lt;h1 id=&quot;description-input&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#description-input&quot;&gt;&lt;/a&gt; Description (input)&lt;/h1&gt;
-&lt;p&gt;Select from exercise 7-1
+          &lt;h1 id=&quot;Description-input&quot;&gt;&lt;a href=&quot;#Description-input&quot; class=&quot;headerlink&quot; title=&quot;Description (input)&quot;&gt;&lt;/a&gt;Description
         
       
     
@@ -326,7 +321,7 @@
         
         
           &lt;p&gt;在学习操作系统时需要用虚拟机进行实验，Bochs虚拟机即是免费的又能够在里面进行调试，因此现在改用Bohcs虚拟机。以下记录了安装和配置的过程(仅在windows下)。&lt;/p&gt;
-&lt;h1 id=&quot;下载安装bochs&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;
+&lt;h1 id=&quot;下载安装Bochs&quot;&gt;&lt;a href=&quot;#下载安装Bochs&quot;
         
       
     
@@ -350,8 +345,7 @@
       
         
         
-          &lt;h1 id=&quot;description-if&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#description-if&quot;&gt;&lt;/a&gt; Description (if)&lt;/h1&gt;
-&lt;p&gt;Select from exercise 5-1 to
+          &lt;h1 id=&quot;Description-if&quot;&gt;&lt;a href=&quot;#Description-if&quot; class=&quot;headerlink&quot; title=&quot;Description (if)&quot;&gt;&lt;/a&gt;Description (if)&lt;/h1&gt;&lt;p&gt;Select from
         
       
     
@@ -375,9 +369,7 @@
       
         
         
-          &lt;h1 id=&quot;description&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#description&quot;&gt;&lt;/a&gt; Description&lt;/h1&gt;
-&lt;p&gt;Select from exercise 3-1 to 4-15&lt;/p&gt;
-&lt;h1
+          &lt;h1 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description&quot;&gt;&lt;/a&gt;Description&lt;/h1&gt;&lt;p&gt;Select from exercise 3-1 to
         
       
     
@@ -401,8 +393,7 @@
       
         
         
-          &lt;p&gt;之前的博客是直接克隆自他人的博客代码再进行修改，不太好意思。而且不自己从开始建的话，很多配置用不了、不知道如何更改，因此趁周末闲暇&lt;br&gt;
-从新用hexo建站并上传至GitHub Pages，并配置好了主题等，特地记录一下踩过的、好的文章和添加的功能。&lt;/p&gt;
+          &lt;p&gt;之前的博客是直接克隆自他人的博客代码再进行修改，不太好意思。而且不自己从开始建的话，很多配置用不了、不知道如何更改，因此趁周末闲暇&lt;br&gt;从新用hexo建站并上传至GitHub Pages，并配置好了主题等，特地记录一下踩过的、好的文章和添加的功能。&lt;/p&gt;
 &lt;h1
         
       
@@ -427,7 +418,7 @@
       
         
         
-          &lt;h1 id=&quot;实验任务&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#实验任务&quot;&gt;&lt;/a&gt;
+          &lt;h1 id=&quot;实验任务&quot;&gt;&lt;a href=&quot;#实验任务&quot; class=&quot;headerlink&quot;
         
       
     
@@ -451,9 +442,7 @@
       
         
         
-          &lt;h1 id=&quot;description&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#description&quot;&gt;&lt;/a&gt; Description&lt;/h1&gt;
-&lt;p&gt;Select from exercise 2-1 to 2-11.&lt;/p&gt;
-&lt;p&gt;I
+          &lt;h1 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description&quot;&gt;&lt;/a&gt;Description&lt;/h1&gt;&lt;p&gt;Select from exercise 2-1 to 2-11.
         
       
     
@@ -477,7 +466,7 @@
       
         
         
-          &lt;h1 id=&quot;python-的优点&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#python-的优点&quot;&gt;&lt;/a&gt; Python
+          &lt;h1 id=&quot;Python-的优点&quot;&gt;&lt;a href=&quot;#Python-的优点&quot; class=&quot;headerlink&quot; title=&quot;Python 的优点&quot;&gt;&lt;/a&gt;Python
         
       
     
@@ -501,7 +490,7 @@
       
         
         
-          &lt;h1 id=&quot;hello-blog&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#hello-blog&quot;&gt;&lt;/a&gt; Hello
+          &lt;h1 id=&quot;Hello-Blog&quot;&gt;&lt;a href=&quot;#Hello-Blog&quot; class=&quot;headerlink&quot; title=&quot;Hello Blog&quot;&gt;&lt;/a&gt;Hello
         
       
     
