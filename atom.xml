@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-05T16:02:28.860Z</updated>
+  <updated>2018-06-11T03:18:06.707Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python作业 Jupyter练习</title>
+    <link href="http://yoursite.com/2018/06/11/python%E4%BD%9C%E4%B8%9A-Jupyter%E7%BB%83%E4%B9%A0/"/>
+    <id>http://yoursite.com/2018/06/11/python作业-Jupyter练习/</id>
+    <published>2018-06-11T02:27:35.000Z</published>
+    <updated>2018-06-11T03:18:06.707Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;Jupyter Notebook可以让你在浏览器上运行的笔记本，支持实时代码运算、生成图像，是很多数据科学工作者的选择。&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Scipy库习题</title>
@@ -473,30 +498,6 @@
     </summary>
     
       <category term="python" scheme="http://yoursite.com/categories/python/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello Blog</title>
-    <link href="http://yoursite.com/2018/03/06/2018-03-06-Hello-Blog/"/>
-    <id>http://yoursite.com/2018/03/06/2018-03-06-Hello-Blog/</id>
-    <published>2018-03-06T05:16:00.000Z</published>
-    <updated>2018-03-10T06:22:48.667Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Hello-Blog&quot;&gt;&lt;a href=&quot;#Hello-Blog&quot; class=&quot;headerlink&quot; title=&quot;Hello Blog&quot;&gt;&lt;/a&gt;Hello
-        
-      
-    
-    </summary>
-    
-      <category term="others" scheme="http://yoursite.com/categories/others/"/>
     
     
   </entry>

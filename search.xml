@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[python作业 Jupyter练习]]></title>
+    <url>%2F2018%2F06%2F11%2Fpython%E4%BD%9C%E4%B8%9A-Jupyter%E7%BB%83%E4%B9%A0%2F</url>
+    <content type="text"><![CDATA[简介Jupyter Notebook可以让你在浏览器上运行的笔记本，支持实时代码运算、生成图像，是很多数据科学工作者的选择。 习题 在博客中插入jupyter：参考自这个教程。首先将ipynb文件上传至github，打开这个网页，输入自己的用户名,在自己的仓库中找到ipynb文件，打开，复制其url，例如1https://nbviewer.jupyter.org/github/Skyraker2016/markdownpic/blob/master/Exercises.ipynb 在博客中插入 1&lt;iframe src="your_URL" width="700" height="400"&gt;&lt;/iframe&gt; 其中width和height分别是jupyter框的宽度和长度。]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Scipy库习题]]></title>
     <url>%2F2018%2F06%2F05%2FScipy%E5%BA%93%E4%B9%A0%E9%A2%98%2F</url>
     <content type="text"><![CDATA[Learning scipy Exercise 10.1: Least squaresGenerate matrix A ∈ $R_{m×n}$ with m &gt; n. Also generate some vector b ∈ $R_m$ .Now find $x=arg \min_x||Ax-b||_2$. Print the norm of the residual. Code1234567891011121314import numpy as npimport scipy.linalgm = 20n = 10A = np.random.rand(m, n)b = np.random.rand(m).reshape(m, 1)x = scipy.linalg.lstsq(A, b)[0]print("x = "+str(x))err = A.dot(x) - bresidual = scipy.linalg.norm(err,ord=2)print("norm of the residual: "+str(residual)) Result1234567891011x = [[ 0.29354894] [ 0.3171796 ] [ 0.3076955 ] [ 0.16784761] [ 0.37531644] [-0.12455975] [ 0.24540134] [ 0.17275431] [-0.28511405] [-0.52271425]]norm of the residual: 0.7740732857559364 Exercise 10.2: OptimizationFind the maximum of the function$$ f(x) = sin^2(x-2)e^{-x^2}$$ Code12345678import numpy as npimport scipy.linalgimport scipy.optimizef = lambda x: -scipy.sin(x-2)**2*(x-2)*scipy.exp(-(x*x))# 由于只有取最小值的方法，因此要取反函数并对答案取反res = scipy.optimize.fmin(f, scipy.rand(), full_output=True)print("Max of the func: "+str(-res[1])) Result12345Optimization terminated successfully. Current function value: -0.000225 Iterations: 20 Function evaluations: 40Max of the func: 0.0002253477813642845 Exercise 10.3: Pairwise distancesLet X be a matrix with n rows and m columns. How can you compute the pairwise distances between every two rows? As an example application, consider n cities, and we are given their coordinates in two columns. Now we want a nice table that tells us for each two cities, how far they are apart. Again, make sure you make use of Scipy’s functionality instead of writing your own routine. Code1234567891011import numpy as npimport scipy.spatial.distancem, n = 4, 3# 4 cities, x,y,z to discribe a cityA = np.random.rand(m,n)print("4 Cities: ")print(A)D = scipy.spatial.distance.pdist(A)print("Distance between each 2 cities: ")print(D) Result12345674 Cities:[[0.42422873 0.17197828 0.82144308] [0.15882959 0.42992466 0.80128027] [0.7649197 0.21990926 0.38651754] [0.75747478 0.15525905 0.16286141]]Distance between each 2 cities:[0.37064751 0.55455201 0.73828332 0.7638585 0.91727634 0.23293162]]]></content>
