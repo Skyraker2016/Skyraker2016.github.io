@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[python作业 Jupyter练习]]></title>
     <url>%2F2018%2F06%2F11%2Fpython%E4%BD%9C%E4%B8%9A-Jupyter%E7%BB%83%E4%B9%A0%2F</url>
-    <content type="text"><![CDATA[简介Jupyter Notebook可以让你在浏览器上运行的笔记本，支持实时代码运算、生成图像，是很多数据科学工作者的选择。 习题 在博客中插入jupyter：参考自这个教程。首先将ipynb文件上传至github，打开这个网页，输入自己的用户名,在自己的仓库中找到ipynb文件，打开，复制其url，例如1https://nbviewer.jupyter.org/github/Skyraker2016/markdownpic/blob/master/Exercises.ipynb 在博客中插入 1&lt;iframe src="your_URL" width="700" height="400"&gt;&lt;/iframe&gt; 其中width和height分别是jupyter框的宽度和长度。]]></content>
+    <content type="text"><![CDATA[简介Jupyter Notebook可以让你在浏览器上运行的笔记本，支持实时代码运算、生成图像，是很多数据科学工作者的选择。 习题 在博客中插入jupyter：参考自这个教程。首先将ipynb文件上传至github，打开这个网页，输入自己的用户名,在自己的仓库中找到ipynb文件，打开，复制其url，例如1https://nbviewer.jupyter.org/github/Skyraker2016/markdownpic/blob/master/Exercises.ipynb 在博客中插入 1&lt;iframe src="your_URL" width="700" height="400"&gt;&lt;/iframe&gt; 其中width和height分别是jupyter框的宽度和长度。 注意，https的网页不能嵌套http的网页]]></content>
       <categories>
         <category>python</category>
       </categories>
