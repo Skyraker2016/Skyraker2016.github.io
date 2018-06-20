@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-12T10:59:44.291Z</updated>
+  <updated>2018-06-20T03:11:32.390Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python作业 sklearn习题</title>
+    <link href="http://yoursite.com/2018/06/20/python%E4%BD%9C%E4%B8%9A-sklearn%E4%B9%A0%E9%A2%98/"/>
+    <id>http://yoursite.com/2018/06/20/python作业-sklearn习题/</id>
+    <published>2018-06-20T02:51:06.000Z</published>
+    <updated>2018-06-20T03:11:32.390Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;学习sklearn库，进行数据的生成、分组、回归及算法性能分析。&lt;/p&gt;
+&lt;h2 id=&quot;步骤&quot;&gt;&lt;a href=&quot;#步骤&quot; class=&quot;headerlink&quot; title=&quot;步骤&quot;&gt;&lt;/a&gt;步骤&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;数据生成&lt;/p&gt;
+  &lt;figure
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>python作业 Jupyter练习</title>
@@ -468,30 +495,6 @@
         
         
           &lt;h1 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description&quot;&gt;&lt;/a&gt;Description&lt;/h1&gt;&lt;p&gt;Select from exercise 2-1 to 2-11.
-        
-      
-    
-    </summary>
-    
-      <category term="python" scheme="http://yoursite.com/categories/python/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello Python</title>
-    <link href="http://yoursite.com/2018/03/06/2018-03-06-Hello-Python/"/>
-    <id>http://yoursite.com/2018/03/06/2018-03-06-Hello-Python/</id>
-    <published>2018-03-06T15:16:00.000Z</published>
-    <updated>2018-03-08T02:27:16.930Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Python-的优点&quot;&gt;&lt;a href=&quot;#Python-的优点&quot; class=&quot;headerlink&quot; title=&quot;Python 的优点&quot;&gt;&lt;/a&gt;Python
         
       
     
