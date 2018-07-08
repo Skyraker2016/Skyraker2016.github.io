@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-20T03:11:32.390Z</updated>
+  <updated>2018-07-08T01:43:03.168Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Cuda+VS2016配置</title>
+    <link href="http://yoursite.com/2018/07/08/Cuda-VS2016%E9%85%8D%E7%BD%AE/"/>
+    <id>http://yoursite.com/2018/07/08/Cuda-VS2016配置/</id>
+    <published>2018-07-08T01:41:58.000Z</published>
+    <updated>2018-07-08T01:43:03.168Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;先按照&lt;a href=&quot;https://blog.csdn.net/m0_37870649/article/details/79327178&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="OpenGL" scheme="http://yoursite.com/categories/OpenGL/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>python作业 sklearn习题</title>
@@ -477,30 +501,6 @@
     </summary>
     
       <category term="OS" scheme="http://yoursite.com/categories/OS/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Python作业01-变量和简单数据类型</title>
-    <link href="http://yoursite.com/2018/03/08/2018-03-08-Python%E4%BD%9C%E4%B8%9A01-%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    <id>http://yoursite.com/2018/03/08/2018-03-08-Python作业01-变量和简单数据类型/</id>
-    <published>2018-03-08T12:33:00.000Z</published>
-    <updated>2018-03-10T18:10:09.227Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description&quot;&gt;&lt;/a&gt;Description&lt;/h1&gt;&lt;p&gt;Select from exercise 2-1 to 2-11.
-        
-      
-    
-    </summary>
-    
-      <category term="python" scheme="http://yoursite.com/categories/python/"/>
     
     
   </entry>
