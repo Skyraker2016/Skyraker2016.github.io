@@ -103,7 +103,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/assets/1563433487769.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/assets/1563433565544.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/assets/1563433760336.png">
-<meta property="og:updated_time" content="2019-07-18T08:20:54.954Z">
+<meta property="og:updated_time" content="2019-07-18T08:52:15.797Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Facial Landmark Machines: A Backbone-Branches Architecture with Progressive Representation Learning 论文阅读笔记">
 <meta name="twitter:description" content="论文链接 主要工作本文将面部特征点检测问题看作像素级的分类问题，提出了一种级联主干分支全卷积网络BB-FCN用于面部特征点检测，包括两部分：（1）主干网络，用于粗粒度地检测面部特征点的位置；（2）分支网络，更进一步地分别对各个面部特征点作细化处理。该工作解决了以下问题：  非受控环境下的面部特征点检测，包括不确定的人脸数量、位置、动作、光线等。论文提出的方法能够在没有预处理的前提下对非受控环境有很">
@@ -404,7 +404,7 @@
 <p><img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/assets/1563429795286.png" alt="1563429795286"></p>
 <p>其中，$H_c^k(I)$为ground-truth。</p>
 <p>在训练阶段，将人脸从不受限的拥挤环境中截取出来，并降低至32*32的分辨率中；同时，主干网络不对特征点作区分。这两个训练设置是为了让模型隐式地学到在一个人脸的各个特征点之间的相对约束。例如，模型可以学到两眼之间偏下一般对应鼻子这类信息。</p>
-<h4 id="分支网络"><a href="#分支网络" class="headerlink" title="分支网络"></a>分支网络</h4><p>分支网络由$K$个不同的分支组成，每个分支对应一种特征点。输入为原始图像与主干网络输出响应图的对应位置叠合，形成RGB+主干输出的4通道图作为输入。为了更好地检测特征点，将输入的原始图像resize为64<em>64，主干网络生成的响应图也是如此；每一个特征点对应的输入图为24\</em>24，即前文提到的以粗粒度landmarks为中心的方形区域。</p>
+<h4 id="分支网络"><a href="#分支网络" class="headerlink" title="分支网络"></a>分支网络</h4><p>分支网络由$K$个不同的分支组成，每个分支对应一种特征点。输入为原始图像与主干网络输出响应图的对应位置叠合，形成RGB+主干输出的4通道图作为输入。为了更好地检测特征点，将输入的原始图像resize为64*64，主干网络生成的响应图也是如此；每一个特征点对应的输入图为24*24，即前文提到的以粗粒度landmarks为中心的方形区域。</p>
 <p>与主干网络类似地，设置$H(P;W_f^k)$代表在区域$P$中的响应热力图，$W_f^k$为模型参数。损失值为：</p>
 <p><img src="https://raw.githubusercontent.com/Skyraker2016/markdownpic/master/assets/1563430943339.png" alt="1563430943339"></p>
 <h3 id="训练设置"><a href="#训练设置" class="headerlink" title="训练设置"></a>训练设置</h3><h4 id="Ground-Truth的生成"><a href="#Ground-Truth的生成" class="headerlink" title="Ground-Truth的生成"></a>Ground-Truth的生成</h4><p>一般地认为，将landmarks对应的坐标设为1，其它位置设为0即可。然而由于标注的偏差，可能存在多个孤立的特征点于同一区域内，都可以认为是正确的。因此论文提出用区域代替原本的孤立点作为ground-truth的特征：如下图的嘴角，用一个区域代替原本的landmark点：</p>
@@ -444,7 +444,8 @@
 <li>主干网络的训练设置，以单独人脸作为训练输入，且将所有特征的响应图共同生成，这一细节能够隐式让模型学到不同特征点间的约束；</li>
 <li>考虑到了人为标注的误差，用区域代替孤立点作为ground-truth；</li>
 <li>在真值响应图上进行选择训练，保障了样本的均衡性；</li>
-<li>在验证集停止下降的时候，利用hard negative samples进行反向传播。</li>
+<li>在验证集停止下降的时候，利用hard negative samples进行反向传播;</li>
+<li>建立了自己的in the wild 数据集，并在VOC2012上的自然分类中采样了负样本。</li>
 </ul>
 
       
