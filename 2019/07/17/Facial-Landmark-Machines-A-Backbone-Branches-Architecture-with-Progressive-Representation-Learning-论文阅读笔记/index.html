@@ -81,12 +81,12 @@
 
 
 
-<meta name="description" content="Facial Landmark Machines: A Backbone-Branches Architecture with Progressive Representation Learning 论文阅读笔记论文链接 主要工作本文将面部特征点检测问题看作像素级的分类问题，提出了一种级联主干分支全卷积网络BB-FCN用于面部特征点检测，包括两部分：（1）主干网络，用于粗粒度地检测面部特征点的位置">
+<meta name="description" content="论文链接 主要工作本文将面部特征点检测问题看作像素级的分类问题，提出了一种级联主干分支全卷积网络BB-FCN用于面部特征点检测，包括两部分：（1）主干网络，用于粗粒度地检测面部特征点的位置；（2）分支网络，更进一步地分别对各个面部特征点作细化处理。该工作解决了以下问题：  非受控环境下的面部特征点检测，包括不确定的人脸数量、位置、动作、光线等。论文提出的方法能够在没有预处理的前提下对非受控环境有很">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Facial Landmark Machines: A Backbone-Branches Architecture with Progressive Representation Learning 论文阅读笔记">
 <meta property="og:url" content="http://yoursite.com/2019/07/17/Facial-Landmark-Machines-A-Backbone-Branches-Architecture-with-Progressive-Representation-Learning-论文阅读笔记/index.html">
 <meta property="og:site_name" content="Skyraker&#39;s">
-<meta property="og:description" content="Facial Landmark Machines: A Backbone-Branches Architecture with Progressive Representation Learning 论文阅读笔记论文链接 主要工作本文将面部特征点检测问题看作像素级的分类问题，提出了一种级联主干分支全卷积网络BB-FCN用于面部特征点检测，包括两部分：（1）主干网络，用于粗粒度地检测面部特征点的位置">
+<meta property="og:description" content="论文链接 主要工作本文将面部特征点检测问题看作像素级的分类问题，提出了一种级联主干分支全卷积网络BB-FCN用于面部特征点检测，包括两部分：（1）主干网络，用于粗粒度地检测面部特征点的位置；（2）分支网络，更进一步地分别对各个面部特征点作细化处理。该工作解决了以下问题：  非受控环境下的面部特征点检测，包括不确定的人脸数量、位置、动作、光线等。论文提出的方法能够在没有预处理的前提下对非受控环境有很">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/2019/07/17/Facial-Landmark-Machines-A-Backbone-Branches-Architecture-with-Progressive-Representation-Learning-论文阅读笔记/assets/1563427137789.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/17/Facial-Landmark-Machines-A-Backbone-Branches-Architecture-with-Progressive-Representation-Learning-论文阅读笔记/assets/1563427713359.png">
@@ -103,10 +103,10 @@
 <meta property="og:image" content="http://yoursite.com/2019/07/17/Facial-Landmark-Machines-A-Backbone-Branches-Architecture-with-Progressive-Representation-Learning-论文阅读笔记/assets/1563433487769.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/17/Facial-Landmark-Machines-A-Backbone-Branches-Architecture-with-Progressive-Representation-Learning-论文阅读笔记/assets/1563433565544.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/17/Facial-Landmark-Machines-A-Backbone-Branches-Architecture-with-Progressive-Representation-Learning-论文阅读笔记/assets/1563433760336.png">
-<meta property="og:updated_time" content="2019-07-18T07:09:22.685Z">
+<meta property="og:updated_time" content="2019-07-18T07:16:58.851Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Facial Landmark Machines: A Backbone-Branches Architecture with Progressive Representation Learning 论文阅读笔记">
-<meta name="twitter:description" content="Facial Landmark Machines: A Backbone-Branches Architecture with Progressive Representation Learning 论文阅读笔记论文链接 主要工作本文将面部特征点检测问题看作像素级的分类问题，提出了一种级联主干分支全卷积网络BB-FCN用于面部特征点检测，包括两部分：（1）主干网络，用于粗粒度地检测面部特征点的位置">
+<meta name="twitter:description" content="论文链接 主要工作本文将面部特征点检测问题看作像素级的分类问题，提出了一种级联主干分支全卷积网络BB-FCN用于面部特征点检测，包括两部分：（1）主干网络，用于粗粒度地检测面部特征点的位置；（2）分支网络，更进一步地分别对各个面部特征点作细化处理。该工作解决了以下问题：  非受控环境下的面部特征点检测，包括不确定的人脸数量、位置、动作、光线等。论文提出的方法能够在没有预处理的前提下对非受控环境有很">
 <meta name="twitter:image" content="http://yoursite.com/2019/07/17/Facial-Landmark-Machines-A-Backbone-Branches-Architecture-with-Progressive-Representation-Learning-论文阅读笔记/assets/1563427137789.png">
 
 
@@ -372,7 +372,7 @@
       
 
       
-        <h1 id="Facial-Landmark-Machines-A-Backbone-Branches-Architecture-with-Progressive-Representation-Learning-论文阅读笔记"><a href="#Facial-Landmark-Machines-A-Backbone-Branches-Architecture-with-Progressive-Representation-Learning-论文阅读笔记" class="headerlink" title="Facial Landmark Machines: A Backbone-Branches Architecture with Progressive Representation Learning 论文阅读笔记"></a>Facial Landmark Machines: A Backbone-Branches Architecture with Progressive Representation Learning 论文阅读笔记</h1><p><a href="https://arxiv.org/abs/1812.03887" target="_blank" rel="noopener">论文链接</a></p>
+        <p><a href="https://arxiv.org/abs/1812.03887" target="_blank" rel="noopener">论文链接</a></p>
 <h2 id="主要工作"><a href="#主要工作" class="headerlink" title="主要工作"></a>主要工作</h2><p>本文将面部特征点检测问题看作像素级的分类问题，提出了一种级联主干分支全卷积网络BB-FCN用于面部特征点检测，包括两部分：（1）主干网络，用于粗粒度地检测面部特征点的位置；（2）分支网络，更进一步地分别对各个面部特征点作细化处理。该工作解决了以下问题：</p>
 <ul>
 <li>非受控环境下的面部特征点检测，包括不确定的人脸数量、位置、动作、光线等。论文提出的方法能够在没有预处理的前提下对非受控环境有很好效果；</li>
@@ -635,7 +635,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Facial-Landmark-Machines-A-Backbone-Branches-Architecture-with-Progressive-Representation-Learning-论文阅读笔记"><span class="nav-number">1.</span> <span class="nav-text">Facial Landmark Machines: A Backbone-Branches Architecture with Progressive Representation Learning 论文阅读笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#主要工作"><span class="nav-number">1.1.</span> <span class="nav-text">主要工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体方法"><span class="nav-number">1.2.</span> <span class="nav-text">具体方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题定义"><span class="nav-number">1.2.1.</span> <span class="nav-text">问题定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型结构"><span class="nav-number">1.2.2.</span> <span class="nav-text">模型结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#主干网络"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">主干网络</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分支网络"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">分支网络</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#训练设置"><span class="nav-number">1.2.3.</span> <span class="nav-text">训练设置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Ground-Truth的生成"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">Ground-Truth的生成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#选择响应图训练"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">选择响应图训练</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验结果"><span class="nav-number">1.3.</span> <span class="nav-text">实验结果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.4.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#主要工作"><span class="nav-number">1.</span> <span class="nav-text">主要工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体方法"><span class="nav-number">2.</span> <span class="nav-text">具体方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题定义"><span class="nav-number">2.1.</span> <span class="nav-text">问题定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型结构"><span class="nav-number">2.2.</span> <span class="nav-text">模型结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#主干网络"><span class="nav-number">2.2.1.</span> <span class="nav-text">主干网络</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分支网络"><span class="nav-number">2.2.2.</span> <span class="nav-text">分支网络</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#训练设置"><span class="nav-number">2.3.</span> <span class="nav-text">训练设置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Ground-Truth的生成"><span class="nav-number">2.3.1.</span> <span class="nav-text">Ground-Truth的生成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#选择响应图训练"><span class="nav-number">2.3.2.</span> <span class="nav-text">选择响应图训练</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验结果"><span class="nav-number">3.</span> <span class="nav-text">实验结果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
@@ -1312,6 +1312,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

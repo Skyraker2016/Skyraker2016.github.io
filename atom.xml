@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-18T07:09:22.685Z</updated>
+  <updated>2019-07-18T07:16:58.851Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/07/17/Facial-Landmark-Machines-A-Backbone-Branches-Architecture-with-Progressive-Representation-Learning-%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2019/07/17/Facial-Landmark-Machines-A-Backbone-Branches-Architecture-with-Progressive-Representation-Learning-论文阅读笔记/</id>
     <published>2019-07-17T07:27:53.000Z</published>
-    <updated>2019-07-18T07:09:22.685Z</updated>
+    <updated>2019-07-18T07:16:58.851Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,8 @@
       
         
         
-          &lt;h1 id=&quot;Facial-Landmark-Machines-A-Backbone-Branches-Architecture-with-Progressive-Representation-Learning-论文阅读笔记&quot;&gt;&lt;a
+          &lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1812.03887&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;论文链接&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;主要工作&quot;&gt;&lt;a href=&quot;#主要工作&quot; class=&quot;headerlink&quot;
         
       
     
