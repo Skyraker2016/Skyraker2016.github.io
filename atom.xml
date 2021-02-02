@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-18T08:52:15.797Z</updated>
+  <updated>2021-02-02T03:29:46.089Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>将博客搬至CSDN</title>
+    <link href="http://yoursite.com/2021/02/02/%E5%B0%86%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%87%B3CSDN/"/>
+    <id>http://yoursite.com/2021/02/02/将博客搬至CSDN/</id>
+    <published>2021-02-02T03:29:46.000Z</published>
+    <updated>2021-02-02T03:29:46.089Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Facial Landmark Machines: A Backbone-Branches Architecture with Progressive Representation Learning 论文阅读笔记</title>
@@ -475,31 +489,6 @@
     </summary>
     
       <category term="python" scheme="http://yoursite.com/categories/python/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello blog again</title>
-    <link href="http://yoursite.com/2018/03/11/hello-blog-again/"/>
-    <id>http://yoursite.com/2018/03/11/hello-blog-again/</id>
-    <published>2018-03-11T04:47:00.000Z</published>
-    <updated>2018-03-13T03:07:38.109Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;之前的博客是直接克隆自他人的博客代码再进行修改，不太好意思。而且不自己从开始建的话，很多配置用不了、不知道如何更改，因此趁周末闲暇&lt;br&gt;从新用hexo建站并上传至GitHub Pages，并配置好了主题等，特地记录一下踩过的、好的文章和添加的功能。&lt;/p&gt;
-&lt;h1
-        
-      
-    
-    </summary>
-    
-      <category term="others" scheme="http://yoursite.com/categories/others/"/>
     
     
   </entry>
